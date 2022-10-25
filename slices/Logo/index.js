@@ -2,17 +2,22 @@ import React from "react";
 import * as prismicH from "@prismicio/helpers";
 import { Bounded } from "../../components/Bounded";
 import { PrismicNextImage } from "@prismicio/next";
+import Link from "next/link";
 const Logo = ({ slice }) => (
   <Bounded as="section" className="bg-white">
     <div className="flex flex-col items-center justify-center">
       <div className="relative w-full max-w-2xl md:w-[600px]">
-        {prismicH.isFilled.image(slice.primary.image) && (
-          <PrismicNextImage
-            field={slice.primary.image}
-            layout="responsive"
-            className="relative"
-          />
-        )}
+        <Link href="/">
+          <a>
+            {prismicH.isFilled.image(slice.primary.image) && (
+              <PrismicNextImage
+                field={slice.primary.image}
+                layout="responsive"
+                className="relative"
+              />
+            )}
+          </a>
+        </Link>
       </div>
     </div>
   </Bounded>

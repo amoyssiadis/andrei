@@ -1,20 +1,20 @@
 {
-  "id": "main_logo",
+  "id": "language_selector",
   "type": "SharedSlice",
-  "name": "MainMenu",
-  "description": "MainLogo",
+  "name": "LanguageSelector",
+  "description": "LanguageSelector",
   "variations": [
     {
       "id": "default",
       "name": "Default",
       "docURL": "...",
       "version": "sktwi1xtmkfgx8626",
-      "description": "MainLogo",
+      "description": "LanguageSelector",
       "primary": {
-        "logo": {
+        "image": {
           "type": "Image",
           "config": {
-            "label": "logo",
+            "label": "image",
             "constraint": {},
             "thumbnails": []
           }

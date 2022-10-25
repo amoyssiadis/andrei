@@ -144,6 +144,21 @@
       "default": {
         "primary": {}
       }
+    },
+    "LanguageSelector": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "AboutTextWithButton": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "FloatingImage": {
+      "default": {
+        "primary": {}
+      }
     }
   }
 }

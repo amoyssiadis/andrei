@@ -1,6 +1,173 @@
 {
   "slices": {
     "components": {
+      "about_text_with_button": {
+        "library": "slices",
+        "id": "about_text_with_button",
+        "name": "AboutTextWithButton",
+        "description": "AboutTextWithButton",
+        "model": {
+          "id": "about_text_with_button",
+          "type": "SharedSlice",
+          "name": "AboutTextWithButton",
+          "description": "AboutTextWithButton",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "AboutTextWithButton",
+              "primary": {
+                "about": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "About",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                },
+                "button_name": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Button name",
+                    "placeholder": ""
+                  }
+                },
+                "button_link": {
+                  "type": "Link",
+                  "config": {
+                    "label": "Button link",
+                    "placeholder": "",
+                    "allowTargetBlank": false,
+                    "select": null
+                  }
+                },
+                "image": {
+                  "type": "Image",
+                  "config": {
+                    "label": "Floating image",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {}
+            ],
+            "primary": {
+              "about": [
+                {
+                  "type": "paragraph",
+                  "text": "Incididunt duis ipsum cillum.",
+                  "spans": []
+                }
+              ],
+              "button_name": "mental",
+              "button_link": {
+                "link_type": "Web",
+                "url": "http://google.com"
+              },
+              "image": {
+                "dimensions": {
+                  "width": 900,
+                  "height": 500
+                },
+                "alt": null,
+                "copyright": null,
+                "url": "https://images.unsplash.com/photo-1560762484-813fc97650a0"
+              }
+            },
+            "slice_type": "about_text_with_button"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {
+          "default": {
+            "path": "/Users/ericmilfont/Fiverr/andrei-portfolio-website/.slicemachine/assets/slices/AboutTextWithButton/default/preview.png",
+            "width": 800,
+            "height": 48
+          }
+        }
+      },
+      "floating_image": {
+        "library": "slices",
+        "id": "floating_image",
+        "name": "FloatingImage",
+        "description": "FloatingImage",
+        "model": {
+          "id": "floating_image",
+          "type": "SharedSlice",
+          "name": "FloatingImage",
+          "description": "FloatingImage",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "FloatingImage",
+              "primary": {
+                "image": {
+                  "type": "Image",
+                  "config": {
+                    "label": "Image",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {}
+            ],
+            "primary": {
+              "image": {
+                "dimensions": {
+                  "width": 900,
+                  "height": 500
+                },
+                "alt": null,
+                "copyright": null,
+                "url": "https://images.unsplash.com/photo-1587905069134-008460d7a636"
+              }
+            },
+            "slice_type": "floating_image"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {
+          "default": {
+            "path": "/Users/ericmilfont/Fiverr/andrei-portfolio-website/.slicemachine/assets/slices/FloatingImage/default/preview.png",
+            "width": 800,
+            "height": 48
+          }
+        }
+      },
       "hero": {
         "library": "slices",
         "id": "hero",
@@ -272,6 +439,71 @@
           "fileName": "index",
           "extension": "js"
         },
+        "screenshotPaths": {
+          "lightSlate": {
+            "path": "/Users/ericmilfont/Fiverr/andrei-portfolio-website/.slicemachine/assets/slices/Image/lightSlate/preview.png",
+            "width": 800,
+            "height": 674
+          }
+        }
+      },
+      "language_selector": {
+        "library": "slices",
+        "id": "language_selector",
+        "name": "LanguageSelector",
+        "description": "LanguageSelector",
+        "model": {
+          "id": "language_selector",
+          "type": "SharedSlice",
+          "name": "LanguageSelector",
+          "description": "LanguageSelector",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "LanguageSelector",
+              "primary": {
+                "image": {
+                  "type": "Image",
+                  "config": {
+                    "label": "image",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {}
+            ],
+            "primary": {
+              "image": {
+                "dimensions": {
+                  "width": 900,
+                  "height": 500
+                },
+                "alt": null,
+                "copyright": null,
+                "url": "https://images.unsplash.com/photo-1591012911207-0dbac31f37da"
+              }
+            },
+            "slice_type": "language_selector"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
         "screenshotPaths": {}
       },
       "logo": {
@@ -331,7 +563,13 @@
           "fileName": "index",
           "extension": "js"
         },
-        "screenshotPaths": {}
+        "screenshotPaths": {
+          "default": {
+            "path": "/Users/ericmilfont/Fiverr/andrei-portfolio-website/.slicemachine/assets/slices/Logo/default/preview.png",
+            "width": 800,
+            "height": 589
+          }
+        }
       },
       "main_logo": {
         "library": "slices",
@@ -351,10 +589,10 @@
               "version": "sktwi1xtmkfgx8626",
               "description": "MainLogo",
               "primary": {
-                "image": {
+                "logo": {
                   "type": "Image",
                   "config": {
-                    "label": "image",
+                    "label": "logo",
                     "constraint": {},
                     "thumbnails": []
                   }
@@ -373,14 +611,14 @@
               {}
             ],
             "primary": {
-              "image": {
+              "logo": {
                 "dimensions": {
                   "width": 900,
                   "height": 500
                 },
                 "alt": null,
                 "copyright": null,
-                "url": "https://images.unsplash.com/photo-1547082299-de196ea013d6"
+                "url": "https://images.unsplash.com/photo-1593642532973-d31b6557fa68"
               }
             },
             "slice_type": "main_logo"
@@ -390,7 +628,13 @@
           "fileName": "index",
           "extension": "js"
         },
-        "screenshotPaths": {}
+        "screenshotPaths": {
+          "default": {
+            "path": "/Users/ericmilfont/Fiverr/andrei-portfolio-website/.slicemachine/assets/slices/MainMenu/default/preview.png",
+            "width": 800,
+            "height": 288
+          }
+        }
       },
       "text_with_features": {
         "library": "slices",

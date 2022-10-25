@@ -6,16 +6,16 @@
       {}
     ],
     "primary": {
-      "logo": {
+      "image": {
         "dimensions": {
           "width": 900,
           "height": 500
         },
         "alt": null,
         "copyright": null,
-        "url": "https://images.unsplash.com/photo-1593642532973-d31b6557fa68"
+        "url": "https://images.unsplash.com/photo-1587905069134-008460d7a636"
       }
     },
-    "slice_type": "main_logo"
+    "slice_type": "floating_image"
   }
 ]

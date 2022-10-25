@@ -1,20 +1,20 @@
 {
-  "id": "main_logo",
+  "id": "floating_image",
   "type": "SharedSlice",
-  "name": "MainMenu",
-  "description": "MainLogo",
+  "name": "FloatingImage",
+  "description": "FloatingImage",
   "variations": [
     {
       "id": "default",
       "name": "Default",
       "docURL": "...",
       "version": "sktwi1xtmkfgx8626",
-      "description": "MainLogo",
+      "description": "FloatingImage",
       "primary": {
-        "logo": {
+        "image": {
           "type": "Image",
           "config": {
-            "label": "logo",
+            "label": "Image",
             "constraint": {},
             "thumbnails": []
           }

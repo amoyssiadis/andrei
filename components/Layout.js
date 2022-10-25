@@ -9,13 +9,12 @@ export const Layout = ({
 }) => {
   return (
     <div className="text-slate-800">
-      <Header
+      {/* <Header
         alternateLanguages={alternateLanguages}
         navigation={navigation}
         settings={settings}
-      />
+      /> */}
       <main>{children}</main>
-      <Footer settings={settings} />
     </div>
   );
 };

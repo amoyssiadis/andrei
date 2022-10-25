@@ -11,13 +11,13 @@ export const Bounded = ({
     <Comp
       data-collapsible={collapsible}
       className={clsx(
-        "px-6 py-20 md:py-32",
-        yPadding === "sm" && "py-8 md:py-10",
-        yPadding === "base" && "py-20 md:py-32",
+        // "px-6 py-20 md:py-32",
+        // yPadding === "sm" && "py-8 md:py-10",
+        // yPadding === "base" && "py-20 md:py-32",
         className
       )}
     >
-      <div className="mx-auto w-full max-w-6xl">{children}</div>
+      <div className="mx-auto w-full max-w-6xl ">{children}</div>
     </Comp>
   );
 };

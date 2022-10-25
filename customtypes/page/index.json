@@ -43,6 +43,15 @@
             },
             "main_logo": {
               "type": "SharedSlice"
+            },
+            "language_selector": {
+              "type": "SharedSlice"
+            },
+            "about_text_with_button": {
+              "type": "SharedSlice"
+            },
+            "floating_image": {
+              "type": "SharedSlice"
             }
           }
         }
