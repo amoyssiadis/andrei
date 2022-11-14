@@ -2,6 +2,7 @@ import React from "react";
 import { PrismicRichText } from "@prismicio/react";
 import { PrismicLink } from "@prismicio/react";
 import FloatingImage from "../FloatingImage";
+
 // import * as prismicH from "@prismicio/helpers";
 
 const AboutTextWithButton = ({ slice }) => (
@@ -23,7 +24,9 @@ const AboutTextWithButton = ({ slice }) => (
       <div className="mt-10 w-fit md:mt-0 md:mr-10 mx-auto ">
         <FloatingImage slice={slice} />
       </div>
+
     </div>
+    
   </section>
 );
 

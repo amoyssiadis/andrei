@@ -55,6 +55,9 @@
             },
             "mansory": {
               "type": "SharedSlice"
+            },
+            "logo_marquee": {
+              "type": "SharedSlice"
             }
           }
         }

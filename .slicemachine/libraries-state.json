@@ -571,6 +571,93 @@
           }
         }
       },
+      "logo_marquee": {
+        "library": "slices",
+        "id": "logo_marquee",
+        "name": "LogoMarquee",
+        "description": "LogoMarquee",
+        "model": {
+          "id": "logo_marquee",
+          "type": "SharedSlice",
+          "name": "LogoMarquee",
+          "description": "LogoMarquee",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "LogoMarquee",
+              "primary": {
+                "title": {
+                  "type": "Text",
+                  "config": {
+                    "label": "title",
+                    "placeholder": ""
+                  }
+                }
+              },
+              "items": {
+                "image": {
+                  "type": "Image",
+                  "config": {
+                    "label": "image",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                },
+                "link": {
+                  "type": "Link",
+                  "config": {
+                    "label": "link",
+                    "placeholder": "",
+                    "select": null
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {
+                "image": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": null,
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d"
+                },
+                "link": {
+                  "link_type": "Web",
+                  "url": "http://google.com"
+                }
+              }
+            ],
+            "primary": {
+              "title": "truth"
+            },
+            "slice_type": "logo_marquee"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {
+          "default": {
+            "path": "/Users/ericmilfont/Fiverr/andrei-portfolio-website/.slicemachine/assets/slices/LogoMarquee/default/preview.png",
+            "width": 800,
+            "height": 80
+          }
+        }
+      },
       "main_logo": {
         "library": "slices",
         "id": "main_logo",

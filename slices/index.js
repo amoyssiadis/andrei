@@ -6,6 +6,7 @@ import Hero from './Hero';
 import Image from './Image';
 import LanguageSelector from './LanguageSelector';
 import Logo from './Logo';
+import LogoMarquee from './LogoMarquee';
 import MainMenu from './MainMenu';
 import Mansory from './Mansory';
 import TextWithFeatures from './TextWithFeatures';
@@ -18,6 +19,7 @@ export {
 	Image,
 	LanguageSelector,
 	Logo,
+	LogoMarquee,
 	MainMenu,
 	Mansory,
 	TextWithFeatures,
@@ -31,6 +33,7 @@ export const components = {
 	image: Image,
 	language_selector: LanguageSelector,
 	logo: Logo,
+	logo_marquee: LogoMarquee,
 	main_logo: MainMenu,
 	mansory: Mansory,
 	text_with_features: TextWithFeatures,

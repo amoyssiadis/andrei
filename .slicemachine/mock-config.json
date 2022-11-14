@@ -167,6 +167,11 @@
         "primary": {},
         "items": {}
       }
+    },
+    "LogoMarquee": {
+      "default": {
+        "primary": {}
+      }
     }
   }
 }
