@@ -31,3 +31,6 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+# assets not used in the project
+/_andrei-portfolio-assets

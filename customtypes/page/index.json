@@ -52,6 +52,9 @@
             },
             "floating_image": {
               "type": "SharedSlice"
+            },
+            "mansory": {
+              "type": "SharedSlice"
             }
           }
         }

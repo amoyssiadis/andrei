@@ -7,6 +7,7 @@ import Image from './Image';
 import LanguageSelector from './LanguageSelector';
 import Logo from './Logo';
 import MainMenu from './MainMenu';
+import Mansory from './Mansory';
 import TextWithFeatures from './TextWithFeatures';
 import TextWithImage from './TextWithImage';
 
@@ -18,6 +19,7 @@ export {
 	LanguageSelector,
 	Logo,
 	MainMenu,
+	Mansory,
 	TextWithFeatures,
 	TextWithImage,
 };
@@ -30,6 +32,7 @@ export const components = {
 	language_selector: LanguageSelector,
 	logo: Logo,
 	main_logo: MainMenu,
+	mansory: Mansory,
 	text_with_features: TextWithFeatures,
 	text_with_image: TextWithImage,
 };

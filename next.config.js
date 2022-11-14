@@ -19,6 +19,9 @@ const nextConfig = async () => {
       // a non-locale prefixed path e.g. `/hello`
       defaultLocale: locales[0],
     },
+    images: {
+      domains: ['andrei-portfolio.cdn.prismic.io','images.prismic.io'],
+    },
   };
 };
 

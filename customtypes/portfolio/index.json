@@ -1,0 +1,9 @@
+{
+  "id": "portfolio",
+  "label": "Portfolio",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {}
+  }
+}

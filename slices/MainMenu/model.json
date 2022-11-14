@@ -18,6 +18,14 @@
             "constraint": {},
             "thumbnails": []
           }
+        },
+        "menu": {
+          "type": "Image",
+          "config": {
+            "label": "menu image",
+            "constraint": {},
+            "thumbnails": []
+          }
         }
       },
       "items": {},

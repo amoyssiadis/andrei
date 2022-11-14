@@ -7,8 +7,8 @@ import FloatingImage from "../FloatingImage";
 const AboutTextWithButton = ({ slice }) => (
   <section>
     <div className="mx-auto mt-14 min-w-[600px] max-w-[1200px] flex-row px-4 md:flex ">
-      <div className="relative">
-        <div className="w-2/4">
+      <div className="relative md:pl-8 md:pr-8">
+        <div className="md:pr-20 ">
           <PrismicRichText field={slice.primary.about} />
         </div>
         <div className="mr-2 w-fit">
@@ -20,7 +20,7 @@ const AboutTextWithButton = ({ slice }) => (
         </div>
       </div>
 
-      <div className="mt-10 w-fit bg-red-300 md:mt-0">
+      <div className="mt-10 w-fit md:mt-0 md:mr-10 mx-auto ">
         <FloatingImage slice={slice} />
       </div>
     </div>

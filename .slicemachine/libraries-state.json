@@ -596,6 +596,14 @@
                     "constraint": {},
                     "thumbnails": []
                   }
+                },
+                "menu": {
+                  "type": "Image",
+                  "config": {
+                    "label": "menu image",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
                 }
               },
               "items": {},
@@ -618,7 +626,16 @@
                 },
                 "alt": null,
                 "copyright": null,
-                "url": "https://images.unsplash.com/photo-1593642532973-d31b6557fa68"
+                "url": "https://images.unsplash.com/photo-1587905069134-008460d7a636"
+              },
+              "menu": {
+                "dimensions": {
+                  "width": 900,
+                  "height": 500
+                },
+                "alt": null,
+                "copyright": null,
+                "url": "https://images.unsplash.com/photo-1560457079-9a6532ccb118"
               }
             },
             "slice_type": "main_logo"
@@ -633,6 +650,118 @@
             "path": "/Users/ericmilfont/Fiverr/andrei-portfolio-website/.slicemachine/assets/slices/MainMenu/default/preview.png",
             "width": 800,
             "height": 288
+          }
+        }
+      },
+      "mansory": {
+        "library": "slices",
+        "id": "mansory",
+        "name": "Mansory",
+        "description": "Mansory",
+        "model": {
+          "id": "mansory",
+          "type": "SharedSlice",
+          "name": "Mansory",
+          "description": "Mansory",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "Mansory",
+              "primary": {
+                "oneColumn": {
+                  "type": "Boolean",
+                  "config": {
+                    "label": "One Column?",
+                    "default_value": false,
+                    "placeholder_true": "true",
+                    "placeholder_false": "false"
+                  }
+                }
+              },
+              "items": {
+                "image": {
+                  "type": "Image",
+                  "config": {
+                    "label": "Placeholder image",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                },
+                "media": {
+                  "type": "Link",
+                  "config": {
+                    "label": "Media",
+                    "placeholder": "",
+                    "select": "media"
+                  }
+                },
+                "video": {
+                  "type": "Embed",
+                  "config": {
+                    "label": "Video",
+                    "placeholder": ""
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {
+                "image": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": null,
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1498050108023-c5249f4df085"
+                },
+                "media": {
+                  "link_type": "Media",
+                  "name": "mock",
+                  "kind": "image",
+                  "url": "https://source.unsplash.com/random",
+                  "size": "10kB"
+                },
+                "video": {
+                  "embed_url": "https://twitter.com/prismicio/status/1354835716430319617",
+                  "author_name": "Prismic",
+                  "author_url": "https://twitter.com/prismicio",
+                  "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">Does anyone want to create a wildly popular website for discussing &#39;Wall Street Bets&#39; using Prismic?<br><br>It may or may not have to look a lot like <a href=\"https://twitter.com/hashtag/reddit?src=hash&amp;ref_src=twsrc%5Etfw\">#reddit</a> and we won&#39;t make it private.<br><br>Just asking for some friends...</p>&mdash; Prismic (@prismicio) <a href=\"https://twitter.com/prismicio/status/1354835716430319617?ref_src=twsrc%5Etfw\">January 28, 2021</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n",
+                  "width": 550,
+                  "height": null,
+                  "type": "rich",
+                  "cache_age": "3153600000",
+                  "provider_name": "Twitter",
+                  "provider_url": "http://www.twitter.com/",
+                  "version": "1.0"
+                }
+              }
+            ],
+            "primary": {
+              "oneColumn": false
+            },
+            "slice_type": "mansory"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {
+          "default": {
+            "path": "/Users/ericmilfont/Fiverr/andrei-portfolio-website/.slicemachine/assets/slices/Mansory/default/preview.png",
+            "width": 800,
+            "height": 48
           }
         }
       },

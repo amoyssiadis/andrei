@@ -45,7 +45,9 @@
           "blocks": 1
         }
       }
-    }
+    },
+    "portfolio": {},
+    "clients": {}
   },
   "slices": {
     "Text": {
@@ -158,6 +160,12 @@
     "FloatingImage": {
       "default": {
         "primary": {}
+      }
+    },
+    "Mansory": {
+      "default": {
+        "primary": {},
+        "items": {}
       }
     }
   }
