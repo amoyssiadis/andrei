@@ -68,11 +68,12 @@ export default function GalleryModal({isOpen, setIsOpen, media}) {
                   > 
                     <XCircleIcon className="h-20" />
                   </button>
+                  <div className='text-base font-medium text-white'>{media.media.url}</div>
                 </div>
                 <div className="player-wrapper inline-flex w-full  justify-center items-center  px-4 py-2 text-base font-medium text-white">
-                  { media && media.video.embed_url && 
-                  (<div className='react-player w-full h-full aspect-video bg-gray-700'>
-                    <ReactPlayer url={media.video.embed_url} width="100%" height="100%" controls={true} loop={true} fallback={() => <div className='text-2xl text-white font-extrabold'>Loading...</div>} />
+                  { media && media.media.url && 
+                  (<div className='react-player w-full h-full aspect-video bg-gray-700 text-white'>
+                    <ReactPlayer url={media.media.url} width="100%" height="100%" controls={true} loop={true} fallback={<div className='text-2xl text-white font-extrabold'>Loading...</div>} />
                   </div>)}
                 </div>
                 

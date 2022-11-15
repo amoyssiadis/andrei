@@ -17,6 +17,13 @@
             "label": "title",
             "placeholder": ""
           }
+        },
+        "speed": {
+          "type": "Text",
+          "config": {
+            "label": "Marquee Speed",
+            "placeholder": ""
+          }
         }
       },
       "items": {
