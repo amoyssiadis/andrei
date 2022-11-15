@@ -1,8 +1,9 @@
 import { Fragment, useEffect, useState } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import { CheckIcon,XCircleIcon } from '@heroicons/react/24/outline'
-import ReactPlayer from 'react-player'
 
+import CustomVideoPlayer from './CustomVideoPlayer'
+//import Vid from '../public/video.mp4'
 
 // const CloseIcon = () => {
 //   return (<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
@@ -68,12 +69,16 @@ export default function GalleryModal({isOpen, setIsOpen, media}) {
                   > 
                     <XCircleIcon className="h-20" />
                   </button>
-                  <div className='text-base font-medium text-white'>{media.media.url}</div>
+                  
                 </div>
                 <div className="player-wrapper inline-flex w-full  justify-center items-center  px-4 py-2 text-base font-medium text-white">
+                  
                   { media && media.media.url && 
                   (<div className='react-player w-full h-full aspect-video bg-gray-700 text-white'>
-                    <ReactPlayer url={media.media.url} width="100%" height="100%" controls={true} loop={true} fallback={<div className='text-2xl text-white font-extrabold'>Loading...</div>} />
+                    <CustomVideoPlayer url={media.media.url} />
+                    {/* <ReactPlayer url={['http://localhost:3000/video.mp4']}
+                    // { "/video.mp4" || media.media.url} 
+                    width="100%" height="100%" controls={true} loop={true} fallback={<div className='text-2xl text-white font-extrabold'>Loading...</div>} /> */}
                   </div>)}
                 </div>
                 

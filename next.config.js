@@ -8,6 +8,16 @@ const nextConfig = async () => {
 
   const repository = await client.getRepository();
   const locales = repository.languages.map((lang) => lang.id);
+  // async function headers() {
+  //   return [
+  //     {
+  //       source: "/_next/:path*",
+  //       headers: [
+  //         { key: "Access-Control-Allow-Origin", value: "http://example.com" },
+  //       ],
+  //     },
+  //   ]
+  // };
 
   return {
     reactStrictMode: true,
