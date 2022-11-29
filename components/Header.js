@@ -1,15 +1,15 @@
-import * as prismicH from "@prismicio/helpers";
-import { PrismicLink, PrismicText } from "@prismicio/react";
-import { PrismicNextImage } from "@prismicio/next";
+import * as prismicH from '@prismicio/helpers'
+import { PrismicLink, PrismicText } from '@prismicio/react'
+import { PrismicNextImage } from '@prismicio/next'
 
-import { linkResolver } from "../prismicio";
-import { Bounded } from "./Bounded";
+import { linkResolver } from '../prismicio'
+import { Bounded } from './Bounded'
 
 const FlagIcon = ({ lang }) => {
-  const code = lang.substring(3).toLowerCase();
+  const code = lang.substring(3).toLowerCase()
 
-  return <span className={`fi fi-${code}`} />;
-};
+  return <span className={`fi fi-${code}`} />
+}
 
 export const Header = ({ alternateLanguages = [], navigation, settings }) => {
   return (
@@ -44,5 +44,5 @@ export const Header = ({ alternateLanguages = [], navigation, settings }) => {
         </nav> */}
       </div>
     </Bounded>
-  );
-};
+  )
+}

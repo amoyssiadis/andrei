@@ -1,8 +1,8 @@
-import { PrismicLink, PrismicRichText, PrismicText } from "@prismicio/react";
-import * as prismicH from "@prismicio/helpers";
+import { PrismicLink, PrismicRichText, PrismicText } from '@prismicio/react'
+import * as prismicH from '@prismicio/helpers'
 
-import { Bounded } from "./Bounded";
-import { Heading } from "./Heading";
+import { Bounded } from './Bounded'
+import { Heading } from './Heading'
 
 const SignUpForm = ({ settings }) => {
   return (
@@ -61,8 +61,8 @@ const SignUpForm = ({ settings }) => {
         </div>
       </form>
     </div>
-  );
-};
+  )
+}
 
 export const Footer = ({ settings }) => {
   return (
@@ -70,12 +70,12 @@ export const Footer = ({ settings }) => {
       <div className="grid grid-cols-1 justify-items-center gap-20 md:gap-24">
         {/* <SignUpForm settings={settings} /> */}
         <div className="mx-auto w-full max-w-3xl text-center text-xs font-semibold tracking-tight">
-          Proudly published using{" "}
+          Proudly published using{' '}
           <PrismicLink href="https://prismic.io" className="text-white">
             Prismic
           </PrismicLink>
         </div>
       </div>
     </Bounded>
-  );
-};
+  )
+}

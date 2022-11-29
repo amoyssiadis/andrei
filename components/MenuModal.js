@@ -1,6 +1,6 @@
 import { Fragment, useEffect, useState } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
-import { CheckIcon,XCircleIcon } from '@heroicons/react/24/outline'
+import { CheckIcon, XCircleIcon } from '@heroicons/react/24/outline'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -10,7 +10,7 @@ import Link from 'next/link'
 // </svg>
 // )}
 
-export default function MenuModal({isOpen, setIsOpen, image}) {
+export default function MenuModal({ isOpen, setIsOpen, image }) {
   const [open, setOpen] = useState(isOpen || false)
   function close() {
     setIsOpen(false)
@@ -18,18 +18,16 @@ export default function MenuModal({isOpen, setIsOpen, image}) {
   }
   useEffect(() => {
     setOpen(isOpen)
-   
+
     return () => {
-    //  second
+      //  second
     }
   }, [isOpen])
-  
+
   useEffect(() => {
     setIsOpen(open)
-    
-    return () => {
-    
-    }
+
+    return () => {}
   }, [open])
 
   return (
@@ -48,7 +46,7 @@ export default function MenuModal({isOpen, setIsOpen, image}) {
         </Transition.Child>
 
         <div className="fixed inset-0 z-10 overflow-y-auto">
-          <div className="flex min-h-full items-center min-w-full justify-end text-center ">
+          <div className="flex min-h-full min-w-full items-center justify-end text-center ">
             <Transition.Child
               as={Fragment}
               enter="ease-out duration-300"
@@ -59,20 +57,27 @@ export default function MenuModal({isOpen, setIsOpen, image}) {
               leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
             >
               <Dialog.Panel className="relative h-screen transform overflow-hidden rounded-lg  px-4 pt-5 pb-4 text-left shadow-xl transition-all  sm:w-full sm:max-w-sm sm:p-6">
-              <div className="inline-flex w-full   justify-end">
+                <div className="inline-flex w-full   justify-end">
                   <button
                     type="button"
                     className="   px-4 py-2 text-base font-medium text-white"
                     onClick={() => close()}
-                  > 
+                  >
                     <XCircleIcon className="h-20" />
                   </button>
                 </div>
                 <div className="inline-flex h-96  justify-end  px-4 py-2 text-base font-medium text-white">
-                  <Link href='/gallery'><a ><Image className='' src={image} alt="Work menu" width={200}  /></a></Link>
+                  <Link href="/gallery">
+                    <a>
+                      <Image
+                        className=""
+                        src={image}
+                        alt="Work menu"
+                        width={200}
+                      />
+                    </a>
+                  </Link>
                 </div>
-                
-                
               </Dialog.Panel>
             </Transition.Child>
           </div>

@@ -1,39 +1,35 @@
-@import "flag-icons/css/flag-icons.css";
+@import 'flag-icons/css/flag-icons.css';
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-[data-collapsible="true"].bg-white + [data-collapsible="true"].bg-white,
-[data-collapsible="true"].bg-slate-100
-  + [data-collapsible="true"].bg-slate-100 {
+[data-collapsible='true'].bg-white + [data-collapsible='true'].bg-white,
+[data-collapsible='true'].bg-slate-100
+  + [data-collapsible='true'].bg-slate-100 {
   @apply pt-0 md:pt-0;
 }
 
 body {
   @apply bg-[#EBECE6];
-  
-
 }
 
 /* mansory */
 @layer utilities {
   @variants responsive {
-      .masonry {
-          @apply columns-1 md:columns-2 gap-0 max-w-7xl mx-auto;
-      }
-      .masonry div {
-        
-        break-inside: avoid;
+    .masonry {
+      @apply mx-auto max-w-7xl columns-1 gap-0 md:columns-2;
     }
-      
+    .masonry div {
+      break-inside: avoid;
+    }
   }
 }
 
 /* video player */
 .player-wrapper {
   position: relative;
-  padding-top: 56.25% /* Player ratio: 100 / (1280 / 720) */
+  padding-top: 56.25%; /* Player ratio: 100 / (1280 / 720) */
 }
 
 .react-player {
@@ -43,18 +39,16 @@ body {
 }
 /* language selector */
 
-
 .langsprite {
   display: flex;
   justify-content: flex-end;
   transform: scale(0.6);
-  @apply w-[700px] ml-[10px] md:w-[1000px] md:ml-[150px] ;
+  @apply ml-[10px] w-[700px] md:ml-[150px] md:w-[1000px];
 }
 
 .langsprite li {
-  
   list-style-type: none;
-  
+
   background-image: url(/lang_en_pt.svg);
   background-repeat: no-repeat;
 }
@@ -68,33 +62,25 @@ body {
 }
 .langsprite li.en {
   background-position: 33px 0px;
-  
 }
 .langsprite li.pt {
   background-position: -59px 0px;
-  
 }
-
 
 /* navbar */
 .navbar {
-
   /* grid-template-columns: 1fr 2fr 1fr; */
-  @apply  mt-8 sm:mt-12 w-[900px]   sm:w-[1000px] ;
-
-
+  @apply mt-8 w-[900px] sm:mt-12   sm:w-[1000px];
 }
 
 .navsprite {
-  @apply flex items-center  justify-between    p-0 m-0 ;
+  @apply m-0 flex  items-center    justify-between p-0;
   transform: scale(0.6);
 }
 
 .navsprite li {
-  
-  
   list-style-type: none;
-  
+
   background-image: url(/menu.svg);
   background-repeat: no-repeat;
   background-size: 817px 37px;
@@ -107,21 +93,17 @@ body {
 .navsprite li.work {
   background-position: -1px 0px;
   width: 95px;
-  
 }
 .navsprite li.info {
   background-position: -213px 0px;
   width: 65px;
-  
 }
 .navsprite li.contact {
   background-position: -398px 0px;
   width: 139px;
-  
 }
 
 .navsprite li.instagram {
   background-position: -643px 0px;
   width: 176px;
-  
 }

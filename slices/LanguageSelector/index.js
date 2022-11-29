@@ -1,9 +1,9 @@
-import React from "react";
-import { PrismicRichText } from "@prismicio/react";
-import { Bounded } from "../../components/Bounded";
-import { PrismicNextImage } from "@prismicio/next";
-import * as prismicH from "@prismicio/helpers";
-import Link from "next/link";
+import React from 'react'
+import { PrismicRichText } from '@prismicio/react'
+import { Bounded } from '../../components/Bounded'
+import { PrismicNextImage } from '@prismicio/next'
+import * as prismicH from '@prismicio/helpers'
+import Link from 'next/link'
 
 const LanguageSelector = ({ slice }) => (
   <Bounded as="section">
@@ -23,6 +23,6 @@ const LanguageSelector = ({ slice }) => (
       </div>
     </div>
   </Bounded>
-);
+)
 
-export default LanguageSelector;
+export default LanguageSelector

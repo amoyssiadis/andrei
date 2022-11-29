@@ -1,9 +1,9 @@
-import { PrismicLink, PrismicRichText } from "@prismicio/react";
-import { PrismicNextImage } from "@prismicio/next";
-import * as prismicH from "@prismicio/helpers";
+import { PrismicLink, PrismicRichText } from '@prismicio/react'
+import { PrismicNextImage } from '@prismicio/next'
+import * as prismicH from '@prismicio/helpers'
 
-import { Bounded } from "../../components/Bounded";
-import { Heading } from "../../components/Heading";
+import { Bounded } from '../../components/Bounded'
+import { Heading } from '../../components/Heading'
 
 const Hero = ({ slice }) => {
   return (
@@ -38,7 +38,7 @@ const Hero = ({ slice }) => {
         )}
       </div>
     </Bounded>
-  );
-};
+  )
+}
 
-export default Hero;
+export default Hero

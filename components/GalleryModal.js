@@ -1,9 +1,9 @@
 import { Fragment, useEffect, useState } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
-import { CheckIcon,XCircleIcon } from '@heroicons/react/24/outline'
+import { CheckIcon, XCircleIcon } from '@heroicons/react/24/outline'
 import CustomVideoPlayer from './CustomVideoPlayer'
 
-export default function GalleryModal({isOpen, setIsOpen, media}) {
+export default function GalleryModal({ isOpen, setIsOpen, media }) {
   const [open, setOpen] = useState(isOpen || false)
   const [mediaItem, setMediaItem] = useState(media || null)
   function close() {
@@ -14,16 +14,14 @@ export default function GalleryModal({isOpen, setIsOpen, media}) {
     setOpen(isOpen)
     setMediaItem(media)
     return () => {
-    //  second
+      //  second
     }
   }, [isOpen])
-  
+
   useEffect(() => {
     setIsOpen(open)
     setMediaItem(media)
-    return () => {
-    
-    }
+    return () => {}
   }, [open])
 
   return (
@@ -42,7 +40,7 @@ export default function GalleryModal({isOpen, setIsOpen, media}) {
         </Transition.Child>
 
         <div className="fixed inset-0 z-10 overflow-y-auto">
-          <div className="flex h-screen items-center mx-auto max-w-7xl justify-center text-center ">
+          <div className="mx-auto flex h-screen max-w-7xl items-center justify-center text-center ">
             <Transition.Child
               as={Fragment}
               enter="ease-out duration-300"
@@ -52,29 +50,26 @@ export default function GalleryModal({isOpen, setIsOpen, media}) {
               leaveFrom="opacity-100 translate-y-0 sm:scale-100"
               leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
             >
-              <Dialog.Panel className="relative  transform overflow-hidden rounded-lg  px-4 pt-5 pb-4 text-left shadow-xl transition-all  w-full  sm:p-6">
-              <div className="inline-flex w-full justify-end">
+              <Dialog.Panel className="relative  w-full transform overflow-hidden  rounded-lg px-4 pt-5 pb-4 text-left shadow-xl  transition-all  sm:p-6">
+                <div className="inline-flex w-full justify-end">
                   <button
                     type="button"
                     className=" px-4 py-2 text-base font-medium text-white"
                     onClick={() => close()}
-                  > 
+                  >
                     <XCircleIcon className="h-20" />
                   </button>
-                  
                 </div>
-                <div className="player-wrapper inline-flex w-full  justify-center items-center  px-4 py-2 text-base font-medium text-white">
-                  
-                  { media && media.media.url && 
-                  (<div className='react-player w-full h-full aspect-video bg-gray-700 text-white'>
-                    <CustomVideoPlayer url={media.media.url} />
-                    {/* <ReactPlayer url={['http://localhost:3000/video.mp4']}
+                <div className="player-wrapper inline-flex w-full  items-center justify-center  px-4 py-2 text-base font-medium text-white">
+                  {media && media.media.url && (
+                    <div className="react-player aspect-video h-full w-full bg-gray-700 text-white">
+                      <CustomVideoPlayer url={media.media.url} />
+                      {/* <ReactPlayer url={['http://localhost:3000/video.mp4']}
                     // { "/video.mp4" || media.media.url} 
                     width="100%" height="100%" controls={true} loop={true} fallback={<div className='text-2xl text-white font-extrabold'>Loading...</div>} /> */}
-                  </div>)}
+                    </div>
+                  )}
                 </div>
-                
-                
               </Dialog.Panel>
             </Transition.Child>
           </div>

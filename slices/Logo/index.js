@@ -1,8 +1,8 @@
-import React from "react";
-import * as prismicH from "@prismicio/helpers";
-import { Bounded } from "../../components/Bounded";
-import { PrismicNextImage } from "@prismicio/next";
-import Link from "next/link";
+import React from 'react'
+import * as prismicH from '@prismicio/helpers'
+import { Bounded } from '../../components/Bounded'
+import { PrismicNextImage } from '@prismicio/next'
+import Link from 'next/link'
 const Logo = ({ slice }) => (
   <Bounded as="section" className="bg-white">
     <div className="flex flex-col items-center justify-center">
@@ -21,6 +21,6 @@ const Logo = ({ slice }) => (
       </div>
     </div>
   </Bounded>
-);
+)
 
-export default Logo;
+export default Logo

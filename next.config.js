@@ -1,13 +1,13 @@
-const prismic = require("@prismicio/client");
+const prismic = require('@prismicio/client')
 
-const sm = require("./sm.json");
+const sm = require('./sm.json')
 
 /** @type {import('next').NextConfig} */
 const nextConfig = async () => {
-  const client = prismic.createClient(sm.apiEndpoint);
+  const client = prismic.createClient(sm.apiEndpoint)
 
-  const repository = await client.getRepository();
-  const locales = repository.languages.map((lang) => lang.id);
+  const repository = await client.getRepository()
+  const locales = repository.languages.map((lang) => lang.id)
   // async function headers() {
   //   return [
   //     {
@@ -30,9 +30,9 @@ const nextConfig = async () => {
       defaultLocale: locales[0],
     },
     images: {
-      domains: ['andrei-portfolio.cdn.prismic.io','images.prismic.io'],
+      domains: ['andrei-portfolio.cdn.prismic.io', 'images.prismic.io'],
     },
-  };
-};
+  }
+}
 
-module.exports = nextConfig;
+module.exports = nextConfig

@@ -1,7 +1,7 @@
-import React from "react";
-import { PrismicRichText } from "@prismicio/react";
-import { PrismicNextImage } from "@prismicio/next";
-import * as prismicH from "@prismicio/helpers";
+import React from 'react'
+import { PrismicRichText } from '@prismicio/react'
+import { PrismicNextImage } from '@prismicio/next'
+import * as prismicH from '@prismicio/helpers'
 
 const FloatingImage = ({ slice }) => (
   <div className="w-[200px]">
@@ -13,6 +13,6 @@ const FloatingImage = ({ slice }) => (
       />
     )}
   </div>
-);
+)
 
-export default FloatingImage;
+export default FloatingImage

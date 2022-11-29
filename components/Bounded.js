@@ -1,8 +1,8 @@
-import clsx from "clsx";
+import clsx from 'clsx'
 
 export const Bounded = ({
-  as: Comp = "div",
-  yPadding = "base",
+  as: Comp = 'div',
+  yPadding = 'base',
   collapsible = true,
   className,
   children,
@@ -19,5 +19,5 @@ export const Bounded = ({
     >
       <div className="mx-auto w-full max-w-6xl ">{children}</div>
     </Comp>
-  );
-};
+  )
+}

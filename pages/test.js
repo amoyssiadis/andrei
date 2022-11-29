@@ -1,40 +1,42 @@
-import Head from "next/head";
-import { SliceZone } from "@prismicio/react";
-import * as prismicH from "@prismicio/helpers";
+import Head from 'next/head'
+import { SliceZone } from '@prismicio/react'
+import * as prismicH from '@prismicio/helpers'
 
-import { createClient } from "../prismicio";
-import { components } from "../slices";
-import { Layout } from "../components/Layout";
-import { useEffect, useRef } from "react";
-
-
+import { createClient } from '../prismicio'
+import { components } from '../slices'
+import { Layout } from '../components/Layout'
+import { useEffect, useRef } from 'react'
 
 const Index = ({ page, navigation, settings }) => {
   const videoRef = useRef()
 
   useEffect(() => {
-    setTimeout(()=>{
+    setTimeout(() => {
       videoRef.current.play()
-    },5000)
-  }, []);
-  const backgroundVideo = "https://andrei-portfolio.cdn.prismic.io/andrei-portfolio/ce1c0eb0-544a-4999-b90b-036ed15337fe_BJORK++DIGITAL-+MAKING+OF+FILTROS+DE+INSTAGRAM.webm"
-  return <Layout title={"Home"}>
-    <video
+    }, 5000)
+  }, [])
+  const backgroundVideo =
+    'https://andrei-portfolio.cdn.prismic.io/andrei-portfolio/ce1c0eb0-544a-4999-b90b-036ed15337fe_BJORK++DIGITAL-+MAKING+OF+FILTROS+DE+INSTAGRAM.webm'
+  return (
+    <Layout title={'Home'}>
+      <video
         ref={videoRef}
         controls
         width="250"
         loop
         muted
         style={{
-          position: "relative",
-          width: "100%",
-          height: "15rem",
+          position: 'relative',
+          width: '100%',
+          height: '15rem',
           left: 0,
           top: 0,
-        }}>
-      <source src={backgroundVideo} type="video/mp4"/>
-    </video>
-  </Layout>
+        }}
+      >
+        <source src={backgroundVideo} type="video/mp4" />
+      </video>
+    </Layout>
+  )
   return (
     <Layout
       alternateLanguages={page.alternate_languages}
@@ -48,17 +50,17 @@ const Index = ({ page, navigation, settings }) => {
         Testing
       </div>
     </Layout>
-  );
-};
+  )
+}
 
-export default Index;
+export default Index
 
 export async function getStaticProps({ locale, previewData }) {
-  const client = createClient({ previewData });
+  const client = createClient({ previewData })
 
-  const page = await client.getByUID("page", "home", { lang: locale });
-  const navigation = await client.getSingle("navigation", { lang: locale });
-  const settings = await client.getSingle("settings", { lang: locale });
+  const page = await client.getByUID('page', 'home', { lang: locale })
+  const navigation = await client.getSingle('navigation', { lang: locale })
+  const settings = await client.getSingle('settings', { lang: locale })
 
   return {
     props: {
@@ -66,5 +68,5 @@ export async function getStaticProps({ locale, previewData }) {
       navigation,
       settings,
     },
-  };
+  }
 }

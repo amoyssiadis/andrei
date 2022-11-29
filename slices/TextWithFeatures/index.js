@@ -1,9 +1,9 @@
-import { PrismicRichText } from "@prismicio/react";
-import { PrismicNextImage } from "@prismicio/next";
-import * as prismicH from "@prismicio/helpers";
+import { PrismicRichText } from '@prismicio/react'
+import { PrismicNextImage } from '@prismicio/next'
+import * as prismicH from '@prismicio/helpers'
 
-import { Bounded } from "../../components/Bounded";
-import { Heading } from "../../components/Heading";
+import { Bounded } from '../../components/Bounded'
+import { Heading } from '../../components/Heading'
 
 const TextWithFeatures = ({ slice }) => {
   return (
@@ -52,7 +52,7 @@ const TextWithFeatures = ({ slice }) => {
         </ul>
       </div>
     </Bounded>
-  );
-};
+  )
+}
 
-export default TextWithFeatures;
+export default TextWithFeatures
