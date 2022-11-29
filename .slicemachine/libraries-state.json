@@ -743,6 +743,33 @@
               },
               "items": {},
               "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            },
+            {
+              "id": "gallery",
+              "name": "Gallery",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "MainLogo",
+              "primary": {
+                "logo": {
+                  "type": "Image",
+                  "config": {
+                    "label": "logo",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                },
+                "menu": {
+                  "type": "Image",
+                  "config": {
+                    "label": "menu image",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
             }
           ]
         },
@@ -761,7 +788,7 @@
                 },
                 "alt": null,
                 "copyright": null,
-                "url": "https://images.unsplash.com/photo-1587905069134-008460d7a636"
+                "url": "https://images.unsplash.com/photo-1491975474562-1f4e30bc9468"
               },
               "menu": {
                 "dimensions": {
@@ -770,7 +797,35 @@
                 },
                 "alt": null,
                 "copyright": null,
-                "url": "https://images.unsplash.com/photo-1560457079-9a6532ccb118"
+                "url": "https://images.unsplash.com/photo-1491975474562-1f4e30bc9468"
+              }
+            },
+            "slice_type": "main_logo"
+          },
+          "gallery": {
+            "variation": "gallery",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {}
+            ],
+            "primary": {
+              "logo": {
+                "dimensions": {
+                  "width": 900,
+                  "height": 500
+                },
+                "alt": null,
+                "copyright": null,
+                "url": "https://images.unsplash.com/photo-1545239351-1141bd82e8a6"
+              },
+              "menu": {
+                "dimensions": {
+                  "width": 900,
+                  "height": 500
+                },
+                "alt": null,
+                "copyright": null,
+                "url": "https://images.unsplash.com/photo-1493119508027-2b584f234d6c"
               }
             },
             "slice_type": "main_logo"
