@@ -58,6 +58,9 @@
             },
             "logo_marquee": {
               "type": "SharedSlice"
+            },
+            "footer": {
+              "type": "SharedSlice"
             }
           }
         }

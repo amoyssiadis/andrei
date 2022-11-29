@@ -172,6 +172,11 @@
       "default": {
         "primary": {}
       }
+    },
+    "Footer": {
+      "default": {
+        "primary": {}
+      }
     }
   }
 }

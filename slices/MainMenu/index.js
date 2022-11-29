@@ -12,14 +12,14 @@ import Alert from "../../components/Alert";
 
 const MainMenu = ({ slice }) => {
   const router = useRouter();
-  const style = router.asPath === "/" ? "h-screen" : "";
+  const style = router.asPath === "/" ? "h-screen -mt-32" : "";
   const [modalOpen, setModalOpen] = useState(false);
   const [alertOpen, setAlertOpen] = useState(false);
   const email = "andrei@andrei.com"; //prismicH.asText(slice.primary.email);
   return (
-    <Bounded as="section" className="relative ">
-      <div className={`${style} mainMenu {style}  flex flex-col items-center `}>
-        <div className="justify-right m-auto mb-6  flex w-[700px] flex-col items-end ">
+    <Bounded as="section" className=" bg-yellow-200  overflow-hidden     ">
+      <div className={`${style} flex flex-col items-center justify-center`}>
+        <div className=" mb-12  flex  flex-col  ">
           <div className="langsel">
             <ul className="langsprite">
               <Link href="#en">
@@ -35,22 +35,22 @@ const MainMenu = ({ slice }) => {
             </ul>
           </div>
         </div>
-        <div className="flex flex-col items-center justify-center">
-          <div className="relative w-full max-w-2xl md:w-[600px]">
+        <div className="flex flex-col items-center justify-center   ">
+          <div className="relative  sm:w-[600px] w-[300px] ">
             <Link href="/">
               <a>
                 {prismicH.isFilled.image(slice.primary.logo) && (
                   <PrismicNextImage
                     field={slice.primary.logo}
+                    className=" "
                     layout="responsive"
-                    className="relative"
                   />
                 )}
               </a>
             </Link>
           </div>
         </div>
-        <div className="navbar">
+        <div className="navbar sm:transform-none scale-[0.56] ">
           <ul className="navsprite">
             
               <a onClick={() => setModalOpen(true)}>
