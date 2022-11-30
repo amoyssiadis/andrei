@@ -9,6 +9,7 @@ import MenuModal from '../../components/MenuModal'
 import MenuModalImage from '../../public/portfoliomenu.svg'
 import Alert from '../../components/Alert'
 import clsx from 'clsx'
+import useWindowDimensions from '../../lib/useWindowDimensions'
 
 const MainMenu = ({ slice }) => {
   const router = useRouter()
@@ -16,14 +17,16 @@ const MainMenu = ({ slice }) => {
   const [modalOpen, setModalOpen] = useState(false)
   const [alertOpen, setAlertOpen] = useState(false)
   const email = 'andrei@andrei.com' //prismicH.asText(slice.primary.email);
-  console.log(slice.variation)
-  if (slice.variation === 'gallery') {
+  //console.log(slice.variation)
+  const { width, height } = useWindowDimensions()
+  //console.log('dimensions: ', width, height)
+  if (slice.variation === 'gallery' && width > 1000) {
     return (
-      <Bounded as="section" className=" overflow-hidden  bg-yellow-200 ">
-        <div className={`${style} flex flex-col items-center justify-center`}>
-          <div className=" mb-12  flex  flex-col  ">
-            <div className="langsel">
-              <ul className="langsprite">
+      <Bounded as="section" className=" overflow-hidden  bg-black ">
+        <div className={`${style} flex flex-row items-center justify-center  `}>
+          <div className=" flex flex-col  py-4  sm:order-last  ">
+            <div className="">
+              <ul className="langsprite-gallery filter-white">
                 <Link href="#en">
                   <a>
                     <li className="en"></li>
@@ -38,13 +41,13 @@ const MainMenu = ({ slice }) => {
             </div>
           </div>
           <div className="flex flex-col items-center justify-center   ">
-            <div className="relative  w-[300px] sm:w-[600px] ">
+            <div className="relative  w-[300px] sm:w-[300px] ">
               <Link href="/">
                 <a>
                   {prismicH.isFilled.image(slice.primary.logo) && (
                     <PrismicNextImage
                       field={slice.primary.logo}
-                      className=" "
+                      className="filter-white "
                       layout="responsive"
                     />
                   )}
@@ -52,8 +55,8 @@ const MainMenu = ({ slice }) => {
               </Link>
             </div>
           </div>
-          <div className="navbar scale-[0.56] sm:transform-none ">
-            <ul className="navsprite">
+          <div className="navbar-gallery scale-[0.56] sm:transform-none ">
+            <ul className="navsprite-gallery filter-white">
               <a onClick={() => setModalOpen(true)}>
                 <li className="work"></li>
               </a>
@@ -91,12 +94,14 @@ const MainMenu = ({ slice }) => {
       </Bounded>
     )
   }
+  const bg = slice.variation === 'gallery' ? 'bg-black' : ''
+  const filter = slice.variation === 'gallery' ? 'filter-white' : ''
   return (
-    <Bounded as="section" className=" overflow-hidden  bg-yellow-200 ">
+    <Bounded as="section" className={` overflow-hidden   ${bg} `}>
       <div className={`${style} flex flex-col items-center justify-center`}>
         <div className=" mb-12  flex  flex-col  ">
           <div className="langsel">
-            <ul className="langsprite">
+            <ul className={`langsprite ${filter} `}>
               <Link href="#en">
                 <a>
                   <li className="en"></li>
@@ -117,7 +122,7 @@ const MainMenu = ({ slice }) => {
                 {prismicH.isFilled.image(slice.primary.logo) && (
                   <PrismicNextImage
                     field={slice.primary.logo}
-                    className=" "
+                    className={` ${filter} `}
                     layout="responsive"
                   />
                 )}
@@ -126,7 +131,7 @@ const MainMenu = ({ slice }) => {
           </div>
         </div>
         <div className="navbar scale-[0.56] sm:transform-none ">
-          <ul className="navsprite">
+          <ul className={`navsprite ${filter} `}>
             <a onClick={() => setModalOpen(true)}>
               <li className="work"></li>
             </a>
@@ -153,8 +158,8 @@ const MainMenu = ({ slice }) => {
               </a>
             </Link>
           </ul>
-          <Alert email={email} isOpen={alertOpen} setIsOpen={setAlertOpen} />
         </div>
+        <Alert email={email} isOpen={alertOpen} setIsOpen={setAlertOpen} />
         <MenuModal
           isOpen={modalOpen}
           setIsOpen={setModalOpen}

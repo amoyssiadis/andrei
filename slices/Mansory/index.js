@@ -24,7 +24,7 @@ const Mansory = ({ slice }) => {
           const height = item.image.dimensions.height || 400
 
           return (
-            <div className="cursor-pointer p-1 hover:bg-gray-700" key={i}>
+            <div className=" cursor-pointer p-1 hover:bg-gray-700" key={i}>
               <a onClick={() => openMedia(item)}>
                 <img
                   className=""

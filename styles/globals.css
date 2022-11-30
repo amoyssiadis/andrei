@@ -11,7 +11,7 @@
 }
 
 body {
-  @apply bg-[#EBECE6];
+  @apply bg-[#D6DBDB];
 }
 
 /* mansory */
@@ -39,11 +39,39 @@ body {
 }
 /* language selector */
 
+/* default */
+.langsprite-gallery {
+  display: flex;
+  justify-content: flex-end;
+  transform: scale(0.6);
+}
+
+.langsprite-gallery li {
+  list-style-type: none;
+
+  background-image: url(/lang_en_pt.svg);
+  background-repeat: no-repeat;
+}
+
+.langsprite-gallery li:hover {
+  cursor: pointer;
+}
+.langsprite-gallery li {
+  width: 88px;
+  height: 37px;
+}
+.langsprite-gallery li.en {
+  background-position: 33px 0px;
+}
+.langsprite-gallery li.pt {
+  background-position: -59px 0px;
+}
+/* default */
 .langsprite {
   display: flex;
   justify-content: flex-end;
   transform: scale(0.6);
-  @apply ml-[10px] w-[700px] md:ml-[150px] md:w-[1000px];
+  @apply ml-[10px] w-[700px]  md:ml-[150px] md:w-[1000px];
 }
 
 .langsprite li {
@@ -68,6 +96,52 @@ body {
 }
 
 /* navbar */
+.filter-white {
+  filter: invert(100%) sepia(0%) saturate(7491%) hue-rotate(264deg)
+    brightness(99%) contrast(103%);
+}
+/* gallery */
+.navbar-gallery {
+  /* grid-template-columns: 1fr 2fr 1fr; */
+  @apply w-[900px]  sm:w-[1000px];
+}
+
+.navsprite-gallery {
+  @apply m-0 flex  items-center    justify-between p-0;
+  transform: scale(0.6);
+}
+
+.navsprite-gallery li {
+  list-style-type: none;
+
+  background-image: url(/menu.svg);
+  background-repeat: no-repeat;
+  background-size: 817px 37px;
+  height: 38px;
+}
+.navsprite-gallery li:hover {
+  cursor: pointer;
+  @apply border-b-2 border-black;
+}
+.navsprite-gallery li.work {
+  background-position: -30px 0px;
+  width: 95px;
+}
+.navsprite-gallery li.info {
+  background-position: -226px 0px;
+  width: 65px;
+}
+.navsprite-gallery li.contact {
+  background-position: -398px 0px;
+  width: 130px;
+}
+
+.navsprite-gallery li.instagram {
+  background-position: -624px 0px;
+  width: 166px;
+}
+
+/* default navbar */
 .navbar {
   /* grid-template-columns: 1fr 2fr 1fr; */
   @apply mt-8 w-[900px] sm:mt-12   sm:w-[1000px];
@@ -91,19 +165,19 @@ body {
   @apply border-b-2 border-black;
 }
 .navsprite li.work {
-  background-position: -1px 0px;
+  background-position: -30px 0px;
   width: 95px;
 }
 .navsprite li.info {
-  background-position: -213px 0px;
+  background-position: -226px 0px;
   width: 65px;
 }
 .navsprite li.contact {
   background-position: -398px 0px;
-  width: 139px;
+  width: 130px;
 }
 
 .navsprite li.instagram {
-  background-position: -643px 0px;
-  width: 176px;
+  background-position: -624px 0px;
+  width: 166px;
 }

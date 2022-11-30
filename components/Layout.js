@@ -8,13 +8,13 @@ export const Layout = ({
   children,
 }) => {
   return (
-    <div className="bg-red-200  text-slate-800   ">
+    <div className=" text-[#090709]   ">
       {/* <Header
         alternateLanguages={alternateLanguages}
         navigation={navigation}
         settings={settings}
       /> */}
-      <main className=" mx-auto h-full w-screen overflow-x-hidden bg-green-200">
+      <main className=" mx-auto h-full w-screen overflow-x-hidden ">
         {children}
       </main>
     </div>
