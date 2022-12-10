@@ -27,9 +27,9 @@ export default function Alert({ email, isOpen, setIsOpen }) {
     setOpen(false)
   }
   return (
-    <div className="absolute sm:mt-[20rem] ">
+    <div className="absolute mt-[12.5rem] sm:mt-[20rem] ">
       {open && (
-        <div className="rounded-md bg-green-50 p-4">
+        <div className="rounded-md  p-4">
           <div className="flex">
             <div className="flex-shrink-0">
               <CheckCircleIcon

@@ -8,8 +8,8 @@ const LogoMarquee = ({ slice }) => {
   const [speed, setSpeed] = useState(slice.primary.speed || 40)
   // console.log(slice?.items)
   return (
-    <section className="mt-4 mb-4 p-1 ">
-      <p className="my-4 text-center text-lg font-bold sm:text-xl ">
+    <section className="mb-4 mt-12  p-1 sm:mt-24 ">
+      <p className="my-4 text-center text-lg font-bold tracking-wider sm:text-xl ">
         {slice.primary.title}
       </p>
       <div className="mx-auto flex max-w-5xl justify-center ">

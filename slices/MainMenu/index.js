@@ -13,10 +13,10 @@ import useWindowDimensions from '../../lib/useWindowDimensions'
 
 const MainMenu = ({ slice }) => {
   const router = useRouter()
-  const style = router.asPath === '/' ? 'h-screen -mt-32' : ''
+  const style = router.asPath === '/' ? 'h-screen -mt-24' : ''
   const [modalOpen, setModalOpen] = useState(false)
   const [alertOpen, setAlertOpen] = useState(false)
-  const email = 'andrei@andrei.com' //prismicH.asText(slice.primary.email);
+  const email = 'andrei@andrei.com.br' //prismicH.asText(slice.primary.email);
   //console.log(slice.variation)
   const { width, height } = useWindowDimensions()
   //console.log('dimensions: ', width, height)
@@ -77,11 +77,13 @@ const MainMenu = ({ slice }) => {
                 ></li>
               </a>
 
-              <Link href="https://instagram.com/amoyssiadis">
-                <a>
-                  <li className="instagram"></li>
-                </a>
-              </Link>
+              <a
+                href="https://instagram.com/amoyssiadis"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <li className="instagram"></li>
+              </a>
             </ul>
             <Alert email={email} isOpen={alertOpen} setIsOpen={setAlertOpen} />
           </div>
@@ -99,9 +101,9 @@ const MainMenu = ({ slice }) => {
   return (
     <Bounded as="section" className={` overflow-hidden   ${bg} `}>
       <div className={`${style} flex flex-col items-center justify-center`}>
-        <div className=" mb-12  flex  flex-col  ">
-          <div className="langsel">
-            <ul className={`langsprite ${filter} `}>
+        <div className="mb-9 flex  flex-col  sm:mb-12  ">
+          <div className="langsel ml-36 scale-[0.56] sm:ml-0 sm:transform-none">
+            <ul className={`langsprite  ${filter} `}>
               <Link href="#en">
                 <a>
                   <li className="en"></li>
@@ -152,11 +154,13 @@ const MainMenu = ({ slice }) => {
               ></li>
             </a>
 
-            <Link href="https://instagram.com/amoyssiadis">
-              <a>
-                <li className="instagram"></li>
-              </a>
-            </Link>
+            <a
+              href="https://instagram.com/amoyssiadis"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <li className="instagram"></li>
+            </a>
           </ul>
         </div>
         <Alert email={email} isOpen={alertOpen} setIsOpen={setAlertOpen} />
