@@ -180,7 +180,7 @@ const MainMenu = ({ slice }) => {
           setIsOpen={setAlertOpen}
           variation={slice.variation}
         />
-        <SidePortfolioMenu />
+        {slice.variation === 'gallery' && <SidePortfolioMenu />}
         <GoToTop />
         <MenuModal
           isOpen={modalOpen}
