@@ -66,17 +66,27 @@ export default function MenuModal({ isOpen, setIsOpen, image }) {
                     <XCircleIcon className="h-20" />
                   </button>
                 </div>
-                <div className="inline-flex h-96  justify-end  px-4 py-2 text-base font-medium text-white">
-                  <Link href="/gallery">
-                    <a>
-                      <Image
-                        className=""
-                        src={image}
-                        alt="Work menu"
-                        width={200}
-                      />
-                    </a>
-                  </Link>
+                <div className="">
+                  <div className="portfoliomenu ">
+                    <ul className="portfoliomenu-sprite ">
+                      <Link href="/gallery">
+                        <a>
+                          <li className="editing"></li>
+                        </a>
+                      </Link>
+
+                      <Link href="/gallery">
+                        <a>
+                          <li className="original"></li>
+                        </a>
+                      </Link>
+                      <Link href="/gallery">
+                        <a>
+                          <li className="other"></li>
+                        </a>
+                      </Link>
+                    </ul>
+                  </div>
                 </div>
               </Dialog.Panel>
             </Transition.Child>

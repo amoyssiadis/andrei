@@ -9,6 +9,7 @@ import MenuModalImage from '../../public/portfoliomenu.svg'
 import Alert from '../../components/Alert'
 import clsx from 'clsx'
 import useWindowDimensions from '../../lib/useWindowDimensions'
+import SidePortfolioMenu from '../../components/SidePortfolioMenu'
 
 const MainMenu = ({ slice }) => {
   const router = useRouter()
@@ -93,6 +94,7 @@ const MainMenu = ({ slice }) => {
               variation={slice.variation}
             />
           </div>
+          <SidePortfolioMenu />
           <MenuModal
             isOpen={modalOpen}
             setIsOpen={setModalOpen}
