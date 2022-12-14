@@ -839,7 +839,12 @@
           "default": {
             "path": "/Users/ericmilfont/Fiverr/andrei-portfolio-website/.slicemachine/assets/slices/MainMenu/default/preview.png",
             "width": 800,
-            "height": 288
+            "height": 504
+          },
+          "gallery": {
+            "path": "/Users/ericmilfont/Fiverr/andrei-portfolio-website/.slicemachine/assets/slices/MainMenu/gallery/preview.png",
+            "width": 800,
+            "height": 504
           }
         }
       },
@@ -1153,6 +1158,71 @@
           "extension": "js"
         },
         "screenshotPaths": {}
+      },
+      "top_bar": {
+        "library": "slices",
+        "id": "top_bar",
+        "name": "TopBar",
+        "description": "TopBar",
+        "model": {
+          "id": "top_bar",
+          "type": "SharedSlice",
+          "name": "TopBar",
+          "description": "TopBar",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "TopBar",
+              "primary": {
+                "image": {
+                  "type": "Image",
+                  "config": {
+                    "label": "image",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {}
+            ],
+            "primary": {
+              "image": {
+                "dimensions": {
+                  "width": 900,
+                  "height": 500
+                },
+                "alt": null,
+                "copyright": null,
+                "url": "https://images.unsplash.com/photo-1560457079-9a6532ccb118"
+              }
+            },
+            "slice_type": "top_bar"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {
+          "default": {
+            "path": "/Users/ericmilfont/Fiverr/andrei-portfolio-website/.slicemachine/assets/slices/TopBar/default/preview.png",
+            "width": 800,
+            "height": 800
+          }
+        }
       }
     }
   }

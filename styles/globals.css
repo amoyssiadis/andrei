@@ -184,13 +184,11 @@ body {
 
 /* mansory */
 @layer utilities {
-  @variants responsive {
-    .masonry {
-      @apply mx-auto max-w-7xl columns-1 gap-0 md:columns-2;
-    }
-    .masonry div {
-      break-inside: avoid;
-    }
+  .masonry {
+    @apply mx-auto min-h-screen max-w-5xl columns-1 gap-0 pt-20 md:columns-2;
+  }
+  .masonry div {
+    break-inside: avoid;
   }
 }
 
@@ -219,27 +217,35 @@ body {
 
   background-image: url(/lang_en_pt.svg);
   background-repeat: no-repeat;
+  background-size: 88px 37px;
 }
 
-.langsprite-gallery li:hover {
+.langsprite-gallery li.en:hover,
+.langsprite-gallery li.pt:hover {
   cursor: pointer;
+  @apply border-b-2 border-black;
 }
 .langsprite-gallery li {
-  width: 88px;
-  height: 37px;
+  @apply h-[37px];
 }
 .langsprite-gallery li.en {
-  background-position: 33px 0px;
+  background-position: 0px 0px;
+  width: 30px;
+}
+.langsprite-gallery li.spacer {
+  background-position: -31px 0px;
+  width: 30px;
 }
 .langsprite-gallery li.pt {
-  background-position: -59px 0px;
+  background-position: -61px 0px;
+  width: 30px;
 }
 /* default */
 .langsprite {
   display: flex;
   justify-content: flex-end;
   transform: scale(0.6);
-  @apply ml-[10px] w-[700px]  sm:ml-[150px] sm:w-[1000px];
+  @apply -ml-[50px] w-[700px]  sm:ml-[90px] sm:w-[1000px];
 }
 
 .langsprite li {
@@ -247,20 +253,28 @@ body {
 
   background-image: url(/lang_en_pt.svg);
   background-repeat: no-repeat;
+  background-size: 88px 37px;
 }
 
-.langsprite li:hover {
+.langsprite li.en:hover,
+.langsprite li.pt:hover {
   cursor: pointer;
+  @apply border-b-2 border-black;
 }
 .langsprite li {
-  width: 88px;
-  height: 37px;
+  @apply h-[37px];
 }
 .langsprite li.en {
-  background-position: 33px 0px;
+  background-position: 0px 0px;
+  width: 30px;
+}
+.langsprite li.spacer {
+  background-position: -31px 0px;
+  width: 30px;
 }
 .langsprite li.pt {
-  background-position: -59px 0px;
+  background-position: -61px 0px;
+  width: 30px;
 }
 
 /* navbar */
@@ -348,4 +362,16 @@ body {
 .navsprite li.instagram {
   background-position: -624px 0px;
   width: 166px;
+}
+
+/** TOP BAR **/
+.topbar {
+  position: fixed;
+  top: 0;
+  mix-blend-mode: exclusion;
+  z-index: 0;
+  width: 100%;
+  height: 2%;
+  min-height: 10px;
+  overflow: hidden;
 }

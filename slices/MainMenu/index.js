@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { PrismicRichText } from '@prismicio/react'
 import * as prismicH from '@prismicio/helpers'
 import { Bounded } from '../../components/Bounded'
 import { PrismicNextImage } from '@prismicio/next'
@@ -19,10 +18,11 @@ const MainMenu = ({ slice }) => {
   const email = 'andrei@andrei.com.br' //prismicH.asText(slice.primary.email);
   //console.log(slice.variation)
   const { width, height } = useWindowDimensions()
-  //console.log('dimensions: ', width, height)
+
+  // GALERY DESKTOP MAIN MENU
   if (slice.variation === 'gallery' && width > 1000) {
     return (
-      <Bounded as="section" className=" overflow-hidden  bg-black ">
+      <Bounded as="section" className=" overflow-hidden  bg-black py-10 ">
         <div className={`${style} flex flex-row items-center justify-center  `}>
           <div className=" flex flex-col  py-4  sm:order-last  ">
             <div className="">
@@ -32,6 +32,7 @@ const MainMenu = ({ slice }) => {
                     <li className="en"></li>
                   </a>
                 </Link>
+                <li className="spacer"></li>
                 <Link href="#pt">
                   <a>
                     <li className="pt"></li>
@@ -55,7 +56,7 @@ const MainMenu = ({ slice }) => {
               </Link>
             </div>
           </div>
-          <div className="navbar-gallery scale-[0.56] sm:transform-none ">
+          <div className="navbar-gallery scale-[0.56] sm:scale-[0.9] ">
             <ul className="navsprite-gallery filter-white">
               <a onClick={() => setModalOpen(true)}>
                 <li className="work"></li>
@@ -85,7 +86,12 @@ const MainMenu = ({ slice }) => {
                 <li className="instagram"></li>
               </a>
             </ul>
-            <Alert email={email} isOpen={alertOpen} setIsOpen={setAlertOpen} />
+            <Alert
+              email={email}
+              isOpen={alertOpen}
+              setIsOpen={setAlertOpen}
+              variation={slice.variation}
+            />
           </div>
           <MenuModal
             isOpen={modalOpen}
@@ -102,13 +108,14 @@ const MainMenu = ({ slice }) => {
     <Bounded as="section" className={` overflow-hidden   ${bg} `}>
       <div className={`${style} flex flex-col items-center justify-center`}>
         <div className="mb-9 flex  flex-col  sm:mb-12  ">
-          <div className="langsel ml-36 scale-[0.56] sm:ml-0 sm:transform-none">
+          <div className="langsel ml-36 scale-[0.56]  sm:ml-0 sm:transform-none">
             <ul className={`langsprite  ${filter} `}>
               <Link href="#en">
                 <a>
                   <li className="en"></li>
                 </a>
               </Link>
+              <li className="spacer"></li>
               <Link href="#pt">
                 <a>
                   <li className="pt"></li>
@@ -163,7 +170,12 @@ const MainMenu = ({ slice }) => {
             </a>
           </ul>
         </div>
-        <Alert email={email} isOpen={alertOpen} setIsOpen={setAlertOpen} />
+        <Alert
+          email={email}
+          isOpen={alertOpen}
+          setIsOpen={setAlertOpen}
+          variation={slice.variation}
+        />
         <MenuModal
           isOpen={modalOpen}
           setIsOpen={setModalOpen}

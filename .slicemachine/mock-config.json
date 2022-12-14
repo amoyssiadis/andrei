@@ -177,6 +177,11 @@
       "default": {
         "primary": {}
       }
+    },
+    "TopBar": {
+      "default": {
+        "primary": {}
+      }
     }
   }
 }

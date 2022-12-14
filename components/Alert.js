@@ -1,7 +1,8 @@
 import { CheckCircleIcon, XMarkIcon } from '@heroicons/react/20/solid'
 import { useEffect, useState } from 'react'
+import useWindowDimensions from '../lib/useWindowDimensions'
 
-export default function Alert({ email, isOpen, setIsOpen }) {
+export default function Alert({ email, isOpen, setIsOpen, variation = null }) {
   const [open, setOpen] = useState(isOpen || false)
   function close() {
     setIsOpen(false)
@@ -26,24 +27,36 @@ export default function Alert({ email, isOpen, setIsOpen }) {
     setIsOpen(false)
     setOpen(false)
   }
+  const { width, height } = useWindowDimensions()
+  let alertVariationClass = 'mt-[12.5rem] sm:mt-[20rem]' //default variation value
+
+  if (variation === 'gallery') {
+    alertVariationClass = 'text-white'
+  }
+  if (variation === 'gallery' && width > 1000) {
+    alertVariationClass =
+      alertVariationClass + ' mt-[12.5rem] sm:mt-[0rem] sm:right-1/3 '
+  } else if (variation === 'gallery' && width <= 1000) {
+    alertVariationClass = alertVariationClass + ' mt-[12.5rem] sm:mt-[20rem] '
+  }
   return (
-    <div className="absolute mt-[12.5rem] sm:mt-[20rem] ">
+    <div className={`${alertVariationClass} absolute  px-2    `}>
       {open && (
-        <div className="rounded-md  p-4">
+        <div className="rounded-md">
           <div className="flex">
-            <div className="flex-shrink-0">
+            {/* <div className="flex-shrink-0">
               <CheckCircleIcon
                 className="h-5 w-5 text-green-400"
                 aria-hidden="true"
               />
-            </div>
+            </div> */}
             <div className="ml-3">
-              <p className="text-sm font-medium text-green-800">
+              <p className="text-center text-base tracking-wider ">
                 Hey my e-mail is {email} and it&apos;s been copied to your
                 clipboard.
               </p>
             </div>
-            <div className="ml-auto pl-3">
+            {/*<div className="ml-auto pl-3">
               <div className="-mx-1.5 -my-1.5">
                 <button
                   type="button"
@@ -57,7 +70,7 @@ export default function Alert({ email, isOpen, setIsOpen }) {
                   />
                 </button>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       )}
