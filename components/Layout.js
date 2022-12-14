@@ -5,7 +5,7 @@ export const Layout = ({
   children,
 }) => {
   return (
-    <div className=" text-[#090709]   ">
+    <div className=" text-[#090709]  ">
       {/* <Header
         alternateLanguages={alternateLanguages}
         navigation={navigation}

@@ -10,6 +10,7 @@ import Alert from '../../components/Alert'
 import clsx from 'clsx'
 import useWindowDimensions from '../../lib/useWindowDimensions'
 import SidePortfolioMenu from '../../components/SidePortfolioMenu'
+import GoToTop from '../../components/GoToTop'
 
 const MainMenu = ({ slice }) => {
   const router = useRouter()
@@ -95,6 +96,7 @@ const MainMenu = ({ slice }) => {
             />
           </div>
           <SidePortfolioMenu />
+          <GoToTop />
           <MenuModal
             isOpen={modalOpen}
             setIsOpen={setModalOpen}
@@ -179,6 +181,7 @@ const MainMenu = ({ slice }) => {
           variation={slice.variation}
         />
         <SidePortfolioMenu />
+        <GoToTop />
         <MenuModal
           isOpen={modalOpen}
           setIsOpen={setModalOpen}
