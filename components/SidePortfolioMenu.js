@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 export default function Sidesideportfoliomenu() {
   return (
-    <div className="fixed -right-10 bottom-1/3 ">
+    <div className="fixed -right-10 bottom-1/4 sm:bottom-1/3  ">
       <div className="sideportfoliomenu ">
         <ul className="sideportfoliomenu-sprite ">
           <Link href="/gallery">

@@ -381,11 +381,11 @@ body {
   background-size: 200px 162px;
   height: 28px;
   width: 150px;
-  @apply mb-12;
+  @apply mb-12 transition-all;
 }
 .portfoliomenu-sprite li:hover {
   cursor: pointer;
-  @apply border-b-2 border-black;
+  @apply -translate-x-4 border-black;
 }
 .portfoliomenu-sprite li.editing {
   background-position: -55px 0px;
@@ -403,11 +403,11 @@ body {
 }
 
 .sideportfoliomenu-sprite li {
-  @apply mb-4 rounded-lg bg-white bg-center pt-2 pb-1 pl-2;
+  @apply mb-4 rounded-lg bg-white bg-center pt-2 pb-1 pl-2 transition-all;
 }
 .sideportfoliomenu-sprite li:hover {
   cursor: pointer;
-  transform: translateX(-10px);
+  transform: translateX(-15px);
   /* @apply border-b-2 border-red-300; */
 }
 .sideportfoliomenu-sprite li div {
