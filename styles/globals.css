@@ -367,11 +367,11 @@ body {
 /** TOP BAR **/
 .topbar {
   position: fixed;
-  top: 0;
   mix-blend-mode: exclusion;
   z-index: 0;
-  width: 100%;
+  background-size: 1920px 192px;
   height: 2%;
   min-height: 10px;
   overflow: hidden;
+  @apply left-0 right-0 mx-auto w-full bg-repeat-x;
 }

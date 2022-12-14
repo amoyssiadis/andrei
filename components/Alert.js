@@ -52,8 +52,7 @@ export default function Alert({ email, isOpen, setIsOpen, variation = null }) {
             </div> */}
             <div className="ml-3">
               <p className="text-center text-base tracking-wider ">
-                Hey my e-mail is {email} and it&apos;s been copied to your
-                clipboard.
+                {email} has been copied to your clipboard
               </p>
             </div>
             {/*<div className="ml-auto pl-3">
