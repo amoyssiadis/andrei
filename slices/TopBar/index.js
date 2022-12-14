@@ -2,7 +2,7 @@ import React from 'react'
 import { PrismicRichText } from '@prismicio/react'
 
 const TopBar = ({ slice }) => (
-  <section className="mx-auto w-full bg-red-200">
+  <section className="mx-auto w-full">
     <div className="topbar">
       <img
         src={slice.primary.image.url}

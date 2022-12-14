@@ -437,7 +437,7 @@ body {
   position: fixed;
   mix-blend-mode: exclusion;
   z-index: 0;
-  background-size: 1920px 192px;
+  background-size: 1920px 100px;
   height: 2%;
   min-height: 10px;
   overflow: hidden;
