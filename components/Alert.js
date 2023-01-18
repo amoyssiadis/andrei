@@ -1,28 +1,23 @@
 import { CheckCircleIcon, XMarkIcon } from '@heroicons/react/20/solid'
 import { useEffect, useState } from 'react'
 import useWindowDimensions from '../lib/useWindowDimensions'
+import { motion, AnimatePresence } from 'framer-motion'
 
 export default function Alert({ email, isOpen, setIsOpen, variation = null }) {
   const [open, setOpen] = useState(isOpen || false)
-  function close() {
-    setIsOpen(false)
-    setOpen(false)
-  }
   useEffect(() => {
     setOpen(isOpen)
-    // console.log("isOpen mudou")
-    return () => {
-      //  second
-    }
   }, [isOpen])
 
   useEffect(() => {
-    setIsOpen(open)
-    //console.log("open mudou")
-    return () => {
-      //  TODO HERE CHECK THIS JS
+    if (open) {
+      setTimeout(() => {
+        setIsOpen(false)
+        setOpen(false)
+      }, 4000)
     }
   }, [open])
+
   function close() {
     setIsOpen(false)
     setOpen(false)
@@ -40,39 +35,27 @@ export default function Alert({ email, isOpen, setIsOpen, variation = null }) {
     alertVariationClass = alertVariationClass + ' mt-[12.5rem] sm:mt-[20rem] '
   }
   return (
-    <div className={`${alertVariationClass} absolute  px-2    `}>
+    <AnimatePresence>
       {open && (
-        <div className="rounded-md">
-          <div className="flex">
-            {/* <div className="flex-shrink-0">
-              <CheckCircleIcon
-                className="h-5 w-5 text-green-400"
-                aria-hidden="true"
-              />
-            </div> */}
-            <div className="ml-3">
-              <p className="text-center text-base tracking-wider ">
-                {email} has been copied to your clipboard
-              </p>
-            </div>
-            {/*<div className="ml-auto pl-3">
-              <div className="-mx-1.5 -my-1.5">
-                <button
-                  type="button"
-                  className="inline-flex rounded-md bg-green-50 p-1.5 text-green-500 hover:bg-green-100 focus:outline-none focus:ring-2 focus:ring-green-600 focus:ring-offset-2 focus:ring-offset-green-50"
-                >
-                  <span className="sr-only">Dismiss</span>
-                  <XMarkIcon
-                    className="h-5 w-5"
-                    aria-hidden="true"
-                    onClick={close}
-                  />
-                </button>
+        <motion.div
+          key="alert"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.5 }}
+          className={`${alertVariationClass} absolute px-2`}
+        >
+          <div className="rounded-md">
+            <div className="flex">
+              <div className="ml-3">
+                <p className="text-center text-sm tracking-wider md:text-base ">
+                  {email} has been copied to your clipboard
+                </p>
               </div>
-            </div> */}
+            </div>
           </div>
-        </div>
+        </motion.div>
       )}
-    </div>
+    </AnimatePresence>
   )
 }
