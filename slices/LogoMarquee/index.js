@@ -9,7 +9,7 @@ const LogoMarquee = ({ slice }) => {
   // console.log(slice?.items)
   return (
     <section className="mb-4 mt-12  p-1 sm:mt-24 ">
-      <p className="my-4 text-center text-lg font-bold tracking-wider sm:text-xl ">
+      <p className="my-4 text-center text-lg font-bold tracking-wider sm:text-lg ">
         {slice.primary.title}
       </p>
       <div className="mx-auto flex max-w-5xl justify-center ">
