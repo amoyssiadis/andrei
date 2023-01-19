@@ -138,7 +138,7 @@ const MainMenu = ({ slice }) => {
           </div>
         </div>
         <div className="flex flex-col items-center justify-center   ">
-          <div className="relative -my-4  w-[300px] bg-[url('/logobg.webp')] py-4 px-4   sm:w-[630px] ">
+          <div className="relative -my-4  w-[300px] rounded bg-[url('/logobg.webp')] py-4 px-4   sm:w-[630px] ">
             <Link href="/">
               <a>
                 {prismicH.isFilled.image(slice.primary.logo) && (
