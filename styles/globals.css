@@ -350,6 +350,11 @@ body {
   cursor: pointer;
   @apply border-b-2 border-black;
 }
+
+li.active {
+  cursor: default;
+  @apply border-b-2 border-black;
+}
 .navsprite li.work {
   background-position: -30px 0px;
   width: 95px;

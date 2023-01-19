@@ -7,7 +7,7 @@ import { useRouter } from 'next/router'
 import MenuModal from '../../components/MenuModal'
 import MenuModalImage from '../../public/portfoliomenu.svg'
 import Alert from '../../components/Alert'
-import clsx from 'clsx'
+//import clsx from 'clsx'
 import useWindowDimensions from '../../lib/useWindowDimensions'
 import SidePortfolioMenu from '../../components/SidePortfolioMenu'
 import GoToTop from '../../components/GoToTop'
@@ -23,6 +23,7 @@ const MainMenu = ({ slice }) => {
 
   // GALERY DESKTOP MAIN MENU
   if (slice.variation === 'gallery' && width > 1000) {
+    console.log('router.asPath', router.asPath)
     return (
       <Bounded as="section" className=" overflow-hidden  bg-black py-10 ">
         <div className={`${style} flex flex-row items-center justify-center  `}>
@@ -61,12 +62,20 @@ const MainMenu = ({ slice }) => {
           <div className="navbar-gallery scale-[0.56] sm:scale-[0.9] ">
             <ul className="navsprite-gallery filter-white">
               <a onClick={() => setModalOpen(true)}>
-                <li className="work"></li>
+                <li
+                  className={
+                    router.asPath == '/gallery' ? 'active work' : '' + 'work'
+                  }
+                ></li>
               </a>
 
               <Link href="/info">
                 <a>
-                  <li className="info"></li>
+                  <li
+                    className={
+                      router.asPath == '/info' ? 'active info' : '' + 'info'
+                    }
+                  ></li>
                 </a>
               </Link>
 
@@ -146,12 +155,20 @@ const MainMenu = ({ slice }) => {
         <div className="navbar scale-[0.56] sm:transform-none ">
           <ul className={`navsprite ${filter} `}>
             <a onClick={() => setModalOpen(true)}>
-              <li className="work"></li>
+              <li
+                className={
+                  router.asPath == '/gallery' ? 'active work' : '' + 'work'
+                }
+              ></li>
             </a>
 
             <Link href="/info">
               <a>
-                <li className="info"></li>
+                <li
+                  className={
+                    router.asPath == '/info' ? 'active info' : '' + 'info'
+                  }
+                ></li>
               </a>
             </Link>
 
