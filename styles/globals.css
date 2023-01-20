@@ -448,3 +448,9 @@ li.active {
   overflow: hidden;
   @apply left-0 right-0 mx-auto w-full bg-repeat;
 }
+
+#grained-effect {
+  position: relative;
+  overflow: hidden;
+  @apply min-h-screen;
+}

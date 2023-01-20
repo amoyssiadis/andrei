@@ -15,8 +15,8 @@ const Mansory = ({ slice }) => {
   }
 
   return (
-    <section className="bg-black ">
-      <div className="masonry ">
+    <section className=" bg-black">
+      <div className="masonry relative ">
         {slice?.items?.map((item, i) => {
           console.log(item.video)
           // you might want to use a lib here (eg. react-oembed-container)
@@ -24,7 +24,7 @@ const Mansory = ({ slice }) => {
           const height = item.image.dimensions.height || 400
 
           return (
-            <div className=" cursor-pointer p-1 " key={i}>
+            <div className="  cursor-pointer p-1" key={i}>
               <a onClick={() => openMedia(item)}>
                 <img
                   className=""

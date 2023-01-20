@@ -1,3 +1,5 @@
+import GrainedEffect from './GrainedEffect'
+
 export const Layout = ({
   alternateLanguages,
   navigation,
@@ -5,15 +7,17 @@ export const Layout = ({
   children,
 }) => {
   return (
-    <div className="  text-[#090709]">
-      {/* <Header
+    <GrainedEffect>
+      <div className="  text-[#090709]">
+        {/* <Header
         alternateLanguages={alternateLanguages}
         navigation={navigation}
         settings={settings}
       /> */}
-      <main className=" mx-auto h-full w-screen overflow-x-hidden  ">
-        {children}
-      </main>
-    </div>
+        <main className=" mx-auto h-full w-screen overflow-x-hidden  ">
+          {children}
+        </main>
+      </div>
+    </GrainedEffect>
   )
 }
