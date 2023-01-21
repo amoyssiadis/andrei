@@ -452,5 +452,8 @@ li.active {
 #grained-effect {
   position: relative;
   overflow: hidden;
-  @apply min-h-screen;
+  @apply pointer-events-none min-h-screen;
+}
+#grained-effect > * {
+  @apply pointer-events-auto;
 }

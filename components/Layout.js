@@ -8,13 +8,13 @@ export const Layout = ({
 }) => {
   return (
     <GrainedEffect>
-      <div className="  text-[#090709]">
+      <div className="text-[#090709]">
         {/* <Header
         alternateLanguages={alternateLanguages}
         navigation={navigation}
         settings={settings}
       /> */}
-        <main className=" mx-auto h-full w-screen overflow-x-hidden  ">
+        <main className=" mx-auto h-full w-screen overflow-x-hidden ">
           {children}
         </main>
       </div>

@@ -15,8 +15,8 @@ const Mansory = ({ slice }) => {
   }
 
   return (
-    <section className=" bg-black">
-      <div className="masonry relative ">
+    <section className="  bg-black">
+      <div className="masonry  ">
         {slice?.items?.map((item, i) => {
           console.log(item.video)
           // you might want to use a lib here (eg. react-oembed-container)
