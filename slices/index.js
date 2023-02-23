@@ -2,6 +2,7 @@
 
 import AboutTextWithButton from './AboutTextWithButton';
 import FloatingImage from './FloatingImage';
+import FloatingImages from './FloatingImages';
 import Footer from './Footer';
 import Hero from './Hero';
 import Image from './Image';
@@ -17,6 +18,7 @@ import TopBar from './TopBar';
 export {
 	AboutTextWithButton,
 	FloatingImage,
+	FloatingImages,
 	Footer,
 	Hero,
 	Image,
@@ -33,6 +35,7 @@ export {
 export const components = {
 	about_text_with_button: AboutTextWithButton,
 	floating_image: FloatingImage,
+	floating_images: FloatingImages,
 	footer: Footer,
 	hero: Hero,
 	image: Image,

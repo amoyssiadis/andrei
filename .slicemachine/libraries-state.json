@@ -168,6 +168,71 @@
           }
         }
       },
+      "floating_images": {
+        "library": "slices",
+        "id": "floating_images",
+        "name": "FloatingImages",
+        "description": "FloatingImages",
+        "model": {
+          "id": "floating_images",
+          "type": "SharedSlice",
+          "name": "FloatingImages",
+          "description": "FloatingImages",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "FloatingImages",
+              "primary": {},
+              "items": {
+                "image": {
+                  "type": "Image",
+                  "config": {
+                    "label": "image",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {
+                "image": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": null,
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1587905069134-008460d7a636"
+                }
+              }
+            ],
+            "primary": {},
+            "slice_type": "floating_images"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {
+          "default": {
+            "path": "/Users/ericmilfont/Fiverr/andrei-portfolio-website/.slicemachine/assets/slices/FloatingImages/default/preview.png",
+            "width": 800,
+            "height": 320
+          }
+        }
+      },
       "footer": {
         "library": "slices",
         "id": "footer",

@@ -64,6 +64,9 @@
             },
             "top_bar": {
               "type": "SharedSlice"
+            },
+            "floating_images": {
+              "type": "SharedSlice"
             }
           }
         }

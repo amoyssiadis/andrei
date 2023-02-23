@@ -182,6 +182,11 @@
       "default": {
         "primary": {}
       }
+    },
+    "FloatingImages": {
+      "default": {
+        "primary": {}
+      }
     }
   }
 }
