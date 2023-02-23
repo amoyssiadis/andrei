@@ -28,7 +28,7 @@ const FloatingImages = ({ slice }) => {
   }
   const images = randomizeElemnts(slice?.items, slice?.items.length - 1)
   return (
-    <div className="absolute inset-0 ">
+    <div className="pointer-events-none absolute inset-0 ">
       <ImageAnim images={images} />
       {/* {slice?.items?.map((item, i) => (
         <AnimatedImage src={item.image.url} key={i} />

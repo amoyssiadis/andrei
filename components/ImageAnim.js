@@ -9,7 +9,7 @@ function ImageAnim(images) {
   }
   return (
     <div className="">
-      <div className="imagesAnim x absolute">
+      <div className="imagesAnim x pointer-events-auto absolute cursor-pointer	 ">
         <img
           className="y"
           src={images.images[0].image.url}
@@ -17,7 +17,7 @@ function ImageAnim(images) {
           onClick={closeImage}
         />
       </div>
-      <div className="imagesAnim  x2 absolute right-0 top-0">
+      <div className="imagesAnim  x2 pointer-events-auto absolute right-0 top-0 cursor-pointer	">
         <img
           className="y2"
           src={images.images[1].image.url}
