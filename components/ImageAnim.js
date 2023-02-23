@@ -4,7 +4,7 @@ function ImageAnim(images) {
   // console.log(images.images[0].image.url)
   // console.log({ images })
   const closeImage = (evt) => {
-    console.log(evt)
+    //console.log(evt)
     evt.target.className = 'hidden'
   }
   return (

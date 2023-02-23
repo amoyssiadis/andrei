@@ -2,7 +2,7 @@ import React from 'react'
 
 import ImageAnim from '../../components/ImageAnim'
 const FloatingImages = ({ slice }) => {
-  console.log({ slice })
+  // console.log({ slice })
   const randomizeIndex = (count) => {
     return Math.floor(count * Math.random())
   }
@@ -26,7 +26,7 @@ const FloatingImages = ({ slice }) => {
     }
     return result
   }
-  const images = randomizeElemnts(slice?.items, slice?.items.length - 1)
+  const images = randomizeElemnts(slice?.items, slice?.items.length)
   return (
     <div className="pointer-events-none absolute inset-0 ">
       <ImageAnim images={images} />
