@@ -5,6 +5,7 @@ import { PrismicPreview } from '@prismicio/next'
 import { repositoryName, linkResolver } from '../prismicio'
 
 import '../styles/globals.css'
+import { AnimatePresence } from 'framer-motion'
 
 const NextLinkShim = ({ href, children, locale, ...props }) => {
   return (
@@ -54,7 +55,9 @@ export default function App({ Component, pageProps }) {
       richTextComponents={richTextComponents}
     >
       <PrismicPreview repositoryName={repositoryName}>
-        <Component {...pageProps} />
+        <AnimatePresence mode="wait" initial={false}>
+          <Component {...pageProps} />
+        </AnimatePresence>
       </PrismicPreview>
     </PrismicProvider>
   )
