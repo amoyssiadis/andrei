@@ -69,7 +69,7 @@ export default function MenuModal({ isOpen, setIsOpen, image }) {
                 <div className="">
                   <div className="portfoliomenu ">
                     <ul className="portfoliomenu-sprite ">
-                      <Link href="/gallery">
+                      <Link href="/editing">
                         <a>
                           <li className="editing"></li>
                         </a>
@@ -80,7 +80,7 @@ export default function MenuModal({ isOpen, setIsOpen, image }) {
                           <li className="original"></li>
                         </a>
                       </Link>
-                      <Link href="/gallery">
+                      <Link href="/other">
                         <a>
                           <li className="other"></li>
                         </a>

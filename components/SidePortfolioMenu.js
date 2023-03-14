@@ -5,7 +5,7 @@ export default function Sidesideportfoliomenu() {
     <div className="fixed -right-10 bottom-1/4 sm:bottom-1/3  ">
       <div className="sideportfoliomenu ">
         <ul className="sideportfoliomenu-sprite ">
-          <Link href="/gallery">
+          <Link href="/editing">
             <a>
               <li>
                 <div className="editing filter-black"></div>
@@ -20,7 +20,7 @@ export default function Sidesideportfoliomenu() {
               </li>
             </a>
           </Link>
-          <Link href="/gallery">
+          <Link href="/other">
             <a>
               <li>
                 <div className="other filter-black"></div>
