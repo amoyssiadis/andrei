@@ -11,6 +11,7 @@ import Alert from '../../components/Alert'
 import useWindowDimensions from '../../lib/useWindowDimensions'
 import SidePortfolioMenu from '../../components/SidePortfolioMenu'
 import GoToTop from '../../components/GoToTop'
+import { motion } from 'framer-motion'
 
 const MainMenu = ({ slice }) => {
   const router = useRouter()
@@ -25,94 +26,98 @@ const MainMenu = ({ slice }) => {
   if (slice.variation === 'gallery' && width > 1000) {
     console.log('router.asPath', router.asPath)
     return (
-      <Bounded as="section" className=" overflow-hidden  bg-black py-10 ">
-        <div className={`${style} flex flex-row items-center justify-center  `}>
-          <div className=" flex flex-col  py-4  sm:order-last  ">
-            <div className="">
-              <ul className="langsprite-gallery filter-white">
-                <Link href="#en">
+      <motion.div layoutId="mainmenu">
+        <Bounded as="section" className=" overflow-hidden  bg-black py-10 ">
+          <div
+            className={`${style} flex flex-row items-center justify-center  `}
+          >
+            <div className=" flex flex-col  py-4  sm:order-last  ">
+              <div className="">
+                <ul className="langsprite-gallery filter-white">
+                  <Link href="#en">
+                    <a>
+                      <li className="en"></li>
+                    </a>
+                  </Link>
+                  <li className="spacer"></li>
+                  <Link href="#pt">
+                    <a>
+                      <li className="pt"></li>
+                    </a>
+                  </Link>
+                </ul>
+              </div>
+            </div>
+            <div className="flex flex-col items-center justify-center   ">
+              <div className="relative  w-[300px] sm:w-[300px] ">
+                <Link href="/">
                   <a>
-                    <li className="en"></li>
+                    {prismicH.isFilled.image(slice.primary.logo) && (
+                      <PrismicNextImage
+                        field={slice.primary.logo}
+                        className="filter-white "
+                        layout="responsive"
+                      />
+                    )}
                   </a>
                 </Link>
-                <li className="spacer"></li>
-                <Link href="#pt">
-                  <a>
-                    <li className="pt"></li>
-                  </a>
-                </Link>
-              </ul>
+              </div>
             </div>
-          </div>
-          <div className="flex flex-col items-center justify-center   ">
-            <div className="relative  w-[300px] sm:w-[300px] ">
-              <Link href="/">
-                <a>
-                  {prismicH.isFilled.image(slice.primary.logo) && (
-                    <PrismicNextImage
-                      field={slice.primary.logo}
-                      className="filter-white "
-                      layout="responsive"
-                    />
-                  )}
-                </a>
-              </Link>
-            </div>
-          </div>
-          <div className="navbar-gallery scale-[0.56] sm:scale-[0.9] ">
-            <ul className="navsprite-gallery filter-white">
-              <a onClick={() => setModalOpen(true)}>
-                <li
-                  className={
-                    router.asPath == '/gallery' ? 'active work' : '' + 'work'
-                  }
-                ></li>
-              </a>
-
-              <Link href="/info">
-                <a>
+            <div className="navbar-gallery scale-[0.56] sm:scale-[0.9] ">
+              <ul className="navsprite-gallery filter-white">
+                <a onClick={() => setModalOpen(true)}>
                   <li
                     className={
-                      router.asPath == '/info' ? 'active info' : '' + 'info'
+                      router.asPath == '/gallery' ? 'active work' : '' + 'work'
                     }
                   ></li>
                 </a>
-              </Link>
 
-              <a>
-                <li
-                  className="contact"
-                  onClick={() => {
-                    navigator.clipboard.writeText(email)
-                    setAlertOpen(true)
-                  }}
-                ></li>
-              </a>
+                <Link href="/info">
+                  <a>
+                    <li
+                      className={
+                        router.asPath == '/info' ? 'active info' : '' + 'info'
+                      }
+                    ></li>
+                  </a>
+                </Link>
 
-              <a
-                href="https://instagram.com/amoyssiadis"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <li className="instagram"></li>
-              </a>
-            </ul>
-            <Alert
-              email={email}
-              isOpen={alertOpen}
-              setIsOpen={setAlertOpen}
-              variation={slice.variation}
+                <a>
+                  <li
+                    className="contact"
+                    onClick={() => {
+                      navigator.clipboard.writeText(email)
+                      setAlertOpen(true)
+                    }}
+                  ></li>
+                </a>
+
+                <a
+                  href="https://instagram.com/amoyssiadis"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <li className="instagram"></li>
+                </a>
+              </ul>
+              <Alert
+                email={email}
+                isOpen={alertOpen}
+                setIsOpen={setAlertOpen}
+                variation={slice.variation}
+              />
+            </div>
+            <SidePortfolioMenu />
+            <GoToTop />
+            <MenuModal
+              isOpen={modalOpen}
+              setIsOpen={setModalOpen}
+              image={MenuModalImage}
             />
           </div>
-          <SidePortfolioMenu />
-          <GoToTop />
-          <MenuModal
-            isOpen={modalOpen}
-            setIsOpen={setModalOpen}
-            image={MenuModalImage}
-          />
-        </div>
-      </Bounded>
+        </Bounded>
+      </motion.div>
     )
   }
   const bg = slice.variation === 'gallery' ? 'bg-black' : ''
