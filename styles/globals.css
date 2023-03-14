@@ -436,6 +436,9 @@ li.active {
 .sideportfoliomenu-sprite li div.other {
   background-position: -55px -140px;
 }
+.active-sideportfoliomenu {
+  transform: translateX(-15px);
+}
 
 /** TOP BAR **/
 .topbar {

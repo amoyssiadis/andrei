@@ -1,7 +1,6 @@
 import { Fragment, useEffect, useState } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import { CheckIcon, XCircleIcon } from '@heroicons/react/24/outline'
-import Image from 'next/image'
 import Link from 'next/link'
 
 // const CloseIcon = () => {
