@@ -123,94 +123,96 @@ const MainMenu = ({ slice }) => {
   const bg = slice.variation === 'gallery' ? 'bg-black' : ''
   const filter = slice.variation === 'gallery' ? 'filter-white' : ''
   return (
-    <Bounded as="section" className={` overflow-hidden   ${bg} `}>
-      <div className={`${style} flex flex-col items-center justify-center`}>
-        <div className="mb-9 flex  flex-col  sm:mb-12  ">
-          <div className="langsel ml-36 scale-[0.56]  sm:ml-0 sm:transform-none">
-            <ul className={`langsprite  ${filter} `}>
-              <Link href="#en">
+    <motion.div layoutId="mainmenu">
+      <Bounded as="section" className={` overflow-hidden   ${bg} `}>
+        <div className={`${style} flex flex-col items-center justify-center`}>
+          <div className="mb-9 flex  flex-col  sm:mb-12  ">
+            <div className="langsel ml-36 scale-[0.56]  sm:ml-0 sm:transform-none">
+              <ul className={`langsprite  ${filter} `}>
+                <Link href="#en">
+                  <a>
+                    <li className="en"></li>
+                  </a>
+                </Link>
+                <li className="spacer"></li>
+                <Link href="#pt">
+                  <a>
+                    <li className="pt"></li>
+                  </a>
+                </Link>
+              </ul>
+            </div>
+          </div>
+          <div className="flex flex-col items-center justify-center   ">
+            <div className="relative -my-4  w-[300px] rounded bg-[url('/logobg.webp')] py-4 px-4   sm:w-[630px] ">
+              <Link href="/">
                 <a>
-                  <li className="en"></li>
+                  {prismicH.isFilled.image(slice.primary.logo) && (
+                    <PrismicNextImage
+                      field={slice.primary.logo}
+                      className={` ${filter} `}
+                      layout="responsive"
+                    />
+                  )}
                 </a>
               </Link>
-              <li className="spacer"></li>
-              <Link href="#pt">
-                <a>
-                  <li className="pt"></li>
-                </a>
-              </Link>
-            </ul>
+            </div>
           </div>
-        </div>
-        <div className="flex flex-col items-center justify-center   ">
-          <div className="relative -my-4  w-[300px] rounded bg-[url('/logobg.webp')] py-4 px-4   sm:w-[630px] ">
-            <Link href="/">
-              <a>
-                {prismicH.isFilled.image(slice.primary.logo) && (
-                  <PrismicNextImage
-                    field={slice.primary.logo}
-                    className={` ${filter} `}
-                    layout="responsive"
-                  />
-                )}
-              </a>
-            </Link>
-          </div>
-        </div>
-        <div className="navbar scale-[0.56] sm:transform-none ">
-          <ul className={`navsprite ${filter} `}>
-            <a onClick={() => setModalOpen(true)}>
-              <li
-                className={
-                  router.asPath == '/gallery' ? 'active work' : '' + 'work'
-                }
-              ></li>
-            </a>
-
-            <Link href="/info">
-              <a>
+          <div className="navbar scale-[0.56] sm:transform-none ">
+            <ul className={`navsprite ${filter} `}>
+              <a onClick={() => setModalOpen(true)}>
                 <li
                   className={
-                    router.asPath == '/info' ? 'active info' : '' + 'info'
+                    router.asPath == '/gallery' ? 'active work' : '' + 'work'
                   }
                 ></li>
               </a>
-            </Link>
 
-            <a>
-              <li
-                className="contact"
-                onClick={() => {
-                  navigator.clipboard.writeText(email)
-                  setAlertOpen(true)
-                }}
-              ></li>
-            </a>
+              <Link href="/info">
+                <a>
+                  <li
+                    className={
+                      router.asPath == '/info' ? 'active info' : '' + 'info'
+                    }
+                  ></li>
+                </a>
+              </Link>
 
-            <a
-              href="https://instagram.com/amoyssiadis"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <li className="instagram"></li>
-            </a>
-          </ul>
+              <a>
+                <li
+                  className="contact"
+                  onClick={() => {
+                    navigator.clipboard.writeText(email)
+                    setAlertOpen(true)
+                  }}
+                ></li>
+              </a>
+
+              <a
+                href="https://instagram.com/amoyssiadis"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <li className="instagram"></li>
+              </a>
+            </ul>
+          </div>
+          <Alert
+            email={email}
+            isOpen={alertOpen}
+            setIsOpen={setAlertOpen}
+            variation={slice.variation}
+          />
+          {slice.variation === 'gallery' && <SidePortfolioMenu />}
+          <GoToTop />
+          <MenuModal
+            isOpen={modalOpen}
+            setIsOpen={setModalOpen}
+            image={MenuModalImage}
+          />
         </div>
-        <Alert
-          email={email}
-          isOpen={alertOpen}
-          setIsOpen={setAlertOpen}
-          variation={slice.variation}
-        />
-        {slice.variation === 'gallery' && <SidePortfolioMenu />}
-        <GoToTop />
-        <MenuModal
-          isOpen={modalOpen}
-          setIsOpen={setModalOpen}
-          image={MenuModalImage}
-        />
-      </div>
-    </Bounded>
+      </Bounded>
+    </motion.div>
   )
 }
 
