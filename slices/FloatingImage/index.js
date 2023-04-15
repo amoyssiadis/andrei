@@ -8,11 +8,11 @@ const FloatingImage = ({ slice }) => {
   const closeImage = (evt) => {
     // console.log(evt)
     FloatImgDivRef.current.className =
-      'opacity-0 pointer-events-auto relative mt-8 w-[200px] cursor-pointer'
+      'opacity-0 pointer-events-auto  mt-20 w-[200px] cursor-pointer md:mt-8'
   }
   return (
     <div
-      className="pointer-events-auto relative mt-8 w-[200px] cursor-pointer"
+      className="pointer-events-auto  mt-20 w-[200px] cursor-pointer md:mt-8"
       onClick={closeImage}
       ref={FloatImgDivRef}
     >
@@ -21,7 +21,7 @@ const FloatingImage = ({ slice }) => {
           className="pointer-events-none"
           initial={{ y: 0, x: 0 }}
           animate={{
-            y: [50, -80, 0],
+            y: [0, -80, 0],
             x: [50, -50, 0],
           }}
           transition={{

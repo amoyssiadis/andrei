@@ -9,7 +9,7 @@ const TextWithImage = ({ slice }) => {
   return (
     <Bounded as="section" className="bg-white">
       <div className="grid grid-cols-1 gap-8 md:grid-cols-12 md:gap-16 lg:gap-28">
-        <div className="relative max-w-xs md:col-span-5 md:max-w-none">
+        <div className=" max-w-xs md:col-span-5 md:max-w-none">
           <div className="absolute -top-6 -left-6 w-2/3">
             <div className="aspect-w-1 aspect-h-1 bg-slate-100/50" />
           </div>
@@ -17,7 +17,7 @@ const TextWithImage = ({ slice }) => {
             <PrismicNextImage
               field={slice.primary.image}
               layout="responsive"
-              className="relative"
+              className=""
             />
           )}
         </div>

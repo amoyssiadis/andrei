@@ -6,7 +6,7 @@ import GalleryModal from '../../components/GalleryModal'
 const Mansory = ({ slice }) => {
   const [modalOpen, setModalOpen] = useState(false)
   const [modalMedia, setModalMedia] = useState(null)
-  console.log({ Mansory: slice })
+  // console.log({ Mansory: slice })
   const oneColumn = slice?.primary?.oneColumn || false
 
   function openMedia(item) {

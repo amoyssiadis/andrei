@@ -13,7 +13,7 @@ const Image = ({ slice }) => {
         slice.variation === 'white' && 'bg-white'
       )}
     >
-      <div className="relative">
+      <div className="">
         {slice.primary.withAccent && (
           <div className="absolute -top-4 -left-4 w-1/3">
             <div className="aspect-w-1 aspect-h-1 bg-slate-200/50" />
@@ -23,7 +23,7 @@ const Image = ({ slice }) => {
           <PrismicNextImage
             field={slice.primary.image}
             layout="responsive"
-            className="relative"
+            className=""
           />
         )}
       </div>
