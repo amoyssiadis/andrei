@@ -190,6 +190,12 @@ body {
   .masonry div {
     break-inside: avoid;
   }
+  .oneColumn {
+    @apply md:columns-1;
+  }
+  .oneColumn img {
+    @apply w-full;
+  }
 }
 
 /* video player */

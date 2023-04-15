@@ -6,6 +6,8 @@ import GalleryModal from '../../components/GalleryModal'
 const Mansory = ({ slice }) => {
   const [modalOpen, setModalOpen] = useState(false)
   const [modalMedia, setModalMedia] = useState(null)
+  console.log({ Mansory: slice })
+  const oneColumn = slice?.primary?.oneColumn || false
 
   function openMedia(item) {
     console.log('openMedia', item)
@@ -16,7 +18,7 @@ const Mansory = ({ slice }) => {
 
   return (
     <section className="  bg-black">
-      <div className="masonry  ">
+      <div className={`masonry ${oneColumn ? 'oneColumn' : ''}  `}>
         {slice?.items?.map((item, i) => {
           console.log(item.video)
           // you might want to use a lib here (eg. react-oembed-container)
