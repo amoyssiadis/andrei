@@ -29,7 +29,7 @@ const MainMenu = ({ slice }) => {
       <motion.div layoutId="mainmenu">
         <Bounded as="section" className=" overflow-hidden  bg-black py-10 ">
           <div
-            className={`${style} flex flex-row items-center justify-center  `}
+            className={`${style} flex flex-row items-center justify-center px-8 `}
           >
             <div className=" flex flex-col  py-4  sm:order-last  ">
               <div className="">
