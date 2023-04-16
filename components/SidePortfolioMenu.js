@@ -6,7 +6,7 @@ export default function Sidesideportfoliomenu() {
   //.active-sideportfoliomenu
   const isActive = (name) => {
     let active = ''
-    console.log(router.asPath, `/${name}`)
+    //console.log(router.asPath, `/${name}`)
     if (router.asPath === `/${name}`) {
       active = ' active-sideportfoliomenu '
     }

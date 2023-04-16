@@ -24,7 +24,7 @@ const MainMenu = ({ slice }) => {
 
   // GALERY DESKTOP MAIN MENU
   if (slice.variation === 'gallery' && width > 1000) {
-    console.log('router.asPath', router.asPath)
+    //console.log('router.asPath', router.asPath)
     return (
       <motion.div layoutId="mainmenu">
         <Bounded as="section" className=" overflow-hidden  bg-black py-10 ">
