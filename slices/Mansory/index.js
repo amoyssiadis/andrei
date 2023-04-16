@@ -10,7 +10,7 @@ const Mansory = ({ slice }) => {
   const oneColumn = slice?.primary?.oneColumn || false
 
   function openMedia(item) {
-    console.log('openMedia', item)
+    //console.log('openMedia', item)
     //setModalMedia(item.video.url)
     setModalMedia(item)
     setModalOpen(true)
@@ -20,7 +20,7 @@ const Mansory = ({ slice }) => {
     <section className="  bg-black">
       <div className={`masonry ${oneColumn ? 'oneColumn' : ''}  `}>
         {slice?.items?.map((item, i) => {
-          console.log(item.video)
+          //console.log(item.video)
           // you might want to use a lib here (eg. react-oembed-container)
           const width = item.image.dimensions.width || 850
           const height = item.image.dimensions.height || 400

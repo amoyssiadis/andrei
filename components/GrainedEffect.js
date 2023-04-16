@@ -9,12 +9,18 @@ const GrainedEffect = (props) => {
       if (typeof grained !== 'undefined' && typeof window !== 'undefined') {
         var options = {
           animate: true,
-          patternWidth: 100,
-          patternHeight: 100,
-          grainOpacity: 0.05,
+          patternWidth: 226.13,
+          patternHeight: 323.38,
+          grainOpacity: 0.14,
           grainDensity: 1,
-          grainWidth: 2.4,
-          grainHeight: 1.6,
+          grainWidth: 1,
+          grainHeight: 1.1,
+          // patternWidth: 100,
+          // patternHeight: 100,
+          // grainOpacity: 0.05,
+          // grainDensity: 1,
+          // grainWidth: 2.4,
+          // grainHeight: 1.6,
         }
         const elem = document.getElementById('grained-effect')
         if (elem) {
