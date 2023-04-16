@@ -1,5 +1,5 @@
 import GrainedEffect from './GrainedEffect'
-import { motion } from 'framer-motion'
+
 export const Layout = ({
   alternateLanguages,
   navigation,

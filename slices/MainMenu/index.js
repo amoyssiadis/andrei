@@ -12,6 +12,8 @@ import useWindowDimensions from '../../lib/useWindowDimensions'
 import SidePortfolioMenu from '../../components/SidePortfolioMenu'
 import GoToTop from '../../components/GoToTop'
 import { AnimatePresence, motion } from 'framer-motion'
+import { EnvelopeIcon } from '@heroicons/react/24/outline'
+import { PrismicLink } from '@prismicio/react'
 
 const MainMenu = ({ slice }) => {
   const router = useRouter()
@@ -34,17 +36,17 @@ const MainMenu = ({ slice }) => {
           <div className=" flex flex-col  py-4  sm:order-last  ">
             <div className="">
               <ul className="langsprite-gallery filter-white">
-                <Link href="/en-us">
+                <PrismicLink href={router.asPath} locale="en-us">
                   <a>
                     <li className="en"></li>
                   </a>
-                </Link>
+                </PrismicLink>
                 <li className="spacer"></li>
-                <Link href="/pt-br">
+                <PrismicLink href={router.asPath} locale="pt-br">
                   <a>
                     <li className="pt"></li>
                   </a>
-                </Link>
+                </PrismicLink>
               </ul>
             </div>
           </div>
@@ -129,17 +131,17 @@ const MainMenu = ({ slice }) => {
             <div className="mb-9 flex  flex-col  sm:mb-12  ">
               <div className="langsel ml-36 scale-[0.56]  sm:ml-0 sm:transform-none">
                 <ul className={`langsprite  ${filter} `}>
-                  <Link href="/en-us">
+                  <PrismicLink href={router.asPath} locale="en-us">
                     <a>
                       <li className="en"></li>
                     </a>
-                  </Link>
+                  </PrismicLink>
                   <li className="spacer"></li>
-                  <Link href="/pt-br">
+                  <PrismicLink href={router.asPath} locale="pt-br">
                     <a>
                       <li className="pt"></li>
                     </a>
-                  </Link>
+                  </PrismicLink>
                 </ul>
               </div>
             </div>

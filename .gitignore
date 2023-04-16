@@ -34,3 +34,4 @@ yarn-error.log*
 
 # assets not used in the project
 /_andrei-portfolio-assets
+.env
