@@ -4,11 +4,11 @@ export const CustomVideoPlayer = ({ url }) => {
   const [playing, setPlaying] = useState(false)
   const videoRef = useRef()
 
-  useEffect(() => {
-    setTimeout(() => {
-      videoRef.current.play()
-    }, 2000)
-  }, [])
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     videoRef.current.play()
+  //   }, 2000)
+  // }, [])
   const backgroundVideo =
     url ||
     'https://andrei-portfolio.cdn.prismic.io/andrei-portfolio/ce1c0eb0-544a-4999-b90b-036ed15337fe_BJORK++DIGITAL-+MAKING+OF+FILTROS+DE+INSTAGRAM.webm'
