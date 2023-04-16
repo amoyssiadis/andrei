@@ -7,6 +7,10 @@ import { components } from '../slices'
 import { Layout } from '../components/Layout'
 
 const Page = ({ page, navigation, settings }) => {
+  const title =
+    prismicH.asText(page.data.title) +
+    ' | ' +
+    prismicH.asText(settings.data.siteTitle)
   return (
     <Layout
       alternateLanguages={page.alternate_languages}
@@ -14,10 +18,7 @@ const Page = ({ page, navigation, settings }) => {
       settings={settings}
     >
       <Head>
-        <title>
-          {prismicH.asText(page.data.title)} |{' '}
-          {prismicH.asText(settings.data.siteTitle)}
-        </title>
+        <title>{title}</title>
       </Head>
       <SliceZone slices={page.data.slices} components={components} />
     </Layout>
