@@ -9,13 +9,13 @@ const LanguageSelector = ({ slice }) => (
   <Bounded as="section">
     <div className="justify-right flex flex-col items-end">
       <div className="flex items-center justify-center  gap-8 text-2xl">
-        <Link href="#en">
+        <Link href="/en-us">
           <a>
             <div>en</div>
           </a>
         </Link>
         <div>/</div>
-        <Link href="#pt">
+        <Link href="/pt-br">
           <a>
             <div>pt</div>
           </a>

@@ -34,13 +34,13 @@ const MainMenu = ({ slice }) => {
             <div className=" flex flex-col  py-4  sm:order-last  ">
               <div className="">
                 <ul className="langsprite-gallery filter-white">
-                  <Link href="#en">
+                  <Link href="/en-us">
                     <a>
                       <li className="en"></li>
                     </a>
                   </Link>
                   <li className="spacer"></li>
-                  <Link href="#pt">
+                  <Link href="/pt-br">
                     <a>
                       <li className="pt"></li>
                     </a>
