@@ -129,13 +129,13 @@ const MainMenu = ({ slice }) => {
           <div className="mb-9 flex  flex-col  sm:mb-12  ">
             <div className="langsel ml-36 scale-[0.56]  sm:ml-0 sm:transform-none">
               <ul className={`langsprite  ${filter} `}>
-                <Link href="#en">
+                <Link href="/en-us">
                   <a>
                     <li className="en"></li>
                   </a>
                 </Link>
                 <li className="spacer"></li>
-                <Link href="#pt">
+                <Link href="/pt-br">
                   <a>
                     <li className="pt"></li>
                   </a>
