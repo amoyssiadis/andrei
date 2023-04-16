@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { PrismicLink, PrismicRichText } from '@prismicio/react'
 import Image from 'next/image'
 import GalleryModal from '../../components/GalleryModal'
+import Sidesideportfoliomenu from '../../components/SidePortfolioMenu'
 
 const Mansory = ({ slice }) => {
   const [modalOpen, setModalOpen] = useState(false)
@@ -18,6 +19,7 @@ const Mansory = ({ slice }) => {
 
   return (
     <section className="  bg-black">
+      <Sidesideportfoliomenu />
       <div className={`masonry ${oneColumn ? 'oneColumn' : ''}  `}>
         {slice?.items?.map((item, i) => {
           //console.log(item.video)

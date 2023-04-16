@@ -6,7 +6,7 @@ import { repositoryName, linkResolver } from '../prismicio'
 
 import '../styles/globals.css'
 import { AnimatePresence } from 'framer-motion'
-import { useRouter } from 'next/router'
+//import { useRouter } from 'next/router'
 
 const NextLinkShim = ({ href, children, locale, ...props }) => {
   return (
@@ -49,7 +49,8 @@ const richTextComponents = {
 }
 
 export default function App({ Component, pageProps }) {
-  const router = useRouter()
+  //const router = useRouter()
+
   return (
     <PrismicProvider
       linkResolver={linkResolver}
@@ -57,9 +58,9 @@ export default function App({ Component, pageProps }) {
       richTextComponents={richTextComponents}
     >
       <PrismicPreview repositoryName={repositoryName}>
-        <AnimatePresence mode="wait" initial={false}>
-          <Component {...pageProps} key={router.asPath} />
-        </AnimatePresence>
+        {/* <AnimatePresence mode="wait" initial={true}> */}
+        <Component {...pageProps} key={pageProps.page.uid} />
+        {/* </AnimatePresence> */}
       </PrismicPreview>
     </PrismicProvider>
   )
