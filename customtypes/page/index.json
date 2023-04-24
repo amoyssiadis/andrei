@@ -21,6 +21,36 @@
           "single": "heading1"
         }
       },
+      "seo": {
+        "type": "Group",
+        "config": {
+          "label": "SEO",
+          "fields": {
+            "title": {
+              "type": "Text",
+              "config": {
+                "label": "title",
+                "placeholder": ""
+              }
+            },
+            "description": {
+              "type": "Text",
+              "config": {
+                "label": "Description",
+                "placeholder": ""
+              }
+            },
+            "image": {
+              "type": "Link",
+              "config": {
+                "label": "Featured image",
+                "placeholder": "",
+                "select": "media"
+              }
+            }
+          }
+        }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",

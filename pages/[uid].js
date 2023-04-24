@@ -5,6 +5,7 @@ import * as prismicH from '@prismicio/helpers'
 import { createClient } from '../prismicio'
 import { components } from '../slices'
 import { Layout } from '../components/Layout'
+import { NextSeo } from 'next-seo'
 
 const Page = ({ page, navigation, settings }) => {
   const title =
@@ -17,6 +18,37 @@ const Page = ({ page, navigation, settings }) => {
       navigation={navigation}
       settings={settings}
     >
+      <NextSeo
+        title={
+          page.data.seo[0].title ||
+          page.data.title ||
+          'Andrei Moyssiadis - Filmmaker'
+        }
+        description={
+          page.data.seo[0].description ||
+          'Official website of Andrei Moyssiadis - Filmmaker'
+        }
+        openGraph={{
+          // url: 'https://www.url.ie/a',
+          title:
+            page.data.seo[0].title ||
+            page.data.title ||
+            'Andrei Moyssiadis - Filmmaker',
+          description:
+            page.data.seo[0].description ||
+            'Official website of Andrei Moyssiadis - Filmmaker',
+          images: [
+            {
+              url: page.data.seo[0].image.url || '',
+              width: page.data.seo[0].image.width || 800,
+              height: page.data.seo[0].image.height || 600,
+              alt: 'Andrei Moyssiadis - Filmmaker',
+              type: 'image/jpeg',
+            },
+          ],
+          siteName: 'Andrei Moyssiadis',
+        }}
+      />
       <Head>
         <title>{title}</title>
       </Head>

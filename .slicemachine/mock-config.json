@@ -16,7 +16,8 @@
           "patternType": "HEADING",
           "blocks": 1
         }
-      }
+      },
+      "seo": {}
     },
     "article": {
       "title": {
