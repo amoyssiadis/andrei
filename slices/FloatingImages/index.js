@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 import ImageAnim from '../../components/ImageAnim'
 const FloatingImages = ({ slice }) => {
+  const [images, setImages] = useState([])
   // console.log({ slice })
   const randomizeIndex = (count) => {
     return Math.floor(count * Math.random())
@@ -26,10 +27,15 @@ const FloatingImages = ({ slice }) => {
     }
     return result
   }
-  const images = randomizeElemnts(slice?.items, slice?.items.length)
+  useEffect(() => {
+    setImages(randomizeElemnts(slice?.items, slice?.items.length))
+
+    return () => {}
+  }, [])
+
   return (
     <div className="pointer-events-none absolute inset-0 ">
-      <ImageAnim images={images} />
+      {images.length > 0 && <ImageAnim images={images} />}
       {/* {slice?.items?.map((item, i) => (
         <AnimatedImage src={item.image.url} key={i} />
       ))} */}

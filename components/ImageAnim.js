@@ -13,6 +13,7 @@ function ImageAnim(images) {
         <img
           className="y"
           src={images.images[0].image.url}
+          key="1"
           alt="Close / Fechar"
           onClick={closeImage}
         />
@@ -21,6 +22,7 @@ function ImageAnim(images) {
         <img
           className="y2"
           src={images.images[1].image.url}
+          key="2"
           alt="Close / Fechar"
           onClick={closeImage}
         />
