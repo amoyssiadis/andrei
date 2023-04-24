@@ -1,5 +1,4 @@
-import Link from 'next/link'
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import Marquee from 'react-fast-marquee'
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/20/solid'
 
@@ -8,34 +7,11 @@ const LogoMarquee = ({ slice }) => {
   const [speed, setSpeed] = useState(slice.primary.speed || 40)
 
   function adjustImageWidth(image) {
-    var widthBase = 50
-    var scaleFactor = 0.525
-    var imageRatio = image.width / image.height
-
-    image.style.width = Math.pow(imageRatio, scaleFactor) * widthBase + 'px'
+    const widthBase = 51
+    const scaleFactor = 0.525
+    const imageRatio = image.target.naturalWidth / image.target.naturalHeight
+    image.target.width = Math.pow(imageRatio, scaleFactor) * widthBase
   }
-
-  useEffect(() => {
-    const images = document.querySelectorAll('.marquee-image')
-
-    function handleImageLoad() {
-      adjustImageWidth(this)
-    }
-
-    images.forEach((image) => {
-      if (image.complete) {
-        adjustImageWidth(image)
-      } else {
-        image.addEventListener('load', handleImageLoad)
-      }
-    })
-
-    return () => {
-      images.forEach((image) => {
-        image.removeEventListener('load', handleImageLoad)
-      })
-    }
-  }, [])
 
   return (
     <section className="mb-4 mt-12  p-1 sm:mt-24 ">
@@ -60,6 +36,7 @@ const LogoMarquee = ({ slice }) => {
                 src={item.image.url}
                 alt={item.image.alt}
                 className="marquee-image max-h-14  object-cover	object-center"
+                onLoad={adjustImageWidth}
               />
             </div>
           ))}
