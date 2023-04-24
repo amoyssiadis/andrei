@@ -9,10 +9,8 @@ import MenuModalImage from '../../public/portfoliomenu.svg'
 import Alert from '../../components/Alert'
 //import clsx from 'clsx'
 import useWindowDimensions from '../../lib/useWindowDimensions'
-import SidePortfolioMenu from '../../components/SidePortfolioMenu'
 import GoToTop from '../../components/GoToTop'
 import { AnimatePresence, motion } from 'framer-motion'
-import { EnvelopeIcon } from '@heroicons/react/24/outline'
 import { PrismicLink } from '@prismicio/react'
 
 const MainMenu = ({ slice }) => {
@@ -23,10 +21,9 @@ const MainMenu = ({ slice }) => {
   const email = 'andrei@andrei.com.br' //prismicH.asText(slice.primary.email);
   //console.log(slice.variation)
   const { width, height } = useWindowDimensions()
-  let menuLayoutID = 'mainmenu'
+
   // GALERY DESKTOP MAIN MENU
   if (slice.variation === 'gallery' && width > 1000) {
-    menuLayoutID = 'gallerymainmenu'
     //console.log('router.asPath', router.asPath)
     return (
       <Bounded as="section" className=" overflow-hidden  bg-black py-10 ">
@@ -37,15 +34,11 @@ const MainMenu = ({ slice }) => {
             <div className="">
               <ul className="langsprite-gallery filter-white">
                 <PrismicLink href={router.asPath} locale="en-us">
-                  <a>
-                    <li className="en"></li>
-                  </a>
+                  <li className="en"></li>
                 </PrismicLink>
                 <li className="spacer"></li>
                 <PrismicLink href={router.asPath} locale="pt-br">
-                  <a>
-                    <li className="pt"></li>
-                  </a>
+                  <li className="pt"></li>
                 </PrismicLink>
               </ul>
             </div>
@@ -125,22 +118,18 @@ const MainMenu = ({ slice }) => {
   const filter = slice.variation === 'gallery' ? 'filter-white' : ''
   return (
     <AnimatePresence mode="wait" initial={true}>
-      <motion.div layoutId={menuLayoutID}>
+      <motion.div layoutId="mainmenu">
         <Bounded as="section" className={` overflow-hidden   ${bg} `}>
           <div className={`${style} flex flex-col items-center justify-center`}>
             <div className="mb-9 flex  flex-col  sm:mb-12  ">
               <div className="langsel ml-36 scale-[0.56]  sm:ml-0 sm:transform-none">
                 <ul className={`langsprite  ${filter} `}>
                   <PrismicLink href={router.asPath} locale="en-us">
-                    <a>
-                      <li className="en"></li>
-                    </a>
+                    <li className="en"></li>
                   </PrismicLink>
                   <li className="spacer"></li>
                   <PrismicLink href={router.asPath} locale="pt-br">
-                    <a>
-                      <li className="pt"></li>
-                    </a>
+                    <li className="pt"></li>
                   </PrismicLink>
                 </ul>
               </div>
