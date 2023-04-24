@@ -3,6 +3,7 @@ import { PrismicLink, PrismicRichText } from '@prismicio/react'
 import Image from 'next/image'
 import GalleryModal from '../../components/GalleryModal'
 import Sidesideportfoliomenu from '../../components/SidePortfolioMenu'
+import LazyLoad from 'react-lazy-load'
 
 const Mansory = ({ slice }) => {
   const [modalOpen, setModalOpen] = useState(false)
@@ -30,13 +31,15 @@ const Mansory = ({ slice }) => {
           return (
             <div className="  cursor-pointer p-1" key={i}>
               <a onClick={() => openMedia(item)}>
-                <img
-                  className=""
-                  src={item.image.url}
-                  alt={item.image.alt}
-                  width={width}
-                  height={height}
-                />
+                <LazyLoad>
+                  <img
+                    className=""
+                    src={item.image.url}
+                    alt={item.image.alt}
+                    width={width}
+                    height={height}
+                  />
+                </LazyLoad>
               </a>
             </div>
           )
