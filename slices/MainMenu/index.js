@@ -118,7 +118,12 @@ const MainMenu = ({ slice }) => {
   const filter = slice.variation === 'gallery' ? 'filter-white' : ''
   return (
     <AnimatePresence mode="wait" initial={true}>
-      <motion.div layoutId="mainmenu">
+      <motion.div
+        layoutId="mainmenu"
+        transition={{
+          duration: 2,
+        }}
+      >
         <Bounded as="section" className={` overflow-hidden   ${bg} `}>
           <div className={`${style} flex flex-col items-center justify-center`}>
             <div className="mb-9 flex  flex-col  sm:mb-12  ">
