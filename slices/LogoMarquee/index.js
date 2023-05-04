@@ -21,7 +21,7 @@ const LogoMarquee = ({ slice }) => {
       <div className="mx-auto flex max-w-5xl justify-center ">
         <ChevronLeftIcon
           className="h-16 cursor-pointer"
-          onClick={() => setDirection('right')}
+          onClick={() => setDirection('left')}
         />
         <Marquee
           className="w-fit   items-center justify-center "
@@ -29,6 +29,7 @@ const LogoMarquee = ({ slice }) => {
           speed={speed}
           direction={direction}
           gradient={false}
+          autoFill={true}
         >
           {slice?.items?.map((item, i) => (
             <div key={i} className=" mr-6 ">
@@ -43,7 +44,7 @@ const LogoMarquee = ({ slice }) => {
         </Marquee>
         <ChevronRightIcon
           className="h-16 cursor-pointer"
-          onClick={() => setDirection('left')}
+          onClick={() => setDirection('right')}
         />
       </div>
     </section>
