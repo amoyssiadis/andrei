@@ -8,7 +8,7 @@ import { Layout } from '../components/Layout'
 import { NextSeo } from 'next-seo'
 
 const Index = ({ page, navigation, settings }) => {
-  console.log({ page })
+  //console.log({ page })
 
   return (
     <Layout

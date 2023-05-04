@@ -1,8 +1,8 @@
-import * as prismicH from '@prismicio/helpers'
-import { PrismicLink, PrismicText } from '@prismicio/react'
-import { PrismicNextImage } from '@prismicio/next'
+// import * as prismicH from '@prismicio/helpers'
+// import { PrismicLink, PrismicText } from '@prismicio/react'
+// import { PrismicNextImage } from '@prismicio/next'
 
-import { linkResolver } from '../prismicio'
+// import { linkResolver } from '../prismicio'
 import { Bounded } from './Bounded'
 
 const FlagIcon = ({ lang }) => {
