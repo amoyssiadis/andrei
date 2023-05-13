@@ -181,8 +181,12 @@ const MainMenu = ({ slice }) => {
                   <li
                     className="contact"
                     onClick={() => {
-                      navigator.clipboard.writeText(email)
-                      setAlertOpen(true)
+                      try {
+                        navigator.clipboard.writeText(email)
+                        setAlertOpen(true)
+                      } catch (e) {
+                        console.log(e)
+                      }
                     }}
                   ></li>
                 </a>

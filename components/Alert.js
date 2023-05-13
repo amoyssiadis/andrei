@@ -48,8 +48,9 @@ export default function Alert({ email, isOpen, setIsOpen, variation = null }) {
           <div className="rounded-md">
             <div className="flex">
               <div className="ml-3">
-                <p className="text-center text-sm tracking-wider md:text-base ">
-                  {email} has been copied to your clipboard
+                <p className="text-center text-xs tracking-wider  sm:text-sm md:text-base ">
+                  {email} has been copied
+                  <span className="hidden sm:inline"> to your clipboard</span>
                 </p>
               </div>
             </div>
