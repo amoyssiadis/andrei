@@ -40,7 +40,7 @@ export default function GalleryModal({ isOpen, setIsOpen, media }) {
         </Transition.Child>
 
         <div className="fixed inset-0 z-10 overflow-y-auto">
-          <div className="mx-auto flex h-screen max-w-7xl items-center justify-center text-center ">
+          <div className="mx-auto flex  max-w-7xl items-center justify-center text-center ">
             <Transition.Child
               as={Fragment}
               enter="ease-out duration-300"
@@ -52,20 +52,20 @@ export default function GalleryModal({ isOpen, setIsOpen, media }) {
             >
               <Dialog.Panel className="relative  w-full transform overflow-hidden  rounded-lg px-4 pt-5 pb-4 text-left shadow-xl  transition-all  sm:p-6">
                 <div className="inline-flex w-full justify-end">
-                  <button
+                  <div
                     type="button"
-                    className=" px-4 py-2 text-base font-medium text-white"
+                    className=" cursor-pointer px-4 py-2 text-base font-medium text-white hover:text-gray-400"
                     onClick={() => close()}
                   >
                     <XCircleIcon className="h-20" />
-                  </button>
+                  </div>
                 </div>
                 <div className="player-wrapper inline-flex w-full  items-center justify-center  px-4 py-2 text-base font-medium text-white">
                   {media && media.media.url && (
-                    <div className="react-player aspect-video h-full w-full bg-gray-700 text-white">
+                    <div className="react-player aspect-video h-full w-full text-white">
                       <CustomVideoPlayer url={media.media.url} />
                       {/* <ReactPlayer url={['http://localhost:3000/video.mp4']}
-                    // { "/video.mp4" || media.media.url} 
+                    // { "/video.mp4" || media.media.url}
                     width="100%" height="100%" controls={true} loop={true} fallback={<div className='text-2xl text-white font-extrabold'>Loading...</div>} /> */}
                     </div>
                   )}
