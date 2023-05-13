@@ -66,7 +66,7 @@ export default function MenuModal({ isOpen, setIsOpen, image }) {
                   </div>
                 </div>
                 <div className=" -mt-16 mr-28 h-full w-full sm:-mt-10 sm:ml-9 ">
-                  <div className="portfoliomenu  h-full w-full scale-[2] ">
+                  <div className="portfoliomenu  h-full w-full scale-[1.5] sm:scale-[2] ">
                     <ul className="portfoliomenu-sprite ">
                       <Link href="/editing">
                         <a>
