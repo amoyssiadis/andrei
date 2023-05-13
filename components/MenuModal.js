@@ -51,7 +51,7 @@ export default function MenuModal({ isOpen, setIsOpen, image }) {
               enter="ease-out duration-300"
               enterFrom="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
               enterTo="opacity-100 translate-y-0 sm:scale-100"
-              leave="ease-in duration-200"
+              leave="ease-in duration-300"
               leaveFrom="opacity-100 translate-y-0 sm:scale-100"
               leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
             >
@@ -69,7 +69,7 @@ export default function MenuModal({ isOpen, setIsOpen, image }) {
                   <div className="portfoliomenu  h-full w-full scale-[1.5] sm:scale-[2] ">
                     <ul className="portfoliomenu-sprite ">
                       <Link href="/editing">
-                        <a>
+                        <a className="focus:outline-none">
                           <li className="editing"></li>
                         </a>
                       </Link>
