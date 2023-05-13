@@ -55,18 +55,18 @@ export default function MenuModal({ isOpen, setIsOpen, image }) {
               leaveFrom="opacity-100 translate-y-0 sm:scale-100"
               leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
             >
-              <Dialog.Panel className="relative h-screen transform overflow-hidden rounded-lg  px-4 pt-5 pb-4 text-left shadow-xl transition-all  sm:w-full sm:max-w-sm sm:p-6">
+              <Dialog.Panel className="relative h-screen  transform  rounded-lg  px-4 pt-5 pb-4 text-left shadow-xl transition-all  sm:w-full sm:max-w-sm sm:p-6">
                 <div className="inline-flex w-full   justify-end">
                   <div
                     type="button"
-                    className=" cursor-pointer  px-4 py-2 text-base font-medium text-white"
+                    className=" z-40  cursor-pointer px-4 py-2 text-base font-medium text-white"
                     onClick={() => close()}
                   >
                     <XCircleIcon className="h-20" />
                   </div>
                 </div>
-                <div className="">
-                  <div className="portfoliomenu ">
+                <div className=" -mt-16 mr-28 h-full w-full sm:-mt-10 sm:ml-9 ">
+                  <div className="portfoliomenu  h-full w-full scale-[2] ">
                     <ul className="portfoliomenu-sprite ">
                       <Link href="/editing">
                         <a>
