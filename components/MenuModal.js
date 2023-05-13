@@ -35,13 +35,13 @@ export default function MenuModal({ isOpen, setIsOpen, image }) {
         <Transition.Child
           as={Fragment}
           enter="ease-out duration-300"
-          enterFrom="opacity-0"
-          enterTo="opacity-100"
-          leave="ease-in duration-200"
-          leaveFrom="opacity-100"
-          leaveTo="opacity-0"
+          enterFrom="opacity-0 translate-x-full "
+          enterTo="opacity-100 translate-x-0"
+          leave="ease-in duration-300"
+          leaveFrom="opacity-100 translate-x-0"
+          leaveTo="opacity-0 translate-x-full"
         >
-          <div className="fixed inset-0 bg-black  transition-opacity" />
+          <div className="fixed inset-0 bg-black transition-all" />
         </Transition.Child>
 
         <div className="fixed inset-0 z-10 overflow-y-auto">
@@ -57,13 +57,13 @@ export default function MenuModal({ isOpen, setIsOpen, image }) {
             >
               <Dialog.Panel className="relative h-screen transform overflow-hidden rounded-lg  px-4 pt-5 pb-4 text-left shadow-xl transition-all  sm:w-full sm:max-w-sm sm:p-6">
                 <div className="inline-flex w-full   justify-end">
-                  <button
+                  <div
                     type="button"
-                    className="   px-4 py-2 text-base font-medium text-white"
+                    className=" cursor-pointer  px-4 py-2 text-base font-medium text-white"
                     onClick={() => close()}
                   >
                     <XCircleIcon className="h-20" />
-                  </button>
+                  </div>
                 </div>
                 <div className="">
                   <div className="portfoliomenu ">
