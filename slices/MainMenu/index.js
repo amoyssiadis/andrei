@@ -116,16 +116,19 @@ const MainMenu = ({ slice }) => {
   }
   const bg = slice.variation === 'gallery' ? 'bg-black' : ''
   const filter = slice.variation === 'gallery' ? 'filter-white' : ''
+  const isInfo = router.asPath == '/info' ? ' scale-[0.85] ' : ''
   return (
     <AnimatePresence mode="wait" initial={true}>
       <motion.div
         layoutId="mainmenu"
         transition={{
-          duration: 2,
+          duration: 1.5,
         }}
       >
-        <Bounded as="section" className={` overflow-hidden   ${bg} `}>
-          <div className={`${style} flex flex-col items-center justify-center`}>
+        <Bounded as="section" className={`     ${bg} `}>
+          <div
+            className={`${style} flex flex-col items-center justify-center  ${isInfo}`}
+          >
             <div className="mb-9 flex  flex-col  sm:mb-12  ">
               <div className="langsel ml-36 scale-[0.56]  sm:ml-0 sm:transform-none">
                 <ul className={`langsprite  ${filter} `}>
