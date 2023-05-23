@@ -394,9 +394,14 @@ li.active {
   width: 150px;
   @apply mb-12 transition-all;
 }
+
 .portfoliomenu-sprite li:hover {
   cursor: pointer;
-  @apply -translate-x-4 border-black;
+}
+.portfoliomenu-sprite a:focus {
+  box-shadow: none;
+  outline: none;
+  @apply shadow-transparent;
 }
 .portfoliomenu-sprite li.editing {
   background-position: -55px 0px;
@@ -435,12 +440,15 @@ li.active {
 
 .sideportfoliomenu-sprite li div.editing {
   background-position: -55px 0px;
+  @apply focus:outline-none;
 }
 .sideportfoliomenu-sprite li div.original {
   background-position: -55px -68px;
+  @apply focus:outline-none;
 }
 .sideportfoliomenu-sprite li div.other {
   background-position: -55px -140px;
+  @apply focus:outline-none;
 }
 .active-sideportfoliomenu {
   transform: translateX(-15px);

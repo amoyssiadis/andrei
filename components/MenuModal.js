@@ -1,13 +1,129 @@
-import { Fragment, useEffect, useState } from 'react'
+import { Fragment, useEffect, useRef, useState } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
-import { CheckIcon, XCircleIcon } from '@heroicons/react/24/outline'
-import Link from 'next/link'
+import { XCircleIcon } from '@heroicons/react/24/outline'
 
-// const CloseIcon = () => {
-//   return (<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
-//   <path strokeLinecap="round" strokeLinejoin="round" d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-// </svg>
-// )}
+const ColorfulMenu = () => {
+  const containerRef = useRef(null)
+  useEffect(() => {
+    const background = document.createElement('div')
+    background.style.backgroundImage = "url('/bgworkmenu.gif')"
+    background.style.backgroundSize = '2000%'
+    background.style.backgroundRepeat = 'no-repeat'
+    background.style.backgroundPosition = 'center'
+    background.style.position = 'absolute'
+    background.style.top = '0'
+    background.style.left = '0'
+    background.style.width = '100%'
+    background.style.height = '100%'
+    containerRef.current.appendChild(background)
+
+    const blackLayer = document.createElement('div')
+    blackLayer.style.backgroundColor = 'black'
+    blackLayer.style.position = 'absolute'
+    blackLayer.style.top = '0'
+    blackLayer.style.left = '0'
+    blackLayer.style.width = '100%'
+    blackLayer.style.height = '100%'
+    blackLayer.style.opacity = '1'
+    containerRef.current.appendChild(blackLayer)
+
+    const list = document.createElement('ul')
+    list.style.listStyleType = 'none'
+    list.style.textAlign = 'center'
+    list.style.color = 'white'
+    list.style.fontFamily = 'sans-serif'
+    list.style.fontWeight = 'bold'
+    list.style.fontSize = '100px'
+    list.style.textTransform = 'uppercase'
+    list.style.position = 'absolute'
+    list.style.top = '50%'
+    list.style.left = '50%'
+    list.style.transform = 'translate(-50%, -50%)'
+
+    list.style.margin = '0'
+    list.style.padding = '0'
+    list.className = 'portfoliomenu-sprite'
+
+    // create onclick links on each li item below
+    const link1 = document.createElement('a')
+    link1.href = '/editing'
+    link1.appendChild(document.createElement('li')).className = 'editing '
+
+    const link2 = document.createElement('a')
+    link2.href = '/original'
+    link2.appendChild(document.createElement('li')).className = 'original '
+
+    const link3 = document.createElement('a')
+    link3.href = '/other'
+    link3.appendChild(document.createElement('li')).className = 'other '
+
+    list.appendChild(link1)
+    list.appendChild(link2)
+    list.appendChild(link3)
+    blackLayer.appendChild(list)
+
+    blackLayer.style.mixBlendMode = 'darken'
+
+    const list2 = list.cloneNode(true)
+    containerRef.current.appendChild(list2)
+
+    list2.addEventListener(
+      'mouseover',
+      function (event) {
+        if (event.target.tagName === 'LI') {
+          event.target.style.opacity = '0'
+        }
+      },
+      false
+    )
+
+    list2.addEventListener(
+      'mouseout',
+      function (event) {
+        if (event.target.tagName === 'LI') {
+          event.target.style.opacity = '1'
+        }
+      },
+      false
+    )
+
+    list2.addEventListener(
+      'mouseover',
+      function (event) {
+        if (event.target.tagName === 'LI') {
+          event.target.style.transition = 'opacity 0.5s'
+        }
+      },
+      false
+    )
+
+    list2.addEventListener(
+      'mouseout',
+      function (event) {
+        if (event.target.tagName === 'LI') {
+          event.target.style.transition = 'opacity 0.5s'
+        }
+      },
+      false
+    )
+
+    list2.addEventListener(
+      'mousedown',
+      function (event) {
+        if (event.target.tagName === 'LI') {
+          event.target.style.userSelect = 'none'
+        }
+      },
+      false
+    )
+
+    return () => {
+      if (containerRef.current) containerRef.current.innerHTML = '' // Cleanup on component unmount
+    }
+  }, [])
+
+  return <div ref={containerRef}>{/* Render your page content here */}</div>
+}
 
 export default function MenuModal({ isOpen, setIsOpen, image }) {
   const [open, setOpen] = useState(isOpen || false)
@@ -55,7 +171,7 @@ export default function MenuModal({ isOpen, setIsOpen, image }) {
               leaveFrom="opacity-100 translate-y-0 sm:scale-100"
               leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
             >
-              <Dialog.Panel className="relative h-screen  transform  rounded-lg  px-4 pt-5 pb-4 text-left shadow-xl transition-all  sm:w-full sm:max-w-sm sm:p-6">
+              <Dialog.Panel className="relative h-screen  w-full max-w-sm  transform  rounded-lg px-4 pt-5 pb-4 text-left shadow-xl  transition-all sm:w-full sm:max-w-sm sm:p-6">
                 <div className="inline-flex w-full   justify-end">
                   <div
                     type="button"
@@ -67,24 +183,7 @@ export default function MenuModal({ isOpen, setIsOpen, image }) {
                 </div>
                 <div className=" -mt-16 mr-28 h-full w-full sm:-mt-10 sm:ml-9 ">
                   <div className="portfoliomenu  h-full w-full scale-[1.5] sm:scale-[2] ">
-                    <ul className="portfoliomenu-sprite ">
-                      <Link href="/editing">
-                        <a className="focus:outline-none">
-                          <li className="editing"></li>
-                        </a>
-                      </Link>
-
-                      <Link href="/gallery">
-                        <a>
-                          <li className="original"></li>
-                        </a>
-                      </Link>
-                      <Link href="/other">
-                        <a>
-                          <li className="other"></li>
-                        </a>
-                      </Link>
-                    </ul>
+                    <ColorfulMenu />
                   </div>
                 </div>
               </Dialog.Panel>
