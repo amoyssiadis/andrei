@@ -945,7 +945,7 @@
                 "image": {
                   "type": "Image",
                   "config": {
-                    "label": "Placeholder image",
+                    "label": "Imagem Destacada",
                     "constraint": {},
                     "thumbnails": []
                   }
@@ -963,6 +963,14 @@
                   "config": {
                     "label": "Video",
                     "placeholder": ""
+                  }
+                },
+                "image_hover": {
+                  "type": "Image",
+                  "config": {
+                    "label": "Imagem MouseOver",
+                    "constraint": {},
+                    "thumbnails": []
                   }
                 }
               },
@@ -983,7 +991,7 @@
                   },
                   "alt": null,
                   "copyright": null,
-                  "url": "https://images.unsplash.com/photo-1498050108023-c5249f4df085"
+                  "url": "https://images.unsplash.com/photo-1607582278043-57198ac8da43"
                 },
                 "media": {
                   "link_type": "Media",
@@ -1004,6 +1012,15 @@
                   "provider_name": "Twitter",
                   "provider_url": "http://www.twitter.com/",
                   "version": "1.0"
+                },
+                "image_hover": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": null,
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1589652717521-10c0d092dea9"
                 }
               }
             ],
@@ -1021,7 +1038,7 @@
           "default": {
             "path": "/Users/ericmilfont/Fiverr/andrei-portfolio-website/.slicemachine/assets/slices/Mansory/default/preview.png",
             "width": 800,
-            "height": 48
+            "height": 600
           }
         }
       },

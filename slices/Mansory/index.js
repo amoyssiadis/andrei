@@ -17,11 +17,17 @@ const Mansory = ({ slice }) => {
     setModalMedia(item)
     setModalOpen(true)
   }
+  function hoverImage(e, url) {
+    //change the src of the image
+    if (url && e.target.src !== url) {
+      e.target.src = url
+    }
+  }
 
   return (
     <section className="  bg-black">
       <Sidesideportfoliomenu />
-      <div className={`masonry ${oneColumn ? 'oneColumn' : ''}  `}>
+      <div className={`masonry px-24 ${oneColumn ? 'oneColumn' : ''}  `}>
         {slice?.items?.map((item, i) => {
           //console.log(item.video)
           // you might want to use a lib here (eg. react-oembed-container)
@@ -29,7 +35,7 @@ const Mansory = ({ slice }) => {
           const height = item.image.dimensions.height || 400
 
           return (
-            <div className="  cursor-pointer p-1" key={i}>
+            <div className="cursor-pointer p-1" key={i}>
               <a onClick={() => openMedia(item)}>
                 <LazyLoad>
                   <img
@@ -38,6 +44,10 @@ const Mansory = ({ slice }) => {
                     alt={item.image.alt}
                     width={width}
                     height={height}
+                    onMouseOver={(e) =>
+                      hoverImage(e, item.image_hover.url || null)
+                    }
+                    onMouseOut={(e) => hoverImage(e, item.image.url)}
                   />
                 </LazyLoad>
               </a>
