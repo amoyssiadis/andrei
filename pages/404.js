@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import GrainedEffect from '../components/GrainedEffect'
+import Image from 'next/image'
 
 export default function FourOhFour() {
   return (
@@ -9,8 +10,18 @@ export default function FourOhFour() {
           <div className="flex h-screen w-screen  items-center justify-center bg-[url('/logobg.webp')]   text-center  ">
             <Link href="/">
               <a>
-                <h1>404</h1>
-                <h2>Page not found</h2>
+                <div className="flex flex-col items-center justify-center ">
+                  <img
+                    alt="Page not Found"
+                    src="/404.svg"
+                    className="w-[900px]"
+                  />
+                  <img
+                    alt="Click to go back"
+                    src="/pagenotfound.svg"
+                    className="w-[283px]"
+                  />
+                </div>
               </a>
             </Link>
           </div>
