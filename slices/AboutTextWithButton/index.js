@@ -13,7 +13,7 @@ const AboutTextWithButton = ({ slice }) => (
           <PrismicRichText field={slice.primary.about} />
         </div>
       </div>
-      <div className=" right-10 mx-auto mt-10 w-fit  lg:mt-0 lg:mr-10 ">
+      <div className=" right-10 mx-auto mt-10 hidden w-fit md:block  lg:mt-0 lg:mr-10 ">
         <FloatingImage slice={slice} />
       </div>
     </div>
