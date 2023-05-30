@@ -14,7 +14,7 @@ const LogoMarquee = ({ slice }) => {
   }
 
   return (
-    <section className="mb-4 mt-12  p-1 sm:mt-24 ">
+    <section className="mb-4 mt-12  p-1 sm:mt-12 ">
       <p className="my-4 text-center font-bold tracking-wider sm:text-lg ">
         {slice.primary.title}
       </p>

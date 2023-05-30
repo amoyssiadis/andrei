@@ -7,7 +7,7 @@ import FloatingImage from '../FloatingImage'
 
 const AboutTextWithButton = ({ slice }) => (
   <section>
-    <div className="min-w-screen mx-auto mt-4 max-w-[1200px] flex-row px-4 sm:mt-16 sm:flex ">
+    <div className="min-w-screen mx-auto mt-4 max-w-[1200px] flex-row px-4 sm:mt-4 sm:flex ">
       <div className="px-6 sm:pl-8 sm:pr-8 ">
         <div className="max-w-[940px] font-bold tracking-wider sm:pr-20 sm:text-lg ">
           <PrismicRichText field={slice.primary.about} />
