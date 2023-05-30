@@ -15,10 +15,10 @@ const LogoMarquee = ({ slice }) => {
 
   return (
     <section className="mb-4 mt-12  p-1 sm:mt-24 ">
-      <p className="my-4 text-center text-lg font-bold tracking-wider sm:text-lg ">
+      <p className="my-4 text-center font-bold tracking-wider sm:text-lg sm:text-lg ">
         {slice.primary.title}
       </p>
-      <div className="mx-auto flex max-w-5xl justify-center ">
+      <div className="mx-auto flex max-w-5xl justify-center px-12 ">
         <ChevronLeftIcon
           className="h-16 cursor-pointer"
           onClick={() => setDirection('left')}
