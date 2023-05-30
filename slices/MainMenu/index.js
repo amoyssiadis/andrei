@@ -26,7 +26,7 @@ const MainMenu = ({ slice }) => {
   if (slice.variation === 'gallery' && width > 1000) {
     //console.log('router.asPath', router.asPath)
     return (
-      <Bounded as="section" className="   bg-black py-10 ">
+      <Bounded as="section" className=" overflow-hidden  bg-black py-10 ">
         <div
           className={`${style} flex flex-row items-center justify-center px-8 `}
         >
@@ -116,7 +116,7 @@ const MainMenu = ({ slice }) => {
   }
   const bg = slice.variation === 'gallery' ? 'bg-black' : ''
   const filter = slice.variation === 'gallery' ? 'filter-white' : ''
-  const isInfo = router.asPath == '/info' ? '  ' : ''
+  const isInfo = router.asPath == '/info' ? ' scale-[0.85] ' : ''
   return (
     <AnimatePresence mode="wait" initial={true}>
       <motion.div
@@ -170,53 +170,56 @@ const MainMenu = ({ slice }) => {
               </div>
             </motion.div>
             <motion.div
-              layoutId="menulinks"
+              layoutId="navbarlinks"
               transition={{
                 duration: 1.5,
               }}
-              className="navbar scale-[0.56] sm:transform-none "
             >
-              <ul className={`navsprite ${filter} `}>
-                <a onClick={() => setModalOpen(true)}>
-                  <li
-                    className={
-                      router.asPath == '/gallery' ? 'active work' : '' + 'work'
-                    }
-                  ></li>
-                </a>
-
-                <Link href="/info">
-                  <a>
+              <div className="navbar scale-[0.56] sm:transform-none ">
+                <ul className={`navsprite ${filter} `}>
+                  <a onClick={() => setModalOpen(true)}>
                     <li
                       className={
-                        router.asPath == '/info' ? 'active info' : '' + 'info'
+                        router.asPath == '/gallery'
+                          ? 'active work'
+                          : '' + 'work'
                       }
                     ></li>
                   </a>
-                </Link>
 
-                <a>
-                  <li
-                    className="contact"
-                    onClick={() => {
-                      try {
-                        navigator.clipboard.writeText(email)
-                        setAlertOpen(true)
-                      } catch (e) {
-                        console.log(e)
-                      }
-                    }}
-                  ></li>
-                </a>
+                  <Link href="/info">
+                    <a>
+                      <li
+                        className={
+                          router.asPath == '/info' ? 'active info' : '' + 'info'
+                        }
+                      ></li>
+                    </a>
+                  </Link>
 
-                <a
-                  href="https://instagram.com/amoyssiadis"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <li className="instagram"></li>
-                </a>
-              </ul>
+                  <a>
+                    <li
+                      className="contact"
+                      onClick={() => {
+                        try {
+                          navigator.clipboard.writeText(email)
+                          setAlertOpen(true)
+                        } catch (e) {
+                          console.log(e)
+                        }
+                      }}
+                    ></li>
+                  </a>
+
+                  <a
+                    href="https://instagram.com/amoyssiadis"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <li className="instagram"></li>
+                  </a>
+                </ul>
+              </div>
             </motion.div>
             <Alert
               email={email}
