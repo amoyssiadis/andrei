@@ -150,10 +150,10 @@ export default function MenuModal({ isOpen, setIsOpen, image }) {
       <Dialog as="div" className="relative z-10" onClose={setOpen}>
         <Transition.Child
           as={Fragment}
-          enter="ease-out duration-300"
+          enter="ease-out duration-500"
           enterFrom="opacity-0 translate-x-full "
           enterTo="opacity-100 translate-x-0"
-          leave="ease-in duration-300"
+          leave="ease-in duration-500"
           leaveFrom="opacity-100 translate-x-0"
           leaveTo="opacity-0 translate-x-full"
         >
@@ -164,10 +164,10 @@ export default function MenuModal({ isOpen, setIsOpen, image }) {
           <div className="flex min-h-full min-w-full items-center justify-end text-center ">
             <Transition.Child
               as={Fragment}
-              enter="ease-out duration-300"
+              enter="ease-out duration-500"
               enterFrom="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
               enterTo="opacity-100 translate-y-0 sm:scale-100"
-              leave="ease-in duration-300"
+              leave="ease-in duration-500"
               leaveFrom="opacity-100 translate-y-0 sm:scale-100"
               leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
             >
