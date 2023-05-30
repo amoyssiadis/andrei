@@ -159,7 +159,7 @@ const MainMenu = ({ slice }) => {
               className="flex flex-col items-center justify-center   "
             >
               <div
-                className={` -my-4  w-[300px] rounded-2xl ${bgColor} py-4 px-4   sm:w-[630px] `}
+                className={` -my-4  w-[325px] rounded-2xl ${bgColor} py-4 px-4   sm:w-[630px] `}
               >
                 <Link href="/">
                   <a>
@@ -233,7 +233,9 @@ const MainMenu = ({ slice }) => {
               variation={slice.variation}
             />
             {/* {slice.variation === 'gallery' && <SidePortfolioMenu />} */}
-            <GoToTop />
+            {(router.asPath !== '/' || router.asPath !== '/pt-br') && (
+              <GoToTop />
+            )}
             <MenuModal
               isOpen={modalOpen}
               setIsOpen={setModalOpen}
