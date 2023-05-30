@@ -50,7 +50,9 @@ const Index = ({ page, navigation, settings }) => {
       <Head>
         <title>{prismicH.asText(page.data.title)}</title>
       </Head>
-      <SliceZone slices={page.data.slices} components={components} />
+      <div className="max-h-screen overflow-hidden">
+        <SliceZone slices={page.data.slices} components={components} />
+      </div>
     </Layout>
   )
 }
