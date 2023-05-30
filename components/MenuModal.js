@@ -50,7 +50,7 @@ const ColorfulMenu = () => {
     link1.appendChild(document.createElement('li')).className = 'editing '
 
     const link2 = document.createElement('a')
-    link2.href = '/original'
+    link2.href = '/gallery'
     link2.appendChild(document.createElement('li')).className = 'original '
 
     const link3 = document.createElement('a')
