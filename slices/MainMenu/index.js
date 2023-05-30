@@ -117,6 +117,8 @@ const MainMenu = ({ slice }) => {
   const bg = slice.variation === 'gallery' ? 'bg-black' : ''
   const filter = slice.variation === 'gallery' ? 'filter-white' : ''
   const isInfo = router.asPath == '/info' ? ' scale-[0.85] ' : ''
+  const bgColor =
+    slice.variation === 'gallery' ? '  ' : ' bg-[url("/logobg.webp")] '
   return (
     <AnimatePresence mode="wait" initial={true}>
       <motion.div
@@ -124,8 +126,9 @@ const MainMenu = ({ slice }) => {
         transition={{
           duration: 1.5,
         }}
+        className=""
       >
-        <Bounded as="section" className={`     ${bg} `}>
+        <Bounded as="section" className={`  pt-4 md:pt-0   ${bg} `}>
           <div
             className={`${style} flex flex-col items-center justify-center  ${isInfo}`}
           >
@@ -155,7 +158,9 @@ const MainMenu = ({ slice }) => {
               }}
               className="flex flex-col items-center justify-center   "
             >
-              <div className=" -my-4  w-[300px] rounded-2xl bg-[url('/logobg.webp')] py-4 px-4   sm:w-[630px] ">
+              <div
+                className={` -my-4  w-[300px] rounded-2xl ${bgColor} py-4 px-4   sm:w-[630px] `}
+              >
                 <Link href="/">
                   <a>
                     {prismicH.isFilled.image(slice.primary.logo) && (
