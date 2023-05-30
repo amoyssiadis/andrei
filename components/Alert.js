@@ -30,7 +30,7 @@ export default function Alert({ email, isOpen, setIsOpen, variation = null }) {
   }
   if (variation === 'gallery' && width > 1000) {
     alertVariationClass =
-      alertVariationClass + ' mt-[12.5rem] sm:mt-[0rem] sm:right-1/3 '
+      alertVariationClass + ' mt-[12.5rem] sm:mt-[1rem] sm:right-1/3 '
   } else if (variation === 'gallery' && width <= 1000) {
     alertVariationClass = alertVariationClass + ' mt-[12.5rem] sm:mt-[20rem] '
   }

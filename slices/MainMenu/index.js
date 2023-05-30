@@ -26,7 +26,7 @@ const MainMenu = ({ slice }) => {
   if (slice.variation === 'gallery' && width > 1000) {
     //console.log('router.asPath', router.asPath)
     return (
-      <Bounded as="section" className=" overflow-hidden  bg-black py-10 ">
+      <Bounded as="section" className="   bg-black py-10 ">
         <div
           className={`${style} flex flex-row items-center justify-center px-8 `}
         >
