@@ -116,7 +116,7 @@ const MainMenu = ({ slice }) => {
   }
   const bg = slice.variation === 'gallery' ? 'bg-black' : ''
   const filter = slice.variation === 'gallery' ? 'filter-white' : ''
-  const isInfo = router.asPath == '/info' ? ' scale-[0.85] ' : ''
+  const isInfo = router.asPath == '/info' ? '  ' : ''
   return (
     <AnimatePresence mode="wait" initial={true}>
       <motion.div
