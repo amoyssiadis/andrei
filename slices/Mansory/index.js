@@ -25,9 +25,11 @@ const Mansory = ({ slice }) => {
   }
 
   return (
-    <section className="  bg-black">
+    <section className="  bg-black pb-14">
       <Sidesideportfoliomenu />
-      <div className={`masonry px-24 ${oneColumn ? 'oneColumn' : ''}  `}>
+      <div
+        className={`masonry px-4 md:px-20 ${oneColumn ? 'oneColumn' : ''}  `}
+      >
         {slice?.items?.map((item, i) => {
           //console.log(item.video)
           // you might want to use a lib here (eg. react-oembed-container)
