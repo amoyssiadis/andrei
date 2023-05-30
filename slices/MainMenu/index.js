@@ -119,17 +119,18 @@ const MainMenu = ({ slice }) => {
   const isInfo = router.asPath == '/info' ? ' scale-[0.85] ' : ''
   return (
     <AnimatePresence mode="wait" initial={true}>
-      <motion.div
-        layoutId="mainmenu"
-        transition={{
-          duration: 1.5,
-        }}
-      >
+      <motion.div>
         <Bounded as="section" className={`     ${bg} `}>
           <div
             className={`${style} flex flex-col items-center justify-center  ${isInfo}`}
           >
-            <div className="mb-9 flex  flex-col  sm:mb-12  ">
+            <motion.div
+              layoutId="langsel"
+              transition={{
+                duration: 1.5,
+              }}
+              className="mb-9 flex  flex-col  sm:mb-12  "
+            >
               <div className="langsel ml-36 scale-[0.56]  sm:ml-0 sm:transform-none">
                 <ul className={`langsprite  ${filter} `}>
                   <PrismicLink href={router.asPath} locale="en-us">
@@ -141,8 +142,14 @@ const MainMenu = ({ slice }) => {
                   </PrismicLink>
                 </ul>
               </div>
-            </div>
-            <div className="flex flex-col items-center justify-center   ">
+            </motion.div>
+            <motion.div
+              layoutId="logo"
+              transition={{
+                duration: 1.5,
+              }}
+              className="flex flex-col items-center justify-center   "
+            >
               <div className=" -my-4  w-[300px] rounded-2xl bg-[url('/logobg.webp')] py-4 px-4   sm:w-[630px] ">
                 <Link href="/">
                   <a>
@@ -156,8 +163,14 @@ const MainMenu = ({ slice }) => {
                   </a>
                 </Link>
               </div>
-            </div>
-            <div className="navbar scale-[0.56] sm:transform-none ">
+            </motion.div>
+            <motion.div
+              layoutId="menulinks"
+              transition={{
+                duration: 1.5,
+              }}
+              className="navbar scale-[0.56] sm:transform-none "
+            >
               <ul className={`navsprite ${filter} `}>
                 <a onClick={() => setModalOpen(true)}>
                   <li
@@ -199,7 +212,7 @@ const MainMenu = ({ slice }) => {
                   <li className="instagram"></li>
                 </a>
               </ul>
-            </div>
+            </motion.div>
             <Alert
               email={email}
               isOpen={alertOpen}
