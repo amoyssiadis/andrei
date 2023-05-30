@@ -119,7 +119,12 @@ const MainMenu = ({ slice }) => {
   const isInfo = router.asPath == '/info' ? ' scale-[0.85] ' : ''
   return (
     <AnimatePresence mode="wait" initial={true}>
-      <motion.div>
+      <motion.div
+        layoutId="mainmenu"
+        transition={{
+          duration: 1.5,
+        }}
+      >
         <Bounded as="section" className={`     ${bg} `}>
           <div
             className={`${style} flex flex-col items-center justify-center  ${isInfo}`}
