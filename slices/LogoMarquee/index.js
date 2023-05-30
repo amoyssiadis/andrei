@@ -5,7 +5,7 @@ import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/20/solid'
 const LogoMarquee = ({ slice }) => {
   const [direction, setDirection] = useState('left')
   const [speed, setSpeed] = useState(slice.primary.speed || 40)
-
+  // console.log({ slice }, speed)
   function adjustImageWidth(image) {
     const widthBase = 51
     const scaleFactor = 0.525
