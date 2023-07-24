@@ -38,19 +38,19 @@
             "select": "media"
           }
         },
-        "video": {
-          "type": "Embed",
-          "config": {
-            "label": "Video",
-            "placeholder": ""
-          }
-        },
         "image_hover": {
           "type": "Image",
           "config": {
             "label": "Imagem MouseOver",
             "constraint": {},
             "thumbnails": []
+          }
+        },
+        "description": {
+          "type": "Text",
+          "config": {
+            "label": "Descrição",
+            "placeholder": ""
           }
         }
       },
