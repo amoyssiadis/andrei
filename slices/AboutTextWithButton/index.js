@@ -1,22 +1,35 @@
 import React from 'react'
 import { PrismicRichText } from '@prismicio/react'
-import { PrismicLink } from '@prismicio/react'
+//import { PrismicLink } from '@prismicio/react'
 import FloatingImage from '../FloatingImage'
+import { AnimatePresence, motion } from 'framer-motion'
 
 // import * as prismicH from "@prismicio/helpers";
 
 const AboutTextWithButton = ({ slice }) => (
   <section>
-    <div className="min-w-screen mx-auto mt-4 max-w-[1200px] flex-row px-4 sm:mt-4 sm:flex ">
-      <div className="px-6 sm:pl-8 sm:pr-8 ">
-        <div className="max-w-[940px] font-bold tracking-wider sm:pr-20 sm:text-lg ">
-          <PrismicRichText field={slice.primary.about} />
+    <AnimatePresence mode="wait" initial={true}>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{
+          delay: 1.8,
+          duration: 1.5,
+        }}
+        className=""
+      >
+        <div className="min-w-screen mx-auto mt-4 max-w-[1200px] flex-row px-4 sm:mt-4 sm:flex ">
+          <div className="px-6 sm:pl-8 sm:pr-8 ">
+            <div className="max-w-[940px] font-bold tracking-wider sm:pr-20 sm:text-lg ">
+              <PrismicRichText field={slice.primary.about} />
+            </div>
+          </div>
+          <div className=" right-10 mx-auto mt-10 hidden w-fit md:block  lg:mt-0 lg:mr-10 ">
+            <FloatingImage slice={slice} />
+          </div>
         </div>
-      </div>
-      <div className=" right-10 mx-auto mt-10 hidden w-fit md:block  lg:mt-0 lg:mr-10 ">
-        <FloatingImage slice={slice} />
-      </div>
-    </div>
+      </motion.div>
+    </AnimatePresence>
   </section>
 )
 
