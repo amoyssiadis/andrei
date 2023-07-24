@@ -19,6 +19,7 @@ const LogoMarquee = ({ slice }) => {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
           transition={{
             delay: 1.8,
             duration: 1.5,

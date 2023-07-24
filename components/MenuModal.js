@@ -1,7 +1,7 @@
 import { Fragment, useEffect, useRef, useState } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import { XCircleIcon } from '@heroicons/react/24/outline'
-
+import { motion } from 'framer-motion'
 const ColorfulMenu = () => {
   const containerRef = useRef(null)
   useEffect(() => {
@@ -183,7 +183,18 @@ export default function MenuModal({ isOpen, setIsOpen, image }) {
                 </div>
                 <div className=" -mt-16 mr-28 h-full w-full sm:-mt-10 sm:ml-9 ">
                   <div className="portfoliomenu  h-full w-full scale-[1.5] sm:scale-[2] ">
-                    <ColorfulMenu />
+                    <motion.div
+                      initial={{ opacity: 0 }}
+                      exit={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{
+                        delay: 0.2,
+                        duration: 1,
+                      }}
+                      className=""
+                    >
+                      <ColorfulMenu />
+                    </motion.div>
                   </div>
                 </div>
               </Dialog.Panel>
