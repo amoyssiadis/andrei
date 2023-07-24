@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
 
 export default function GoToTop() {
@@ -22,7 +23,8 @@ export default function GoToTop() {
       setShow(false)
     }
   }, [clientWindowHeight])
-
+  const router = useRouter()
+  if (router.asPath === '/' || router.asPath === '/pt-br') return null
   return (
     <>
       {show && (
