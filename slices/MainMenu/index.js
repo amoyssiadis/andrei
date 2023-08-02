@@ -117,8 +117,15 @@ const MainMenu = ({ slice }) => {
   const bg = slice.variation === 'gallery' ? 'bg-black' : ''
   const filter = slice.variation === 'gallery' ? 'filter-white' : ''
   const isInfo = router.asPath == '/info' ? ' scale-[0.85] ' : ''
+  console.log({ slice })
+  const bgUrl =
+    slice.primary.bgImg && slice.primary.bgImg.url
+      ? slice.primary.bgImg.url
+      : '/logobg.webp'
+  console.log({ bgUrl })
   const bgColor =
-    slice.variation === 'gallery' ? '  ' : ' bg-[url("/logobg.webp")] '
+    slice.variation === 'gallery' ? {} : { backgroundImage: `url(${bgUrl})` }
+  console.log({ bgColor })
   return (
     <AnimatePresence mode="wait" initial={true}>
       <motion.div
@@ -159,7 +166,8 @@ const MainMenu = ({ slice }) => {
               className="flex flex-col items-center justify-center   "
             >
               <div
-                className={` -my-4  w-[325px] rounded-2xl ${bgColor} py-4 px-4   sm:w-[630px] `}
+                className={` -my-4  w-[325px] rounded-2xl py-4 px-4   sm:w-[630px] `}
+                style={bgColor}
               >
                 <Link href="/">
                   <a>
