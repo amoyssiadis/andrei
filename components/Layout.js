@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import GrainedEffect from './GrainedEffect'
 
 export const Layout = ({
@@ -15,18 +16,27 @@ export const Layout = ({
     // //   duration: 15,
     // // }}
     // >
-    <GrainedEffect>
-      <div className="text-[#090709]">
-        {/* <Header
+    <>
+      <Head>
+        <link
+          rel="icon"
+          href={settings.data.favicon.url || '/favicon-32x32.png'}
+          sizes="any"
+        />
+      </Head>
+      <GrainedEffect>
+        <div className="text-[#090709]">
+          {/* <Header
         alternateLanguages={alternateLanguages}
         navigation={navigation}
         settings={settings}
       /> */}
-        <main className=" mx-auto h-full w-screen overflow-x-hidden ">
-          {children}
-        </main>
-      </div>
-    </GrainedEffect>
+          <main className=" mx-auto h-full w-screen overflow-x-hidden ">
+            {children}
+          </main>
+        </div>
+      </GrainedEffect>
+    </>
     // </motion.div>
   )
 }
