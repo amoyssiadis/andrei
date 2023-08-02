@@ -31,7 +31,7 @@ export default function Sidesideportfoliomenu() {
               </li>
             </a>
           </Link>
-          <Link href="/other">
+          <Link href="#">
             <a>
               <li className={`${isActive('other')}`}>
                 <div className={`other filter-black `}></div>

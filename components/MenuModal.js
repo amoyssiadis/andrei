@@ -54,7 +54,7 @@ const ColorfulMenu = () => {
     link2.appendChild(document.createElement('li')).className = 'original '
 
     const link3 = document.createElement('a')
-    link3.href = '/other'
+    link3.href = '#'
     link3.appendChild(document.createElement('li')).className = 'other '
 
     list.appendChild(link1)
