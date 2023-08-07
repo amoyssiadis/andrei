@@ -28,6 +28,17 @@ const Page = ({ page, navigation, settings }) => {
           page.data.seo[0].description ||
           'Official website of Andrei Moyssiadis - Filmmaker'
         }
+        images={[
+          {
+            url:
+              page.data.seo[0].image.url ||
+              'https://images.prismic.io/andrei-portfolio/66267a88-12b3-405a-9d2d-666db442ba99_Captura+de+Tela+2023-04-24+a%CC%80s+02.50.52.png?auto=compress,format',
+            width: page.data.seo[0].image.width || 1200,
+            height: page.data.seo[0].image.height || 800,
+            alt: 'Andrei Moyssiadis - Filmmaker',
+            type: 'image/jpeg',
+          },
+        ]}
         openGraph={{
           // url: 'https://www.url.ie/a',
           title:
@@ -39,9 +50,11 @@ const Page = ({ page, navigation, settings }) => {
             'Official website of Andrei Moyssiadis - Filmmaker',
           images: [
             {
-              url: page.data.seo[0].image.url || '',
-              width: page.data.seo[0].image.width || 800,
-              height: page.data.seo[0].image.height || 600,
+              url:
+                page.data.seo[0].image.url ||
+                'https://images.prismic.io/andrei-portfolio/66267a88-12b3-405a-9d2d-666db442ba99_Captura+de+Tela+2023-04-24+a%CC%80s+02.50.52.png?auto=compress,format',
+              width: page.data.seo[0].image.width || 1200,
+              height: page.data.seo[0].image.height || 800,
               alt: 'Andrei Moyssiadis - Filmmaker',
               type: 'image/jpeg',
             },
