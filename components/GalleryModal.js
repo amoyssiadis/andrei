@@ -2,6 +2,7 @@ import { Fragment, useEffect, useState } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import { CheckIcon, XCircleIcon } from '@heroicons/react/24/outline'
 import CustomVideoPlayer from './CustomVideoPlayer'
+import Image from 'next/image'
 
 export default function GalleryModal({ isOpen, setIsOpen, media }) {
   const [open, setOpen] = useState(isOpen || false)
@@ -23,6 +24,7 @@ export default function GalleryModal({ isOpen, setIsOpen, media }) {
     setMediaItem(media)
     return () => {}
   }, [open])
+  // console.log({ media })
 
   return (
     <Transition.Root show={open} as={Fragment}>
@@ -64,9 +66,19 @@ export default function GalleryModal({ isOpen, setIsOpen, media }) {
                   </div>
                 </div>
                 <div className="player-wrapper inline-flex w-full  items-center justify-center  px-4 py-2 text-base font-medium text-white">
-                  {media && media.media.url && (
+                  {media && media.media.url ? (
                     <div className="react-player aspect-video h-full w-full text-white">
                       <CustomVideoPlayer url={media.media.url} />
+                    </div>
+                  ) : (
+                    <div className="react-player aspect-video h-full w-full text-white">
+                      <Image
+                        src={media.image_hover.url}
+                        alt={media.image_hover.alt}
+                        className="h-full w-full"
+                        width={media.image_hover.dimensions.width}
+                        height={media.image_hover.dimensions.height}
+                      />
                     </div>
                   )}
                 </div>
