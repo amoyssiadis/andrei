@@ -10,18 +10,21 @@ export const CustomVideoPlayer = ({ url }) => {
   //   }, 2000)
   // }, [])
   const backgroundVideo =
+    // 'https://edisciplinas.usp.br/pluginfile.php/5196097/mod_resource/content/1/Teste.mp4' ||
     url ||
     'https://andrei-portfolio.cdn.prismic.io/andrei-portfolio/ce1c0eb0-544a-4999-b90b-036ed15337fe_BJORK++DIGITAL-+MAKING+OF+FILTROS+DE+INSTAGRAM.webm'
   // Determine the video type based on the file extension
   const videoType =
     backgroundVideo.split('.').pop() === 'mp4' ? 'video/mp4' : 'video/webm'
-
+  //console.log({ backgroundVideo, videoType })
   return (
     <video
       ref={videoRef}
-      controls
+      controls="true"
       width="100%"
       loop
+      playsinline
+      playsInline
       style={{
         position: 'absolute',
         width: '100%',
