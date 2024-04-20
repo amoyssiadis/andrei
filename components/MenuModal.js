@@ -160,8 +160,8 @@ export default function MenuModal({ isOpen, setIsOpen, image }) {
           <div className="fixed inset-0 bg-black transition-all" />
         </Transition.Child>
 
-        <div className="fixed inset-0 z-10 overflow-y-auto">
-          <div className="flex min-h-full min-w-full items-center justify-end text-center ">
+        <div className="fixed inset-0 z-10 overflow-none">
+          <div className="flex h-screen w-screen items-center justify-start sm:justify-end text-center">
             <Transition.Child
               as={Fragment}
               enter="ease-out duration-500"
@@ -171,18 +171,18 @@ export default function MenuModal({ isOpen, setIsOpen, image }) {
               leaveFrom="opacity-100 translate-y-0 sm:scale-100"
               leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
             >
-              <Dialog.Panel className="relative h-screen  w-full max-w-sm  transform  rounded-lg px-4 pt-5 pb-4 text-left shadow-xl  transition-all sm:w-full sm:max-w-sm sm:p-6">
-                <div className="inline-flex w-full   justify-end">
+              <Dialog.Panel className="relative h-screen w-screen max-w-sm transform rounded-lg text-left transition-all sm:w-full sm:max-w-sm">
+                <div className="flex w-full flex-row justify-end mt-8">
                   <div
                     type="button"
-                    className=" z-40  cursor-pointer px-4 py-2 text-base font-medium text-white"
+                    className="z-40 cursor-pointer px-4 py-2 text-base font-medium text-white"
                     onClick={() => close()}
                   >
-                    <XCircleIcon className="h-20" />
+                    <XCircleIcon className="h-8 md:h-12 lg:h-16" />
                   </div>
                 </div>
-                <div className=" -mt-16 mr-28 h-full w-full sm:-mt-10 sm:ml-9 ">
-                  <div className="portfoliomenu  h-full w-full scale-[1.5] sm:scale-[2] ">
+                <div className="-mt-16 mr-28 h-full w-full sm:-mt-10 sm:ml-9">
+                  <div className="portfoliomenu">
                     <motion.div
                       initial={{ opacity: 0 }}
                       exit={{ opacity: 0 }}

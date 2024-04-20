@@ -97,7 +97,7 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "/Users/ericmilfont/Fiverr/andrei-portfolio-website/.slicemachine/assets/slices/AboutTextWithButton/default/preview.png",
+            "path": "E:\\personal\\devioand\\andrei-portfolio-website\\.slicemachine\\assets\\slices\\AboutTextWithButton\\default\\preview.png",
             "width": 800,
             "height": 48
           }
@@ -162,7 +162,7 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "/Users/ericmilfont/Fiverr/andrei-portfolio-website/.slicemachine/assets/slices/FloatingImage/default/preview.png",
+            "path": "E:\\personal\\devioand\\andrei-portfolio-website\\.slicemachine\\assets\\slices\\FloatingImage\\default\\preview.png",
             "width": 800,
             "height": 48
           }
@@ -227,7 +227,7 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "/Users/ericmilfont/Fiverr/andrei-portfolio-website/.slicemachine/assets/slices/FloatingImages/default/preview.png",
+            "path": "E:\\personal\\devioand\\andrei-portfolio-website\\.slicemachine\\assets\\slices\\FloatingImages\\default\\preview.png",
             "width": 800,
             "height": 320
           }
@@ -422,12 +422,12 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "/Users/ericmilfont/Fiverr/andrei-portfolio-website/.slicemachine/assets/slices/Hero/default/preview.png",
+            "path": "E:\\personal\\devioand\\andrei-portfolio-website\\.slicemachine\\assets\\slices\\Hero\\default\\preview.png",
             "width": 800,
             "height": 612
           },
           "withButton": {
-            "path": "/Users/ericmilfont/Fiverr/andrei-portfolio-website/.slicemachine/assets/slices/Hero/withButton/preview.png",
+            "path": "E:\\personal\\devioand\\andrei-portfolio-website\\.slicemachine\\assets\\slices\\Hero\\withButton\\preview.png",
             "width": 800,
             "height": 726
           }
@@ -546,7 +546,7 @@
         },
         "screenshotPaths": {
           "lightSlate": {
-            "path": "/Users/ericmilfont/Fiverr/andrei-portfolio-website/.slicemachine/assets/slices/Image/lightSlate/preview.png",
+            "path": "E:\\personal\\devioand\\andrei-portfolio-website\\.slicemachine\\assets\\slices\\Image\\lightSlate\\preview.png",
             "width": 800,
             "height": 674
           }
@@ -670,7 +670,7 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "/Users/ericmilfont/Fiverr/andrei-portfolio-website/.slicemachine/assets/slices/Logo/default/preview.png",
+            "path": "E:\\personal\\devioand\\andrei-portfolio-website\\.slicemachine\\assets\\slices\\Logo\\default\\preview.png",
             "width": 800,
             "height": 589
           }
@@ -765,7 +765,7 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "/Users/ericmilfont/Fiverr/andrei-portfolio-website/.slicemachine/assets/slices/LogoMarquee/default/preview.png",
+            "path": "E:\\personal\\devioand\\andrei-portfolio-website\\.slicemachine\\assets\\slices\\LogoMarquee\\default\\preview.png",
             "width": 800,
             "height": 108
           }
@@ -919,12 +919,12 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "/Users/ericmilfont/Fiverr/andrei-portfolio-website/.slicemachine/assets/slices/MainMenu/default/preview.png",
+            "path": "E:\\personal\\devioand\\andrei-portfolio-website\\.slicemachine\\assets\\slices\\MainMenu\\default\\preview.png",
             "width": 800,
             "height": 504
           },
           "gallery": {
-            "path": "/Users/ericmilfont/Fiverr/andrei-portfolio-website/.slicemachine/assets/slices/MainMenu/gallery/preview.png",
+            "path": "E:\\personal\\devioand\\andrei-portfolio-website\\.slicemachine\\assets\\slices\\MainMenu\\gallery\\preview.png",
             "width": 800,
             "height": 504
           }
@@ -1041,7 +1041,7 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "/Users/ericmilfont/Fiverr/andrei-portfolio-website/.slicemachine/assets/slices/Mansory/default/preview.png",
+            "path": "E:\\personal\\devioand\\andrei-portfolio-website\\.slicemachine\\assets\\slices\\Mansory\\default\\preview.png",
             "width": 800,
             "height": 600
           }
@@ -1167,7 +1167,7 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "/Users/ericmilfont/Fiverr/andrei-portfolio-website/.slicemachine/assets/slices/TextWithFeatures/default/preview.png",
+            "path": "E:\\personal\\devioand\\andrei-portfolio-website\\.slicemachine\\assets\\slices\\TextWithFeatures\\default\\preview.png",
             "width": 800,
             "height": 840
           }
@@ -1305,7 +1305,7 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "/Users/ericmilfont/Fiverr/andrei-portfolio-website/.slicemachine/assets/slices/TopBar/default/preview.png",
+            "path": "E:\\personal\\devioand\\andrei-portfolio-website\\.slicemachine\\assets\\slices\\TopBar\\default\\preview.png",
             "width": 800,
             "height": 800
           }

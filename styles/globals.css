@@ -299,7 +299,7 @@ body {
 }
 
 .navsprite-gallery {
-  @apply m-0 flex  items-center    justify-between p-0;
+  @apply m-0 flex items-center justify-between p-0;
   transform: scale(0.6);
 }
 
@@ -340,7 +340,7 @@ body {
 }
 
 .navsprite {
-  @apply m-0 flex  items-center    justify-between p-0;
+  @apply m-0 flex items-center justify-between p-0;
   transform: scale(0.6);
 }
 
@@ -381,7 +381,7 @@ li.active {
 
 /** Portfolio Menu **/
 .portfoliomenu {
-  @apply m-0 mt-4 flex  items-center    justify-between p-0;
+  @apply m-0 mt-4 flex items-center justify-between p-0;
 }
 
 .portfoliomenu-sprite li {
@@ -415,7 +415,7 @@ li.active {
 
 /** Side Portfolio Menu **/
 .sideportfoliomenu {
-  @apply m-0 mt-4 flex  items-center    justify-between p-0;
+  @apply m-0 mt-4 flex items-center justify-between p-0;
 }
 
 .sideportfoliomenu-sprite li {
@@ -553,5 +553,11 @@ div .imagesAnim {
 @keyframes y {
   100% {
     transform: translateY(calc(100vh - var(--width)));
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .navsprite {
+    @apply m-0 flex items-center justify-around p-0;
   }
 }
