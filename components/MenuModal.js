@@ -2,11 +2,13 @@ import { Fragment, useEffect, useRef, useState } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import { XCircleIcon } from '@heroicons/react/24/outline'
 import { motion } from 'framer-motion'
-const ColorfulMenu = () => {
+const ColorfulMenu = ({ menuBgImage }) => {
+  const bgImage =
+    menuBgImage && menuBgImage?.url ? menuBgImage.url : '/bgworkmenu.gif'
   const containerRef = useRef(null)
   useEffect(() => {
     const background = document.createElement('div')
-    background.style.backgroundImage = "url('/bgworkmenu.gif')"
+    background.style.backgroundImage = `url(${bgImage})`
     background.style.backgroundSize = '2000%'
     background.style.backgroundRepeat = 'no-repeat'
     background.style.backgroundPosition = 'center'
@@ -50,7 +52,7 @@ const ColorfulMenu = () => {
     link1.appendChild(document.createElement('li')).className = 'editing '
 
     const link2 = document.createElement('a')
-    link2.href = '/gallery'
+    link2.href = '/original'
     link2.appendChild(document.createElement('li')).className = 'original '
 
     const link3 = document.createElement('a')
@@ -125,7 +127,7 @@ const ColorfulMenu = () => {
   return <div ref={containerRef}>{/* Render your page content here */}</div>
 }
 
-export default function MenuModal({ isOpen, setIsOpen, image }) {
+export default function MenuModal({ isOpen, setIsOpen, menuBgImage }) {
   const [open, setOpen] = useState(isOpen || false)
   function close() {
     setIsOpen(false)
@@ -160,8 +162,8 @@ export default function MenuModal({ isOpen, setIsOpen, image }) {
           <div className="fixed inset-0 bg-black transition-all" />
         </Transition.Child>
 
-        <div className="fixed inset-0 z-10 overflow-none">
-          <div className="flex h-screen w-screen items-center justify-start sm:justify-end text-center">
+        <div className="overflow-none fixed inset-0 z-10">
+          <div className="flex h-screen w-screen items-center justify-start text-center sm:justify-end">
             <Transition.Child
               as={Fragment}
               enter="ease-out duration-500"
@@ -172,7 +174,7 @@ export default function MenuModal({ isOpen, setIsOpen, image }) {
               leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
             >
               <Dialog.Panel className="relative h-screen w-screen max-w-sm transform rounded-lg text-left transition-all sm:w-full sm:max-w-sm">
-                <div className="flex w-full flex-row justify-end mt-8">
+                <div className="mt-8 flex w-full flex-row justify-end">
                   <div
                     type="button"
                     className="z-40 cursor-pointer px-4 py-2 text-base font-medium text-white"
@@ -193,7 +195,7 @@ export default function MenuModal({ isOpen, setIsOpen, image }) {
                       }}
                       className=""
                     >
-                      <ColorfulMenu />
+                      <ColorfulMenu menuBgImage={menuBgImage} />
                     </motion.div>
                   </div>
                 </div>

@@ -34,6 +34,22 @@
             "constraint": {},
             "thumbnails": []
           }
+        },
+        "logo_bg": {
+          "type": "Image",
+          "config": {
+            "label": "Logo Bg",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "work_menu_bg": {
+          "type": "Image",
+          "config": {
+            "label": "Work Menu Bg",
+            "constraint": {},
+            "thumbnails": []
+          }
         }
       },
       "items": {},
@@ -58,6 +74,14 @@
           "type": "Image",
           "config": {
             "label": "menu image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "work_menu_bg": {
+          "type": "Image",
+          "config": {
+            "label": "Work Menu Bg",
             "constraint": {},
             "thumbnails": []
           }

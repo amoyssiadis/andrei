@@ -134,6 +134,9 @@
     "MainMenu": {
       "default": {
         "primary": {}
+      },
+      "gallery": {
+        "primary": {}
       }
     },
     "LanguageSelector": {
@@ -153,6 +156,10 @@
     },
     "Mansory": {
       "default": {
+        "primary": {},
+        "items": {}
+      },
+      "mansoryVertical": {
         "primary": {},
         "items": {}
       }

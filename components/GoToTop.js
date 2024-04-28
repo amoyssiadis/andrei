@@ -28,9 +28,9 @@ export default function GoToTop() {
   return (
     <>
       {show && (
-        <div className="sm:bottom-1/5 filter-white fixed left-0 bottom-1/4 scale-50 text-white ">
+        <div className="filter-white fixed left-0 sm:left-2 lgc:left-16 bottom-0 sm:bottom-6 lg:bottom-8 scale-50 text-white">
           <a href="#">
-            <Image src="/gototop.svg" width={94} height={150} alt="Go to Top" />
+            <Image src="/gototop.svg" width={74} height={120} alt="Go to Top" />
           </a>
         </div>
       )}
