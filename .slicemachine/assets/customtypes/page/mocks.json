@@ -14,14 +14,14 @@
     "title": [
       {
         "type": "heading1",
-        "text": "Arrive",
+        "text": "Indicate",
         "spans": []
       }
     ],
     "seo": [
       {
-        "title": "belt",
-        "description": "farmer",
+        "title": "action",
+        "description": "indicate",
         "image": {
           "link_type": "Media",
           "name": "mock",

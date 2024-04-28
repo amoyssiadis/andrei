@@ -11,7 +11,7 @@ export default function Sidesideportfoliomenu() {
     return active
   }
   return (
-    <div className="fixed -right-4 bottom-1/4 sm:bottom-1/3">
+    <div className="fixed -right-4 bottom-[38%]">
       <ul className="flex flex-col gap-y-2">
         <Link href="/editing">
           <a>

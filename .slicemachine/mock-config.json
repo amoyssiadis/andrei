@@ -39,6 +39,11 @@
     "clients": {}
   },
   "slices": {
+    "404": {
+      "default": {
+        "primary": {}
+      }
+    },
     "Text": {
       "default": {
         "primary": {
@@ -180,6 +185,11 @@
       }
     },
     "FloatingImages": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "PageNotFound": {
       "default": {
         "primary": {}
       }

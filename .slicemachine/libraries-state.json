@@ -1,6 +1,82 @@
 {
   "slices": {
     "components": {
+      "404": {
+        "library": "slices",
+        "id": "404",
+        "name": "PageNotFound",
+        "description": "404",
+        "model": {
+          "id": "404",
+          "type": "SharedSlice",
+          "name": "PageNotFound",
+          "description": "404",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "404",
+              "primary": {
+                "main_image": {
+                  "type": "Image",
+                  "config": {
+                    "label": "404 Image",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                },
+                "page_not_found": {
+                  "type": "Image",
+                  "config": {
+                    "label": "Page Not Found",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {}
+            ],
+            "primary": {
+              "main_image": {
+                "dimensions": {
+                  "width": 900,
+                  "height": 500
+                },
+                "alt": null,
+                "copyright": null,
+                "url": "https://images.unsplash.com/photo-1587840171670-8b850147754e"
+              },
+              "page_not_found": {
+                "dimensions": {
+                  "width": 900,
+                  "height": 500
+                },
+                "alt": null,
+                "copyright": null,
+                "url": "https://images.unsplash.com/photo-1560457079-9a6532ccb118"
+              }
+            },
+            "slice_type": "404"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {}
+      },
       "about_text_with_button": {
         "library": "slices",
         "id": "about_text_with_button",

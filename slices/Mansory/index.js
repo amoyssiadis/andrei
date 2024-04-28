@@ -6,7 +6,6 @@ import DefaultMansory from './DefaultMansory'
 import StyledMansory from './StyledMansory'
 
 const Mansory = ({ slice }) => {
-  console.log('mansory', slice)
   const [modalOpen, setModalOpen] = useState(false)
   const [modalMedia, setModalMedia] = useState(null)
 

@@ -4,9 +4,15 @@ import LazyLoad from 'react-lazy-load'
 
 const DefaultMansory = ({ slice, openMedia, hoverImage }) => {
   const no_of_columns = Number(slice?.primary?.no_of_columns) || 1
-  const myClassName = `mx-auto max-w-5xl columns-${no_of_columns} gap-0 px-4 md:px-20`
+  const myClassName = `mx-auto max-w-5xl gap-0 px-4 md:px-20`
+
   return (
-    <div className={myClassName}>
+    <div
+      className={myClassName}
+      style={{
+        columns: no_of_columns,
+      }}
+    >
       {slice?.items?.map((item, i) => {
         const isClickable = item?.is_clickable || false
 
@@ -15,7 +21,12 @@ const DefaultMansory = ({ slice, openMedia, hoverImage }) => {
         const height = item.image.dimensions.height || 400
 
         return (
-          <div className={`${isClickable ? 'cursor-pointer' : 'cursor-default'} p-1`} key={i}>
+          <div
+            className={`${
+              isClickable ? 'cursor-pointer' : 'cursor-default'
+            } p-1`}
+            key={i}
+          >
             <a onClick={isClickable ? () => openMedia(item) : undefined}>
               <LazyLoad>
                 <img
