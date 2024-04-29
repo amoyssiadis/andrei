@@ -182,22 +182,6 @@ body {
   @apply bg-[#D6DBDB];
 }
 
-/* mansory */
-@layer utilities {
-  .masonry {
-    @apply mx-auto min-h-screen max-w-5xl columns-1 gap-0 pt-20 md:columns-2;
-  }
-  .masonry div {
-    break-inside: avoid;
-  }
-  .oneColumn {
-    @apply md:columns-1;
-  }
-  .oneColumn img {
-    @apply w-full;
-  }
-}
-
 /* video player */
 .player-wrapper {
   position: relative;
@@ -295,11 +279,11 @@ body {
 /* gallery */
 .navbar-gallery {
   /* grid-template-columns: 1fr 2fr 1fr; */
-  @apply w-[900px]  sm:w-[1000px];
+  @apply w-[900px] sm:w-[1000px];
 }
 
 .navsprite-gallery {
-  @apply m-0 flex  items-center    justify-between p-0;
+  @apply m-0 flex items-center justify-between p-0;
   transform: scale(0.6);
 }
 
@@ -333,14 +317,8 @@ body {
   width: 166px;
 }
 
-/* default navbar */
-.navbar {
-  /* grid-template-columns: 1fr 2fr 1fr; */
-  @apply mt-8 w-[900px] sm:mt-12   sm:w-[1000px];
-}
-
 .navsprite {
-  @apply m-0 flex  items-center    justify-between p-0;
+  @apply m-0 flex items-center justify-between p-0;
   transform: scale(0.6);
 }
 
@@ -381,7 +359,7 @@ li.active {
 
 /** Portfolio Menu **/
 .portfoliomenu {
-  @apply m-0 mt-4 flex  items-center    justify-between p-0;
+  @apply m-0 mt-4 flex items-center justify-between p-0;
 }
 
 .portfoliomenu-sprite li {
@@ -415,11 +393,11 @@ li.active {
 
 /** Side Portfolio Menu **/
 .sideportfoliomenu {
-  @apply m-0 mt-4 flex  items-center    justify-between p-0;
+  @apply m-0 mt-4 flex items-center justify-between p-0;
 }
 
 .sideportfoliomenu-sprite li {
-  @apply mb-4 rounded-lg bg-white bg-center pt-2 pb-1 pl-2 transition-all;
+  @apply mb-4 rounded-lg bg-white bg-center py-2 pl-2 transition-all;
 }
 .sideportfoliomenu-sprite li:hover {
   cursor: pointer;
@@ -429,25 +407,22 @@ li.active {
 .sideportfoliomenu-sprite li div {
   list-style-type: none;
 
-  background-image: url(/portfoliomenu.svg);
+  /* background-image: url(/portfoliomenu.svg);
   background-repeat: no-repeat;
-  background-size: 200px 162px;
-
-  height: 28px;
-  width: 150px;
+  background-size: 170px 102px; */
   /* @apply mb-12; */
 }
 
 .sideportfoliomenu-sprite li div.editing {
-  background-position: -55px 0px;
+  /* background-position: -55px 0px; */
   @apply focus:outline-none;
 }
 .sideportfoliomenu-sprite li div.original {
-  background-position: -55px -68px;
+  /* background-position: -55px -68px; */
   @apply focus:outline-none;
 }
 .sideportfoliomenu-sprite li div.other {
-  background-position: -55px -140px;
+  /* background-position: -55px -140px; */
   @apply focus:outline-none;
 }
 .active-sideportfoliomenu {
@@ -553,5 +528,11 @@ div .imagesAnim {
 @keyframes y {
   100% {
     transform: translateY(calc(100vh - var(--width)));
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .navsprite {
+    @apply m-0 flex items-center justify-around p-0;
   }
 }

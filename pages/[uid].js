@@ -93,8 +93,10 @@ export async function getStaticPaths() {
 
   const pages = await client.getAllByType('page', { lang: '*' })
 
+  const filteredPages = pages.filter((p) => p.uid !== '404')
+
   return {
-    paths: pages.map((page) => {
+    paths: filteredPages.map((page) => {
       return {
         params: { uid: page.uid },
         locale: page.lang,

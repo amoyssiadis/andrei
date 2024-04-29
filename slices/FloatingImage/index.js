@@ -17,7 +17,7 @@ const FloatingImage = ({ slice }) => {
         onClick={closeImage}
         ref={FloatImgDivRef}
       >
-        {prismicH.isFilled.image(slice.primary.image) && (
+        {/* {prismicH.isFilled.image(slice.primary.image) && (
           <motion.div
             className="pointer-events-none"
             initial={{ y: 0, x: 0 }}
@@ -34,7 +34,7 @@ const FloatingImage = ({ slice }) => {
           >
             <PrismicNextImage field={slice.primary.image} layout="responsive" />
           </motion.div>
-        )}
+        )} */}
       </div>
     </AnimatePresence>
   )

@@ -31,7 +31,7 @@ export const Layout = ({
         navigation={navigation}
         settings={settings}
       /> */}
-          <main className=" mx-auto h-full min-h-screen w-screen overflow-x-hidden  ">
+          <main className="mx-auto h-full min-h-screen w-screen overflow-x-hidden">
             {children}
           </main>
         </div>

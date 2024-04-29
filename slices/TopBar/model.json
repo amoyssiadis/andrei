@@ -18,6 +18,15 @@
             "constraint": {},
             "thumbnails": []
           }
+        },
+        "is_clickable": {
+          "type": "Boolean",
+          "config": {
+            "label": "Is Clickable",
+            "placeholder_false": "false",
+            "placeholder_true": "true",
+            "default_value": true
+          }
         }
       },
       "items": {},
