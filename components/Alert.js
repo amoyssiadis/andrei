@@ -23,7 +23,7 @@ export default function Alert({ email, isOpen, setIsOpen, variation = null }) {
     setOpen(false)
   }
   const { width, height } = useWindowDimensions()
-  let alertVariationClass = 'mt-[12.5rem] sm:mt-[20rem]' //default variation value
+  let alertVariationClass = 'mt-[10rem] sm:mt-[20rem]' //default variation value
 
   if (variation === 'gallery') {
     alertVariationClass = 'text-white'
@@ -32,7 +32,7 @@ export default function Alert({ email, isOpen, setIsOpen, variation = null }) {
     alertVariationClass =
       alertVariationClass + ' mt-[12.5rem] sm:mt-[1rem] sm:right-1/3 '
   } else if (variation === 'gallery' && width <= 1000) {
-    alertVariationClass = alertVariationClass + ' mt-[12.5rem] sm:mt-[20rem] '
+    alertVariationClass = alertVariationClass + ' mt-[10rem] sm:mt-[20rem] '
   }
   return (
     <AnimatePresence>
