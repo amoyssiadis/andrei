@@ -6,7 +6,7 @@ import Link from 'next/link'
 const Logo = ({ slice }) => (
   <Bounded as="section" className="bg-white ">
     <div className="flex flex-col items-center justify-center">
-      <div className=" w-full max-w-2xl md:w-[600px]">
+      <div className="w-full max-w-2xl md:w-[600px]">
         <Link href="/">
           <a>
             {prismicH.isFilled.image(slice.primary.image) && (

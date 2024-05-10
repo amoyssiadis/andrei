@@ -43,7 +43,7 @@ const MainMenu = ({ slice }) => {
             </div>
           </div>
           <div className="flex flex-col items-center justify-center">
-            <div className="w-[300px] sm:w-[300px]">
+            <div className="w-[300px]">
               <Link href="/">
                 <a>
                   {prismicH.isFilled.image(slice.primary.logo) && (
@@ -113,7 +113,7 @@ const MainMenu = ({ slice }) => {
       </Bounded>
     )
   }
-  const bg = slice.variation === 'gallery' ? 'bg-black' : ''
+  const bg = slice.variation === 'gallery' ? 'bg-black pb-8' : ''
   const filter = slice.variation === 'gallery' ? 'filter-white' : ''
   const isInfo = router.asPath == '/info' ? ' scale-[0.85] ' : ''
   const bgUrl =
@@ -159,10 +159,10 @@ const MainMenu = ({ slice }) => {
               transition={{
                 duration: 1.5,
               }}
-              className="flex flex-col items-center justify-center   "
+              className="flex flex-col w-full items-center justify-center"
             >
               <div
-                className={`-my-4 w-[265px] rounded-2xl p-2 sm:w-[630px] md:p-4`}
+                className={`relative -my-4 w-full smc:w-[325px] rounded-2xl py-4 px-4 sm:!w-[630px]`}
                 style={bgColor}
               >
                 <Link href="/">
@@ -184,7 +184,7 @@ const MainMenu = ({ slice }) => {
                 duration: 1.5,
               }}
             >
-              <div className="mt-4 w-[900px] scale-[0.56] sm:mt-12 sm:w-[1000px] sm:transform-none">
+              <div className="w-[900px] sm:w-[1000px] mt-4 sm:mt-12 scale-[0.56] sm:transform-none">
                 <ul className={`navsprite ${filter}`}>
                   <a onClick={() => setModalOpen(true)}>
                     <li

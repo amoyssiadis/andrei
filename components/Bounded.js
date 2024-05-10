@@ -17,7 +17,7 @@ export const Bounded = ({
         className
       )}
     >
-      <div className="mx-auto w-full max-w-[1920px] ">{children}</div>
+      <div className="mx-auto w-full max-w-[1920px]">{children}</div>
     </Comp>
   )
 }
