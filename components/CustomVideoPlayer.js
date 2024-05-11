@@ -1,40 +1,34 @@
-import { useEffect, useRef, useState } from 'react'
+import React from 'react'
+import VideoJS from './VideoJS'
 
-export const CustomVideoPlayer = ({ url }) => {
-  const [playing, setPlaying] = useState(false)
-  const videoRef = useRef()
-
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     videoRef.current.play()
-  //   }, 2000)
-  // }, [])
+const CustomVideoPlayer = ({ url }) => {
   const backgroundVideo =
-    // 'https://edisciplinas.usp.br/pluginfile.php/5196097/mod_resource/content/1/Teste.mp4' ||
     url ||
     'https://andrei-portfolio.cdn.prismic.io/andrei-portfolio/ce1c0eb0-544a-4999-b90b-036ed15337fe_BJORK++DIGITAL-+MAKING+OF+FILTROS+DE+INSTAGRAM.webm'
-  // Determine the video type based on the file extension
+
   const videoType =
     backgroundVideo.split('.').pop() === 'mp4' ? 'video/mp4' : 'video/webm'
-  //console.log({ backgroundVideo, videoType })
-  return (
-    <video
-      ref={videoRef}
-      controls="true"
-      width="100%"
-      loop
-      playsinline
-      playsInline
-      style={{
-        position: 'absolute',
-        width: '100%',
-        height: '100%',
-        left: 0,
-        top: 0,
-      }}
-    >
-      <source src={backgroundVideo} type={videoType} />
-    </video>
-  )
+  const playerRef = React.useRef(null)
+
+  const videoJsOptions = {
+    autoplay: false,
+    controls: true,
+    responsive: true,
+    fluid: true,
+    aspectRatio: '16:9',
+    sources: [
+      {
+        src: backgroundVideo,
+        type: videoType,
+      },
+    ],
+  }
+
+  const handlePlayerReady = (player) => {
+    playerRef.current = player;
+  }
+
+  return <VideoJS options={videoJsOptions} onReady={handlePlayerReady} />
 }
+
 export default CustomVideoPlayer
