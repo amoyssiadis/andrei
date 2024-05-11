@@ -10,7 +10,7 @@ const Marquee = ({ slice, reverseAnimation }) => {
   }
 
   return (
-    <div className="main__container  items-center justify-center">
+    <div className="main__container items-center justify-center">
        <div className={`marquee ${reverseAnimation ? 'reverse' : 'normal'}`}>
           <ul className="marquee__content">
             {slice?.items?.map((item, i) => (

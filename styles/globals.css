@@ -494,7 +494,11 @@ body {
   margin-right: 24px;
 }
 
-.marquee:hover .marquee__content {
+.marquee.normal:hover .marquee__content {
+  animation-play-state: paused;
+}
+
+.marquee.reverse:hover .marquee__content {
   animation-play-state: paused;
 }
 
