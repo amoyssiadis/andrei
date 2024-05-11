@@ -268,6 +268,7 @@ body {
 }
 
 /* navbar */
+
 .filter-white {
   filter: invert(100%) sepia(0%) saturate(7491%) hue-rotate(264deg)
     brightness(99%) contrast(103%);
@@ -393,11 +394,11 @@ li.active {
 
 /** Side Portfolio Menu **/
 .sideportfoliomenu {
-  @apply m-0 mt-4 flex items-center justify-between p-0;
+  @apply m-0 mt-4 flex  items-center    justify-between p-0;
 }
 
 .sideportfoliomenu-sprite li {
-  @apply mb-4 rounded-lg bg-white bg-center py-2 pl-2 transition-all;
+  @apply mb-4 rounded-lg bg-white bg-center pt-2 pb-1 pl-2 transition-all;
 }
 .sideportfoliomenu-sprite li:hover {
   cursor: pointer;
@@ -407,22 +408,25 @@ li.active {
 .sideportfoliomenu-sprite li div {
   list-style-type: none;
 
-  /* background-image: url(/portfoliomenu.svg);
+  background-image: url(/portfoliomenu.svg);
   background-repeat: no-repeat;
-  background-size: 170px 102px; */
+  background-size: 200px 162px;
+
+  height: 28px;
+  width: 150px;
   /* @apply mb-12; */
 }
 
 .sideportfoliomenu-sprite li div.editing {
-  /* background-position: -55px 0px; */
+  background-position: -55px 0px;
   @apply focus:outline-none;
 }
 .sideportfoliomenu-sprite li div.original {
-  /* background-position: -55px -68px; */
+  background-position: -55px -68px;
   @apply focus:outline-none;
 }
 .sideportfoliomenu-sprite li div.other {
-  /* background-position: -55px -140px; */
+  background-position: -55px -140px;
   @apply focus:outline-none;
 }
 .active-sideportfoliomenu {
@@ -454,38 +458,53 @@ body {
   margin: 0;
 }
 
-/*
-:root {
-  --size: 100px;
-}
-img .imagesAnim,
-div .imagesAnim {
-  width: var(--size);
-  height: var(--size);
-  @apply absolute;
-}
-.imagesAnim2 .x {
-  animation: x 13s linear infinite alternate-reverse !important;
-}
-.x {
-  animation: x 13s linear infinite alternate;
+.main__container {
+  overflow-x: hidden !important;
+  display: flex !important;
+  flex-direction: row !important;
+  position: relative;
+  width: 100%;
 }
 
-.y {
-  animation: y 7s linear infinite alternate;
+.marquee {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  gap: 12px;
+  width: 100%;
 }
 
-@keyframes x {
-  100% {
-    transform: translateX(calc(100vw - var(--size)));
-  }
+.marquee__content {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-around;
+  gap: 12px;
 }
 
-@keyframes y {
-  100% {
-    transform: translateY(calc(100vh - var(--size)));
-  }
-} */
+.marquee__content > * {
+  flex: 0 0 auto;
+  text-align: center;
+}
+
+.marquee__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 24px;
+}
+
+.marquee:hover .marquee__content {
+  animation-play-state: paused;
+}
+
+.marquee.normal .marquee__content {
+  animation: scroll 40s linear infinite;
+}
+
+.marquee.reverse .marquee__content {
+  animation: scroll-reverse 40s linear infinite;
+}
 
 :root {
   --width: 200px;
@@ -531,8 +550,20 @@ div .imagesAnim {
   }
 }
 
-@media only screen and (max-width: 600px) {
-  .navsprite {
-    @apply m-0 flex items-center justify-around p-0;
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - 12px));
+  }
+}
+
+@keyframes scroll-reverse {
+  from {
+    transform: translateX(calc(-100% - 12px));
+  }
+  to {
+    transform: translateX(0);
   }
 }

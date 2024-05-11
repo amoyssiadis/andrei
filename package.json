@@ -11,7 +11,8 @@
     "start": "next start",
     "lint": "next lint",
     "slicemachine": "start-slicemachine",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "dev:universal": "next dev -H 0.0.0.0 -p 3000"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.4",
