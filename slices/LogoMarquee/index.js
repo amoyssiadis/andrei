@@ -3,17 +3,18 @@ import Marquee from '../../components/Marquee'
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/20/solid'
 import { AnimatePresence, motion } from 'framer-motion'
 const LogoMarquee = ({ slice }) => {
-  const [reverseAnimation, setReverseAnimation] = useState(false)
 
-  const handleRightClick = () => {
-    setReverseAnimation(false)
-  }
+const [reverseAnimation, setReverseAnimation] = useState(false);
 
-  const handleLeftClick = () => {
-    setReverseAnimation(true)
-  }
+const handleRightClick = () => {
+  setReverseAnimation(false);
+};
 
-  return (
+const handleLeftClick = () => {
+  setReverseAnimation(true);
+}
+
+return (
     <section className="mt-36 h-full w-full p-1">
       <AnimatePresence mode="wait" initial={true}>
         <motion.div
