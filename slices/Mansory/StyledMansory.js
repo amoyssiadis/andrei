@@ -1,32 +1,62 @@
+/* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
 import React from 'react'
 import LazyLoad from 'react-lazy-load'
+import { Gallery } from 'react-grid-gallery'
 
 const StyledMansory = ({ slice, openMedia, hoverImage }) => {
+  const images = slice?.items?.map((item) => {
+    const width = item?.image?.dimensions?.width || 850
+    const height = item?.image?.dimensions?.height || 400
+
+    return {
+      src: item?.image?.url,
+      width: width,
+      height: height,
+      alt: item?.image?.alt,
+      item,
+    }
+  })
+
   return (
-    <div className="mx-auto flex min-h-screen max-w-6xl flex-row flex-wrap px-4 md:px-20">
-      {slice?.items?.map((item, i) => {
-        const isClickable = item?.is_clickable || false
-        return (
-          <div className={`${isClickable ? 'cursor-pointer' : 'cursor-default'} p-1`} key={i}>
-            <a onClick={isClickable ? () => openMedia(item) : undefined}>
-              <LazyLoad>
-                <img
-                  className="block h-[160px] object-cover md:h-[220px]"
-                  src={item.image.url}
-                  alt={item.image.alt}
-                  onMouseOver={(e) =>
-                    hoverImage(e, item.image_hover.url || null)
-                  }
-                  onMouseOut={(e) => hoverImage(e, item.image.url)}
-                />
-              </LazyLoad>
-            </a>
-          </div>
-        )
-      })}
+    <div className="mx-auto min-h-screen max-w-6xl px-4 md:px-20">
+      <Gallery
+        images={images}
+        enableImageSelection={false}
+        thumbnailImageComponent={(props) => (
+          <CustomImage
+            props={props}
+            hoverImage={hoverImage}
+            openMedia={openMedia}
+          />
+        )}
+      />
     </div>
   )
 }
 
 export default StyledMansory
+
+const CustomImage = ({ props, hoverImage, openMedia }) => {
+  const item = props?.item?.item
+  const is_clickable = item?.is_clickable || false
+  const url = item?.image?.url || null
+  const hover_url = item.image_hover.url || null
+  return (
+    <div
+      style={{
+        cursor: is_clickable ? 'pointer' : 'default',
+      }}
+    >
+      <a onClick={is_clickable ? () => openMedia(item) : undefined}>
+        <LazyLoad>
+        <img
+          {...props.imageProps}
+          onMouseOver={(e) => hoverImage(e, hover_url)}
+          onMouseOut={(e) => hoverImage(e, url)}
+        />
+        </LazyLoad>
+      </a>
+    </div>
+  )
+}
