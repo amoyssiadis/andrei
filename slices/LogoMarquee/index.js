@@ -4,14 +4,14 @@ import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/20/solid'
 import { AnimatePresence, motion } from 'framer-motion'
 const LogoMarquee = ({ slice }) => {
 
-const [reverseAnimation, setReverseAnimation] = useState(false);
+const [reverseAnimation, setReverseAnimation] = useState(true);
 
 const handleRightClick = () => {
-  setReverseAnimation(false);
+  setReverseAnimation(true);
 };
 
 const handleLeftClick = () => {
-  setReverseAnimation(true);
+  setReverseAnimation(false);
 }
 
 return (
