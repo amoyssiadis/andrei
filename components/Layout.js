@@ -13,11 +13,11 @@ export const Layout = ({
 
   const getBgColor = () => {
     if (path === '/editing' || path === '/pt-br/editing') {
-      return 'bg-black'
+      return 'pb-16 bg-black'
     } else if (path === '/original' || path === '/pt-br/original') {
-      return 'bg-black'
+      return 'pb-16 bg-black'
     } else if (path === '/other' || path === '/pt-br/other') {
-      return 'bg-black'
+      return 'pb-16 bg-black'
     }
     return ''
   }
@@ -48,7 +48,7 @@ export const Layout = ({
         settings={settings}
       /> */}
           <main
-            className={`mx-auto h-full min-h-screen w-screen overflow-x-hidden pb-16 ${bgColor}`}
+            className={`mx-auto h-full min-h-screen w-screen overflow-x-hidden ${bgColor}`}
           >
             {children}
           </main>
