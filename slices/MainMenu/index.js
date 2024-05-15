@@ -133,7 +133,7 @@ const MainMenu = ({ slice }) => {
       >
         <Bounded as="section" className={`pt-4 md:pt-0 ${bg}`}>
           <div
-            className={`${style} flex flex-col items-center justify-center ${isInfo}`}
+            className={`${style} mx-auto w-full flex flex-col items-center justify-center ${isInfo}`}
           >
             <motion.div
               layoutId="langsel"
@@ -162,7 +162,7 @@ const MainMenu = ({ slice }) => {
               className="flex flex-col w-full items-center justify-center"
             >
               <div
-                className={`relative -my-4 w-full smc:w-[325px] rounded-2xl py-4 px-4 sm:!w-[630px]`}
+                className={`relative !mx-4 -my-4 w-full smc:w-[325px] rounded-2xl py-4 px-4 sm:!w-[630px]`}
                 style={bgColor}
               >
                 <Link href="/">

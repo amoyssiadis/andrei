@@ -163,7 +163,7 @@ export default function MenuModal({ isOpen, setIsOpen, menuBgImage }) {
         </Transition.Child>
 
         <div className="fixed inset-0 z-10">
-          <div className="flex min-h-full min-w-full items-center justify-end text-center">
+          <div className="flex min-h-full min-w-full smc:justify-end items-center text-center">
             <Transition.Child
               as={Fragment}
               enter="ease-out duration-500"
@@ -173,18 +173,18 @@ export default function MenuModal({ isOpen, setIsOpen, menuBgImage }) {
               leaveFrom="opacity-100 translate-y-0 sm:scale-100"
               leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
             >
-              <Dialog.Panel className="relative h-screen w-full max-w-sm transform rounded-lg px-4 pt-5 pb-4 text-left shadow-xl transition-all sm:w-full sm:max-w-sm sm:p-6">
+              <Dialog.Panel className="relative h-screen w-full transform rounded-lg px-4 pt-5 pb-4 text-left shadow-xl transition-all sm:w-full sm:max-w-sm sm:p-6">
                 <div className="inline-flex w-full justify-end">
                   <div
                     type="button"
-                    className=" z-40  cursor-pointer px-4 py-2 text-base font-medium text-white"
+                    className="z-40 cursor-pointer px-4 py-2 text-base font-medium text-white"
                     onClick={() => close()}
                   >
-                    <XCircleIcon className="h-20" />
+                    <XCircleIcon className="w-12 h-12 md:w-20 md:h-20" />
                   </div>
                 </div>
-                <div className=" -mt-16 mr-28 h-full w-full sm:-mt-10 sm:ml-9 ">
-                  <div className="portfoliomenu  h-full w-full scale-[1.5] sm:scale-[2] ">
+                <div className="-mt-52 sm:-mt-16 -ml-5 ssm:-ml-8 mds:-ml-28 mr-28 h-full w-full sm:-mt-10 sm:ml-9 ">
+                  <div className="portfoliomenu h-full w-full scale-[1.5] sm:scale-[2] ">
                     <motion.div
                       initial={{ opacity: 0 }}
                       exit={{ opacity: 0 }}
