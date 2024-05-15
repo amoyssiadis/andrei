@@ -163,7 +163,7 @@ export default function MenuModal({ isOpen, setIsOpen, menuBgImage }) {
         </Transition.Child>
 
         <div className="fixed inset-0 z-10">
-          <div className="flex min-h-full min-w-full smc:justify-end items-center text-center">
+          <div className="flex min-h-full min-w-full 426:justify-end items-center text-center">
             <Transition.Child
               as={Fragment}
               enter="ease-out duration-500"
@@ -183,7 +183,7 @@ export default function MenuModal({ isOpen, setIsOpen, menuBgImage }) {
                     <XCircleIcon className="w-12 h-12 md:w-20 md:h-20" />
                   </div>
                 </div>
-                <div className="-mt-52 sm:-mt-16 -ml-5 ssm:-ml-8 mds:-ml-28 mr-28 h-full w-full sm:-mt-10 sm:ml-9 ">
+                <div className="-mt-40 -ml-5 340:-ml-8 431:-ml-28 mr-28 h-full w-full sm:-mt-10 sm:ml-9 ">
                   <div className="portfoliomenu h-full w-full scale-[1.5] sm:scale-[2] ">
                     <motion.div
                       initial={{ opacity: 0 }}

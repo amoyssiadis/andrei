@@ -235,7 +235,7 @@ body {
   display: flex;
   justify-content: flex-end;
   transform: scale(0.6);
-  @apply -ml-[50px] w-[700px]  sm:ml-[90px] sm:w-[1000px];
+  /* @apply ml-[70px] w-[700px] sm:ml-[90px] sm:w-[1000px]; */
 }
 
 .langsprite li {
