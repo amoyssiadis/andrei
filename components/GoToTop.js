@@ -28,7 +28,12 @@ export default function GoToTop() {
   return (
     <>
       {show && (
-        <div className="filter-white fixed left-0 sm:left-2 lgc:left-16 bottom-0 sm:bottom-6 lg:bottom-8 scale-50 text-white">
+        <div
+          style={{
+            zIndex: 1000,
+          }}
+          className="filter-white fixed bottom-0 left-0 scale-50 text-white sm:bottom-6 sm:left-2 lg:bottom-8 1025:left-16"
+        >
           <a href="#">
             <Image src="/gototop.svg" width={74} height={120} alt="Go to Top" />
           </a>

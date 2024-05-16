@@ -113,15 +113,24 @@ const MainMenu = ({ slice }) => {
       </Bounded>
     )
   }
-  const bg = slice.variation === 'gallery' ? 'bg-black pb-8' : ''
+
+  const logoWidth = width < 360 ? width - 20 : width - 40
+  const bg = slice.variation === 'gallery' ? 'bg-black' : ''
   const filter = slice.variation === 'gallery' ? 'filter-white' : ''
   const isInfo = router.asPath == '/info' ? ' scale-[0.85] ' : ''
   const bgUrl =
-    slice.primary.logo_bg && slice.primary.logo_bg.url
-      ? slice.primary.logo_bg.url
+    slice.primary.bgImg && slice.primary.bgImg.url
+      ? slice.primary.bgImg.url
       : '/logobg.webp'
   const bgColor =
     slice.variation === 'gallery' ? {} : { backgroundImage: `url(${bgUrl})` }
+  const logoStyles = width < 431 ? { width: `${logoWidth}px` } : {}
+
+  const styles = {
+    ...bgColor,
+    ...logoStyles,
+  }
+
   return (
     <AnimatePresence mode="wait" initial={true}>
       <motion.div
@@ -133,7 +142,7 @@ const MainMenu = ({ slice }) => {
       >
         <Bounded as="section" className={`pt-4 md:pt-0 ${bg}`}>
           <div
-            className={`${style} flex flex-col items-center justify-center ${isInfo}`}
+            className={`${style} mx-auto flex w-full flex-col items-center justify-center ${isInfo}`}
           >
             <motion.div
               layoutId="langsel"
@@ -143,7 +152,7 @@ const MainMenu = ({ slice }) => {
               className="mb-2 flex flex-col sm:mb-12"
             >
               <div className="langsel scale-[0.56] sm:ml-0 sm:transform-none">
-                <ul className={`langsprite ${filter} !md:ml-24 !ml-6`}>
+                <ul className={`langsprite ${filter} w-[800px] 321:w-[900px] 375:w-[1000px] 400:w-[1100px] 431:w-[900px] sm:w-[1000px]`}>
                   <PrismicLink href={router.asPath} locale="en-us">
                     <li className="en"></li>
                   </PrismicLink>
@@ -159,11 +168,11 @@ const MainMenu = ({ slice }) => {
               transition={{
                 duration: 1.5,
               }}
-              className="flex flex-col w-full items-center justify-center"
+              className="flex w-full flex-col items-center justify-center"
             >
               <div
-                className={`relative -my-4 w-full smc:w-[325px] rounded-2xl py-4 px-4 sm:!w-[630px]`}
-                style={bgColor}
+                className={`-my-4 rounded-2xl px-4 py-4 431:w-[325px] sm:w-[630px]`}
+                style={styles}
               >
                 <Link href="/">
                   <a>
@@ -184,7 +193,7 @@ const MainMenu = ({ slice }) => {
                 duration: 1.5,
               }}
             >
-              <div className="w-[900px] sm:w-[1000px] mt-4 sm:mt-12 scale-[0.56] sm:transform-none">
+              <div className="mt-8 w-[800px] scale-[0.56] 321:w-[900px] 375:w-[1000px] 400:w-[1100px] 431:w-[900px] sm:mt-12 sm:w-[1000px] sm:transform-none">
                 <ul className={`navsprite ${filter}`}>
                   <a onClick={() => setModalOpen(true)}>
                     <li

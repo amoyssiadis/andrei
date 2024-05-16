@@ -235,7 +235,7 @@ body {
   display: flex;
   justify-content: flex-end;
   transform: scale(0.6);
-  @apply -ml-[50px] w-[700px]  sm:ml-[90px] sm:w-[1000px];
+  /* @apply ml-[70px] w-[700px] sm:ml-[90px] sm:w-[1000px]; */
 }
 
 .langsprite li {
@@ -371,7 +371,7 @@ li.active {
   background-size: 200px 162px;
   height: 28px;
   width: 150px;
-  @apply mb-12 transition-all;
+  @apply mb-4 transition-all sm:mb-12;
 }
 
 .portfoliomenu-sprite li:hover {
@@ -394,7 +394,7 @@ li.active {
 
 /** Side Portfolio Menu **/
 .sideportfoliomenu {
-  @apply m-0 mt-4 flex  items-center    justify-between p-0;
+  @apply m-0 mt-4 flex items-center justify-between p-0;
 }
 
 .sideportfoliomenu-sprite li {
@@ -570,4 +570,18 @@ body {
   to {
     transform: translateX(0);
   }
+}
+
+.video-player-wrapper {
+  position: relative;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+  overflow: hidden;
+}
+
+.video-player-wrapper > div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }

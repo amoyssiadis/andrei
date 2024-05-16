@@ -41,7 +41,7 @@ export default function FourOhFour({ page, navigation, settings }) {
                     <img
                       alt="Page not Found"
                       src={four0Fourimage}
-                      className="sm:w-[400px] mdc:w-[600px] lgc:w-[900px]"
+                      className="sm:w-[400px] 769:w-[600px] 1025:w-[900px]"
                     />
                     <img
                       alt="Click to go back"
