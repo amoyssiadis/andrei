@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { PrismicLink, PrismicProvider } from '@prismicio/react'
 import { PrismicPreview } from '@prismicio/next'
 import { repositoryName, linkResolver } from '../prismicio'
+import '@devnomic/marquee/dist/index.css' // This is purely used only for marquee component (for logos in info page)
 import '../styles/globals.css'
 
 const NextLinkShim = ({ href, children, locale, ...props }) => {
