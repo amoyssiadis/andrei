@@ -1,40 +1,32 @@
-/* eslint-disable @next/next/no-img-element */
-import React from 'react'
+import React, { useState } from 'react'
+import { Marquee as MarqueeLib } from '@devnomic/marquee'
 
-const Marquee = ({ slice, reverseAnimation }) => {
-  function adjustImageWidth(image) {
-    const widthBase = 30
-    const scaleFactor = 0.525
-    const imageRatio = image.target.naturalWidth / image.target.naturalHeight
-    image.target.width = Math.pow(imageRatio, scaleFactor) * widthBase
-  }
+const Marquee = ({ slice, direction }) => {
+  const [isPaused, setIsPaused] = useState(false)
 
   return (
-    <div className="main__container items-center justify-center">
-      <div className={`marquee ${reverseAnimation ? 'reverse' : 'normal'}`}>
-        <ul className="marquee__content">
-          {slice?.items?.map((item, i) => (
-            <div key={i} className="marquee__item">
-              <img
-                src={item.image.url}
-                alt={item.image.alt}
-                onLoad={adjustImageWidth}
-              />
-            </div>
+    <div className="relative w-full overflow-hidden">
+      <div
+        className="w-full"
+        onMouseEnter={() => setIsPaused(true)}
+        onMouseLeave={() => setIsPaused(false)}
+      >
+        <MarqueeLib
+          direction={'left'}
+          reverse={direction === 'right'}
+          pauseOnHover={true}
+          speed={30}
+          className={`${isPaused ? 'pause' : ''}`}
+        >
+          {slice?.items?.map((item, index) => (
+            <img
+              key={index}
+              src={item.image.url}
+              alt={item.image.alt}
+              className="mx-2 h-6  object-contain"
+            />
           ))}
-        </ul>
-
-        <ul aria-hidden="true" className="marquee__content">
-          {slice?.items?.map((item, i) => (
-            <div key={i} className="marquee__item">
-              <img
-                src={item.image.url}
-                alt={item.image.alt}
-                onLoad={adjustImageWidth}
-              />
-            </div>
-          ))}
-        </ul>
+        </MarqueeLib>
       </div>
     </div>
   )
