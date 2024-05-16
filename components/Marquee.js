@@ -23,7 +23,7 @@ const Marquee = ({ slice, direction }) => {
               key={index}
               src={item.image.url}
               alt={item.image.alt}
-              className="mx-2 h-6  object-contain"
+              className="mx-0 h-4 object-contain md:mx-2 md:h-6"
             />
           ))}
         </MarqueeLib>
