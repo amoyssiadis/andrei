@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Marquee from '../../components/Marquee'
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/20/solid'
 import { AnimatePresence, motion } from 'framer-motion'
+
 const LogoMarquee = ({ slice }) => {
   const [reverseAnimation, setReverseAnimation] = useState(true)
 
@@ -14,7 +15,7 @@ const LogoMarquee = ({ slice }) => {
   }
 
   return (
-    <section className="mt-10 h-full w-full  p-1">
+    <section className="mt-36 h-full w-full p-1">
       <AnimatePresence mode="wait" initial={true}>
         <motion.div
           initial={{ opacity: 0 }}
@@ -24,7 +25,7 @@ const LogoMarquee = ({ slice }) => {
             delay: 1.8,
             duration: 1.5,
           }}
-          className="relative w-full sm:absolute sm:bottom-12"
+          className="relative w-full sm:absolute sm:bottom-8"
         >
           <p className="my-4 text-center text-xs font-bold tracking-wider sm:text-lg">
             {slice.primary.title}
