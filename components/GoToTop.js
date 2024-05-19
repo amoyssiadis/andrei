@@ -30,7 +30,7 @@ export default function GoToTop() {
       {show && (
         <div
           style={{
-            zIndex: 1000,
+            zIndex: 40,
           }}
           className="filter-white fixed bottom-0 left-0 scale-50 text-white sm:bottom-6 sm:left-2 lg:bottom-8 1025:left-16"
         >

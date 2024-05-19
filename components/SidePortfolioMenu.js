@@ -11,7 +11,7 @@ export default function Sidesideportfoliomenu() {
     return active
   }
   return (
-    <div className="fixed -right-10 bottom-[38%] sm:bottom-1/3 z-50">
+    <div className="fixed -right-10 bottom-[38%] sm:bottom-1/3 z-40">
       <div className="sideportfoliomenu">
         <ul className="sideportfoliomenu-sprite">
           <Link href="/editing">
