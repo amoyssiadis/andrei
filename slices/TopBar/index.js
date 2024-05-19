@@ -2,7 +2,7 @@
 import React from 'react'
 
 const TopBar = ({ slice }) => (
-  <section style={{ zIndex: 1000 }} className="topbar">
+  <section style={{ zIndex: 100 }} className="topbar">
     <img
       src={slice.primary.image.url}
       alt={slice.primary.image.alt}
