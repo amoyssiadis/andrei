@@ -6495,11 +6495,6 @@ react-fast-compare@^3.0.1:
   resolved "https://registry.yarnpkg.com/react-fast-compare/-/react-fast-compare-3.2.2.tgz#929a97a532304ce9fee4bcae44234f1ce2c21d49"
   integrity sha512-nsO+KSNgo1SbJqJEYRE9ERzo7YtYbou/OqjSQKxV7jcKox7+usiUVZOAC+XnDOABXggQTno0Y1CpVnuWEc1boQ==
 
-react-fast-marquee@^1.3.5:
-  version "1.6.4"
-  resolved "https://registry.yarnpkg.com/react-fast-marquee/-/react-fast-marquee-1.6.4.tgz#ac0bed0faee63e4d97e9b8cd03f3bea9f242fab3"
-  integrity sha512-LAgvhRmHdqaUQ8R5jCUwzEGFUIjnCCt3T3W8X7j7wF6DWe0SATlpP0JX1V0pp2qX3DYUezmn1Iz5AtRFdL2EWQ==
-
 react-grid-gallery@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/react-grid-gallery/-/react-grid-gallery-1.0.1.tgz#51e9e920cb83df6c61fbd1f2c7eed7db3b6e5a1b"
@@ -6525,11 +6520,6 @@ react-player@^2.16.0:
     memoize-one "^5.1.1"
     prop-types "^15.7.2"
     react-fast-compare "^3.0.1"
-
-react-ticker@^1.3.2:
-  version "1.3.2"
-  resolved "https://registry.yarnpkg.com/react-ticker/-/react-ticker-1.3.2.tgz#5b8e486a7a7c5c4dd4076bdbabb3efaa31932ef7"
-  integrity sha512-9sLgc9gFx/EMNxn2QcwUJAOf3jdEROKRyXZGbWrEbfJG/MTkHwR+WRrVtypv3iFXPpcrKmPD91+vatHq0BgR0Q==
 
 react@18.2.0:
   version "18.2.0"
@@ -7821,6 +7811,11 @@ validate-npm-package-name@^3.0.0:
   dependencies:
     builtins "^1.0.3"
 
+validate-target@^3.1.1:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/validate-target/-/validate-target-3.1.1.tgz#4a6dc9a6768aaa801f8e3d94f3fc89adc499a47e"
+  integrity sha512-MRTgeSwwI8fyNPzRi8SsZiU6LSwlsRE3cLiynyse8G82hjEkfq/setjs0D789FwKrtnDCZn7m0MHlklDPzs74g==
+
 vary@^1, vary@~1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/vary/-/vary-1.1.2.tgz#2299f02c6ded30d4a5961b0b9f74524a18f634fc"
@@ -7864,6 +7859,13 @@ videojs-vtt.js@0.15.5:
   integrity sha512-yZbBxvA7QMYn15Lr/ZfhhLPrNpI/RmCSCqgIff57GC2gIrV5YfyzLfLyZMj0NnZSAz8syB4N0nHXpZg9MyrMOQ==
   dependencies:
     global "^4.3.1"
+
+vlitejs@^6.0.3:
+  version "6.0.3"
+  resolved "https://registry.yarnpkg.com/vlitejs/-/vlitejs-6.0.3.tgz#4d195c38f489460995c8a3eb072e9ea53e4f1908"
+  integrity sha512-v/m95c3LkxR5AaNW0lUZiNSSECWHYIzrh+yspbsxa46Zeas2OHiiTH3VDMdrWOg4dSBku/jUcuohOhas7kwOSA==
+  dependencies:
+    validate-target "^3.1.1"
 
 wcwidth@^1.0.1:
   version "1.0.1"
