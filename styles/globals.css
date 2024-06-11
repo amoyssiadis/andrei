@@ -277,6 +277,22 @@ body {
   filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(82deg) brightness(105%)
     contrast(105%);
 }
+
+@layer utilities {
+  .masonry {
+    @apply mx-auto min-h-screen max-w-5xl columns-1 gap-0 pt-20 md:columns-2;
+  }
+  .masonry div {
+    break-inside: avoid;
+  }
+  .oneColumn {
+    @apply md:columns-1;
+  }
+  .oneColumn img {
+    @apply w-full;
+  }
+}
+
 /* gallery */
 .navbar-gallery {
   /* grid-template-columns: 1fr 2fr 1fr; */
