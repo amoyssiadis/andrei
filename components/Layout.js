@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import { useRouter } from 'next/router'
 import GrainedEffect from './GrainedEffect'
 
 export const Layout = ({
@@ -7,6 +8,21 @@ export const Layout = ({
   settings,
   children,
 }) => {
+  const router = useRouter()
+  const path = router.asPath
+
+  const getBgColor = () => {
+    if (path === '/editing' || path === '/pt-br/editing') {
+      return 'pb-16 bg-black'
+    } else if (path === '/original' || path === '/pt-br/original') {
+      return 'pb-16 bg-black'
+    } else if (path === '/other' || path === '/pt-br/other') {
+      return 'pb-16 bg-black'
+    }
+    return ''
+  }
+  const bgColor = getBgColor()
+
   return (
     // <motion.div
     // // initial={{ opacity: 0.5 }}
@@ -31,7 +47,9 @@ export const Layout = ({
         navigation={navigation}
         settings={settings}
       /> */}
-          <main className=" mx-auto h-full min-h-screen w-screen overflow-x-hidden  ">
+          <main
+            className={`mx-auto h-full min-h-screen w-screen overflow-x-hidden ${bgColor}`}
+          >
             {children}
           </main>
         </div>

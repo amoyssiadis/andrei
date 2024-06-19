@@ -182,22 +182,6 @@ body {
   @apply bg-[#D6DBDB];
 }
 
-/* mansory */
-@layer utilities {
-  .masonry {
-    @apply mx-auto min-h-screen max-w-5xl columns-1 gap-0 pt-20 md:columns-2;
-  }
-  .masonry div {
-    break-inside: avoid;
-  }
-  .oneColumn {
-    @apply md:columns-1;
-  }
-  .oneColumn img {
-    @apply w-full;
-  }
-}
-
 /* video player */
 .player-wrapper {
   position: relative;
@@ -251,7 +235,7 @@ body {
   display: flex;
   justify-content: flex-end;
   transform: scale(0.6);
-  @apply -ml-[50px] w-[700px]  sm:ml-[90px] sm:w-[1000px];
+  /* @apply ml-[70px] w-[700px] sm:ml-[90px] sm:w-[1000px]; */
 }
 
 .langsprite li {
@@ -284,6 +268,7 @@ body {
 }
 
 /* navbar */
+
 .filter-white {
   filter: invert(100%) sepia(0%) saturate(7491%) hue-rotate(264deg)
     brightness(99%) contrast(103%);
@@ -292,14 +277,30 @@ body {
   filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(82deg) brightness(105%)
     contrast(105%);
 }
+
+@layer utilities {
+  .masonry {
+    @apply mx-auto min-h-screen max-w-5xl columns-1 gap-0 pt-20 md:columns-2;
+  }
+  .masonry div {
+    break-inside: avoid;
+  }
+  .oneColumn {
+    @apply md:columns-1;
+  }
+  .oneColumn img {
+    @apply w-full;
+  }
+}
+
 /* gallery */
 .navbar-gallery {
   /* grid-template-columns: 1fr 2fr 1fr; */
-  @apply w-[900px]  sm:w-[1000px];
+  @apply w-[900px] sm:w-[1000px];
 }
 
 .navsprite-gallery {
-  @apply m-0 flex  items-center    justify-between p-0;
+  @apply m-0 flex items-center justify-between p-0;
   transform: scale(0.6);
 }
 
@@ -333,14 +334,8 @@ body {
   width: 166px;
 }
 
-/* default navbar */
-.navbar {
-  /* grid-template-columns: 1fr 2fr 1fr; */
-  @apply mt-8 w-[900px] sm:mt-12   sm:w-[1000px];
-}
-
 .navsprite {
-  @apply m-0 flex  items-center    justify-between p-0;
+  @apply m-0 flex items-center justify-between p-0;
   transform: scale(0.6);
 }
 
@@ -381,7 +376,7 @@ li.active {
 
 /** Portfolio Menu **/
 .portfoliomenu {
-  @apply m-0 mt-4 flex  items-center    justify-between p-0;
+  @apply m-0 mt-4 flex items-center justify-between p-0;
 }
 
 .portfoliomenu-sprite li {
@@ -392,7 +387,7 @@ li.active {
   background-size: 200px 162px;
   height: 28px;
   width: 150px;
-  @apply mb-12 transition-all;
+  @apply mb-4 transition-all sm:mb-12;
 }
 
 .portfoliomenu-sprite li:hover {
@@ -415,7 +410,7 @@ li.active {
 
 /** Side Portfolio Menu **/
 .sideportfoliomenu {
-  @apply m-0 mt-4 flex  items-center    justify-between p-0;
+  @apply m-0 mt-4 flex items-center justify-between p-0;
 }
 
 .sideportfoliomenu-sprite li {
@@ -479,38 +474,57 @@ body {
   margin: 0;
 }
 
-/*
-:root {
-  --size: 100px;
-}
-img .imagesAnim,
-div .imagesAnim {
-  width: var(--size);
-  height: var(--size);
-  @apply absolute;
-}
-.imagesAnim2 .x {
-  animation: x 13s linear infinite alternate-reverse !important;
-}
-.x {
-  animation: x 13s linear infinite alternate;
+.main__container {
+  overflow-x: hidden !important;
+  display: flex !important;
+  flex-direction: row !important;
+  position: relative;
+  width: 100%;
 }
 
-.y {
-  animation: y 7s linear infinite alternate;
+.marquee {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  gap: 12px;
+  width: 100%;
 }
 
-@keyframes x {
-  100% {
-    transform: translateX(calc(100vw - var(--size)));
-  }
+.marquee__content {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-around;
+  gap: 12px;
 }
 
-@keyframes y {
-  100% {
-    transform: translateY(calc(100vh - var(--size)));
-  }
-} */
+.marquee__content > * {
+  flex: 0 0 auto;
+  text-align: center;
+}
+
+.marquee__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 24px;
+}
+
+.marquee.normal:hover .marquee__content {
+  animation-play-state: paused;
+}
+
+.marquee.reverse:hover .marquee__content {
+  animation-play-state: paused;
+}
+
+.marquee.normal .marquee__content {
+  animation: scroll 40s linear infinite;
+}
+
+.marquee.reverse .marquee__content {
+  animation: scroll-reverse 40s linear infinite;
+}
 
 :root {
   --width: 200px;
@@ -554,4 +568,36 @@ div .imagesAnim {
   100% {
     transform: translateY(calc(100vh - var(--width)));
   }
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - 12px));
+  }
+}
+
+@keyframes scroll-reverse {
+  from {
+    transform: translateX(calc(-100% - 12px));
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.video-player-wrapper {
+  position: relative;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+  overflow: hidden;
+}
+
+.video-player-wrapper > div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }

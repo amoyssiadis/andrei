@@ -39,6 +39,11 @@
     "clients": {}
   },
   "slices": {
+    "404": {
+      "default": {
+        "primary": {}
+      }
+    },
     "Text": {
       "default": {
         "primary": {
@@ -134,6 +139,9 @@
     "MainMenu": {
       "default": {
         "primary": {}
+      },
+      "gallery": {
+        "primary": {}
       }
     },
     "LanguageSelector": {
@@ -155,6 +163,10 @@
       "default": {
         "primary": {},
         "items": {}
+      },
+      "mansoryVertical": {
+        "primary": {},
+        "items": {}
       }
     },
     "LogoMarquee": {
@@ -173,6 +185,11 @@
       }
     },
     "FloatingImages": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "PageNotFound": {
       "default": {
         "primary": {}
       }

@@ -11,6 +11,7 @@ import Logo from './Logo';
 import LogoMarquee from './LogoMarquee';
 import MainMenu from './MainMenu';
 import Mansory from './Mansory';
+import PageNotFound from './PageNotFound';
 import TextWithFeatures from './TextWithFeatures';
 import TextWithImage from './TextWithImage';
 import TopBar from './TopBar';
@@ -27,6 +28,7 @@ export {
 	LogoMarquee,
 	MainMenu,
 	Mansory,
+	PageNotFound,
 	TextWithFeatures,
 	TextWithImage,
 	TopBar,
@@ -44,6 +46,7 @@ export const components = {
 	logo_marquee: LogoMarquee,
 	main_logo: MainMenu,
 	mansory: Mansory,
+	404: PageNotFound,
 	text_with_features: TextWithFeatures,
 	text_with_image: TextWithImage,
 	top_bar: TopBar,

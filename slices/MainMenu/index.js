@@ -19,18 +19,17 @@ const MainMenu = ({ slice }) => {
   const [modalOpen, setModalOpen] = useState(false)
   const [alertOpen, setAlertOpen] = useState(false)
   const email = 'andrei@andrei.com.br' //prismicH.asText(slice.primary.email);
-  //console.log(slice.variation)
   const { width, height } = useWindowDimensions()
+  const workMenuBgImage = slice?.primary?.work_menu_bg
 
   // GALERY DESKTOP MAIN MENU
   if (slice.variation === 'gallery' && width > 1000) {
-    //console.log('router.asPath', router.asPath)
     return (
-      <Bounded as="section" className=" overflow-hidden  bg-black py-10 ">
+      <Bounded as="section" className="overflow-hidden bg-black py-10">
         <div
-          className={`${style} flex flex-row items-center justify-center px-8 `}
+          className={`${style} flex flex-row items-center justify-center px-8`}
         >
-          <div className=" flex flex-col  py-4  sm:order-last  ">
+          <div className="flex flex-col py-4 sm:order-last">
             <div className="">
               <ul className="langsprite-gallery filter-white">
                 <PrismicLink href={router.asPath} locale="en-us">
@@ -43,14 +42,14 @@ const MainMenu = ({ slice }) => {
               </ul>
             </div>
           </div>
-          <div className="flex flex-col items-center justify-center   ">
-            <div className="  w-[300px] sm:w-[300px] ">
+          <div className="flex flex-col items-center justify-center">
+            <div className="w-[300px]">
               <Link href="/">
                 <a>
                   {prismicH.isFilled.image(slice.primary.logo) && (
                     <PrismicNextImage
                       field={slice.primary.logo}
-                      className="filter-white "
+                      className="filter-white"
                       layout="responsive"
                     />
                   )}
@@ -63,7 +62,7 @@ const MainMenu = ({ slice }) => {
               <a onClick={() => setModalOpen(true)}>
                 <li
                   className={
-                    router.asPath == '/gallery' ? 'active work' : '' + 'work'
+                    router.asPath == '/original' ? 'active work' : '' + 'work'
                   }
                 ></li>
               </a>
@@ -108,24 +107,30 @@ const MainMenu = ({ slice }) => {
           <MenuModal
             isOpen={modalOpen}
             setIsOpen={setModalOpen}
-            image={MenuModalImage}
+            menuBgImage={workMenuBgImage}
           />
         </div>
       </Bounded>
     )
   }
+
+  const logoWidth = width < 360 ? width - 20 : width - 40
   const bg = slice.variation === 'gallery' ? 'bg-black' : ''
   const filter = slice.variation === 'gallery' ? 'filter-white' : ''
   const isInfo = router.asPath == '/info' ? ' scale-[0.85] ' : ''
-  console.log({ slice })
   const bgUrl =
     slice.primary.bgImg && slice.primary.bgImg.url
       ? slice.primary.bgImg.url
       : '/logobg.webp'
-  console.log({ bgUrl })
   const bgColor =
     slice.variation === 'gallery' ? {} : { backgroundImage: `url(${bgUrl})` }
-  console.log({ bgColor })
+  const logoStyles = width < 431 ? { width: `${logoWidth}px` } : {}
+
+  const styles = {
+    ...bgColor,
+    ...logoStyles,
+  }
+
   return (
     <AnimatePresence mode="wait" initial={true}>
       <motion.div
@@ -135,19 +140,19 @@ const MainMenu = ({ slice }) => {
         }}
         className=""
       >
-        <Bounded as="section" className={`  pt-4 md:pt-0   ${bg} `}>
+        <Bounded as="section" className={`pt-4 md:pt-0 ${bg}`}>
           <div
-            className={`${style} flex flex-col items-center justify-center  ${isInfo}`}
+            className={`${style} mx-auto flex w-full flex-col items-center justify-center ${isInfo}`}
           >
             <motion.div
               layoutId="langsel"
               transition={{
                 duration: 1.5,
               }}
-              className="mb-9 flex  flex-col  sm:mb-12  "
+              className="mb-2 flex flex-col sm:mb-12"
             >
-              <div className="langsel ml-36 scale-[0.56]  sm:ml-0 sm:transform-none">
-                <ul className={`langsprite  ${filter} `}>
+              <div className="langsel scale-[0.56] sm:ml-0 sm:transform-none">
+                <ul className={`langsprite ${filter} w-[800px] 321:w-[900px] 375:w-[1000px] 400:w-[1100px] 431:w-[900px] sm:w-[1000px]`}>
                   <PrismicLink href={router.asPath} locale="en-us">
                     <li className="en"></li>
                   </PrismicLink>
@@ -163,11 +168,11 @@ const MainMenu = ({ slice }) => {
               transition={{
                 duration: 1.5,
               }}
-              className="flex flex-col items-center justify-center   "
+              className="flex w-full flex-col items-center justify-center"
             >
               <div
-                className={` -my-4  w-[325px] rounded-2xl py-4 px-4   sm:w-[630px] `}
-                style={bgColor}
+                className={`-my-4 rounded-2xl px-4 py-4 431:w-[325px] sm:w-[630px]`}
+                style={styles}
               >
                 <Link href="/">
                   <a>
@@ -188,12 +193,12 @@ const MainMenu = ({ slice }) => {
                 duration: 1.5,
               }}
             >
-              <div className="navbar scale-[0.56] sm:transform-none ">
-                <ul className={`navsprite ${filter} `}>
+              <div className="mt-8 w-[800px] scale-[0.56] 321:w-[900px] 375:w-[1000px] 400:w-[1100px] 431:w-[900px] sm:mt-12 sm:w-[1000px] sm:transform-none">
+                <ul className={`navsprite ${filter}`}>
                   <a onClick={() => setModalOpen(true)}>
                     <li
                       className={
-                        router.asPath == '/gallery'
+                        router.asPath == '/original'
                           ? 'active work'
                           : '' + 'work'
                       }
@@ -241,13 +246,13 @@ const MainMenu = ({ slice }) => {
               variation={slice.variation}
             />
             {/* {slice.variation === 'gallery' && <SidePortfolioMenu />} */}
-            {(router.asPath !== '/' || router.asPath !== '/pt-br') && (
-              <GoToTop />
-            )}
+            {router.asPath !== '/' &&
+              router.asPath !== '/info' &&
+              router.asPath !== '/pt-br' && <GoToTop />}
             <MenuModal
               isOpen={modalOpen}
               setIsOpen={setModalOpen}
-              image={MenuModalImage}
+              menuBgImage={workMenuBgImage}
             />
           </div>
         </Bounded>

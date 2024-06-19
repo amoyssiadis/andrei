@@ -8,7 +8,7 @@ import Link from 'next/link'
 const LanguageSelector = ({ slice }) => (
   <Bounded as="section">
     <div className="justify-right flex flex-col items-end">
-      <div className="flex items-center justify-center  gap-8 text-2xl">
+      <div className="flex items-center justify-center gap-8 text-2xl">
         <Link href="/en-us">
           <a>
             <div>en</div>

@@ -3,19 +3,17 @@ import { useRouter } from 'next/router'
 
 export default function Sidesideportfoliomenu() {
   const router = useRouter()
-  //.active-sideportfoliomenu
   const isActive = (name) => {
     let active = ''
-    //console.log(router.asPath, `/${name}`)
     if (router.asPath === `/${name}`) {
       active = ' active-sideportfoliomenu '
     }
     return active
   }
   return (
-    <div className="fixed -right-10 bottom-1/4 sm:bottom-1/3  ">
-      <div className="sideportfoliomenu ">
-        <ul className="sideportfoliomenu-sprite ">
+    <div className="fixed -right-10 bottom-[38%] sm:bottom-1/3 z-40">
+      <div className="sideportfoliomenu">
+        <ul className="sideportfoliomenu-sprite">
           <Link href="/editing">
             <a>
               <li className={`${isActive('editing')}`}>
@@ -24,9 +22,9 @@ export default function Sidesideportfoliomenu() {
             </a>
           </Link>
 
-          <Link href="/gallery">
+          <Link href="/original">
             <a>
-              <li className={`${isActive('gallery')}`}>
+              <li className={`${isActive('original')}`}>
                 <div className={`original filter-black `}></div>
               </li>
             </a>

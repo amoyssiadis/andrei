@@ -2,11 +2,13 @@ import { Fragment, useEffect, useRef, useState } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import { XCircleIcon } from '@heroicons/react/24/outline'
 import { motion } from 'framer-motion'
-const ColorfulMenu = () => {
+const ColorfulMenu = ({ menuBgImage }) => {
+  const bgImage =
+    menuBgImage && menuBgImage?.url ? menuBgImage.url : '/bgworkmenu.gif'
   const containerRef = useRef(null)
   useEffect(() => {
     const background = document.createElement('div')
-    background.style.backgroundImage = "url('/bgworkmenu.gif')"
+    background.style.backgroundImage = `url(${bgImage})`
     background.style.backgroundSize = '2000%'
     background.style.backgroundRepeat = 'no-repeat'
     background.style.backgroundPosition = 'center'
@@ -50,7 +52,7 @@ const ColorfulMenu = () => {
     link1.appendChild(document.createElement('li')).className = 'editing '
 
     const link2 = document.createElement('a')
-    link2.href = '/gallery'
+    link2.href = '/original'
     link2.appendChild(document.createElement('li')).className = 'original '
 
     const link3 = document.createElement('a')
@@ -125,7 +127,7 @@ const ColorfulMenu = () => {
   return <div ref={containerRef}>{/* Render your page content here */}</div>
 }
 
-export default function MenuModal({ isOpen, setIsOpen, image }) {
+export default function MenuModal({ isOpen, setIsOpen, menuBgImage }) {
   const [open, setOpen] = useState(isOpen || false)
   function close() {
     setIsOpen(false)
@@ -147,7 +149,7 @@ export default function MenuModal({ isOpen, setIsOpen, image }) {
 
   return (
     <Transition.Root show={open} as={Fragment}>
-      <Dialog as="div" className="relative z-10" onClose={setOpen}>
+      <Dialog as="div" className="relative z-50" onClose={setOpen}>
         <Transition.Child
           as={Fragment}
           enter="ease-out duration-500"
@@ -160,8 +162,8 @@ export default function MenuModal({ isOpen, setIsOpen, image }) {
           <div className="fixed inset-0 bg-black transition-all" />
         </Transition.Child>
 
-        <div className="fixed inset-0 z-10 overflow-y-auto">
-          <div className="flex min-h-full min-w-full items-center justify-end text-center ">
+        <div className="fixed inset-0 z-10">
+          <div className="flex min-h-full min-w-full 426:justify-end items-center text-center">
             <Transition.Child
               as={Fragment}
               enter="ease-out duration-500"
@@ -171,18 +173,18 @@ export default function MenuModal({ isOpen, setIsOpen, image }) {
               leaveFrom="opacity-100 translate-y-0 sm:scale-100"
               leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
             >
-              <Dialog.Panel className="relative h-screen  w-full max-w-sm  transform  rounded-lg px-4 pt-5 pb-4 text-left shadow-xl  transition-all sm:w-full sm:max-w-sm sm:p-6">
-                <div className="inline-flex w-full   justify-end">
+              <Dialog.Panel className="relative h-screen w-full transform rounded-lg px-4 pt-5 pb-4 text-left shadow-xl transition-all sm:w-full sm:max-w-sm sm:p-6">
+                <div className="inline-flex w-full justify-end">
                   <div
                     type="button"
-                    className=" z-40  cursor-pointer px-4 py-2 text-base font-medium text-white"
+                    className="z-40 cursor-pointer px-4 py-2 text-base font-medium text-white"
                     onClick={() => close()}
                   >
-                    <XCircleIcon className="h-20" />
+                    <XCircleIcon className="w-12 h-12 md:w-20 md:h-20" />
                   </div>
                 </div>
-                <div className=" -mt-16 mr-28 h-full w-full sm:-mt-10 sm:ml-9 ">
-                  <div className="portfoliomenu  h-full w-full scale-[1.5] sm:scale-[2] ">
+                <div className="-mt-40 -ml-5 340:-ml-8 431:-ml-28 mr-28 h-full w-full sm:-mt-10 sm:ml-9 ">
+                  <div className="portfoliomenu h-full w-full scale-[1.5] sm:scale-[2] ">
                     <motion.div
                       initial={{ opacity: 0 }}
                       exit={{ opacity: 0 }}
@@ -193,7 +195,7 @@ export default function MenuModal({ isOpen, setIsOpen, image }) {
                       }}
                       className=""
                     >
-                      <ColorfulMenu />
+                      <ColorfulMenu menuBgImage={menuBgImage} />
                     </motion.div>
                   </div>
                 </div>

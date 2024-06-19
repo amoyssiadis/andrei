@@ -13,7 +13,7 @@
         },
         "alt": null,
         "copyright": null,
-        "url": "https://images.unsplash.com/photo-1589321599763-d66926c29613"
+        "url": "https://images.unsplash.com/photo-1593642532973-d31b6557fa68"
       },
       "menu": {
         "dimensions": {
@@ -22,7 +22,7 @@
         },
         "alt": null,
         "copyright": null,
-        "url": "https://images.unsplash.com/photo-1579931794097-0ad001e51edb"
+        "url": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef"
       },
       "bgImg": {
         "dimensions": {
@@ -31,7 +31,25 @@
         },
         "alt": null,
         "copyright": null,
-        "url": "https://images.unsplash.com/photo-1587840171670-8b850147754e"
+        "url": "https://images.unsplash.com/photo-1589652717521-10c0d092dea9"
+      },
+      "logo_bg": {
+        "dimensions": {
+          "width": 900,
+          "height": 500
+        },
+        "alt": null,
+        "copyright": null,
+        "url": "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2"
+      },
+      "work_menu_bg": {
+        "dimensions": {
+          "width": 900,
+          "height": 500
+        },
+        "alt": null,
+        "copyright": null,
+        "url": "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5"
       }
     },
     "slice_type": "main_logo"
@@ -50,7 +68,7 @@
         },
         "alt": null,
         "copyright": null,
-        "url": "https://images.unsplash.com/photo-1493119508027-2b584f234d6c"
+        "url": "https://images.unsplash.com/photo-1593642633279-1796119d5482"
       },
       "menu": {
         "dimensions": {
@@ -59,7 +77,16 @@
         },
         "alt": null,
         "copyright": null,
-        "url": "https://images.unsplash.com/photo-1537498425277-c283d32ef9db"
+        "url": "https://images.unsplash.com/photo-1498050108023-c5249f4df085"
+      },
+      "work_menu_bg": {
+        "dimensions": {
+          "width": 900,
+          "height": 500
+        },
+        "alt": null,
+        "copyright": null,
+        "url": "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2"
       }
     },
     "slice_type": "main_logo"
